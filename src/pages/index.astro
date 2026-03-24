@@ -4,27 +4,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const faqSchema = [
   {
     question: "What types of therapy does Lotus Rose Counseling offer?",
-    answer: "Lotus Rose Counseling specializes in EMDR therapy, Accelerated Resolution Therapy (ART), postpartum depression treatment, grief counseling, trauma and PTSD therapy, anxiety and depression treatment, and Internal Family Systems (IFS). Our therapists work with women, teens, and children."
+    answer: "Lotus Rose Counseling specializes in perinatal mental health (postpartum depression, birth trauma, infant loss), childhood abuse recovery, trauma and PTSD therapy, grief counseling, and women's mental health in general — including navigating difficult relationships, abuse, and life transitions. All therapists are trained in trauma treatment modalities like EMDR, ART, IFS, and experiential therapy."
   },
   {
-    question: "Do you accept insurance at Lotus Rose Counseling?",
-    answer: "Yes, Lotus Rose Counseling accepts most major insurance plans. Contact us for specific coverage details and to verify your benefits before your first session."
+    question: "What makes Lotus Rose different from other therapy practices?",
+    answer: "We truly specialize in seeing women — not women's issues plus everything else. As Joy puts it: 'A lot of places will say they see women, but they have a wide variety of what they see. With us, women's mental health is what we do.' Every training the team takes is specifically geared toward women's issues, and the space was designed to feel like a safe haven for women who've experienced traumatic events."
   },
   {
     question: "How do I know if I need therapy?",
-    answer: "If you're experiencing persistent sadness, anxiety, difficulty sleeping, intrusive thoughts, trouble bonding with your baby, grief that feels stuck, or trauma symptoms that interfere with daily life — therapy can help. You don't need to be in crisis to benefit from working with a therapist."
+    answer: "As Joy says, 'You don't know you need it until you know.' Many women come in for postpartum depression and discover unprocessed childhood experiences underneath. If you're struggling with persistent sadness, anxiety, intrusive thoughts, difficulty bonding with your baby, grief, or trauma — therapy can help. You don't need to be in crisis. A free 15-minute consultation is a low-pressure way to find out."
   },
   {
-    question: "What is EMDR therapy and how does it work?",
-    answer: "EMDR (Eye Movement Desensitization and Reprocessing) uses bilateral stimulation — typically guided eye movements — to help your brain reprocess traumatic memories. Instead of talking through every detail, EMDR helps your nervous system process the memory so it no longer triggers the same emotional intensity."
+    question: "What does therapy at Lotus Rose actually look like?",
+    answer: "Most clients work with their therapist for 6-12 months. The first phase focuses on building a genuine relationship, education, and getting comfortable. Then the deeper processing work begins. Joy describes her approach as open and honest, with room for humor — because the topics are hard, and the space needs to feel human. You're never locked into a contract."
   },
   {
     question: "Where is Lotus Rose Counseling located?",
-    answer: "Lotus Rose Counseling is located at 237 W. 520 N. St in Orem, Utah. We serve clients throughout Utah County including Provo, Lehi, American Fork, Pleasant Grove, Lindon, and Vineyard. We also offer telehealth sessions for clients who prefer remote therapy."
+    answer: "Lotus Rose Counseling is located at 237 W. 520 N. St in Orem, Utah, in a cozy basement office under Forever by Ash. We serve clients throughout Utah County including Provo, Lehi, American Fork, Pleasant Grove, Lindon, and Vineyard. Telehealth sessions are also available."
   },
   {
-    question: "How long does therapy take to work?",
-    answer: "The timeline varies based on your specific situation and goals. Some clients experience relief within a few sessions, especially with targeted approaches like EMDR or ART. Others benefit from longer-term therapy for complex trauma or ongoing life challenges. Your therapist will work with you to set realistic expectations during your first session."
+    question: "I'm nervous about starting therapy. What should I do?",
+    answer: "Call and ask for a free 15-minute consultation. You can meet a clinician over telehealth, ask about their approach and training, see what they're like as a person. As Joy puts it: 'Sometimes just having that initial conversation opens the door.' There's no commitment — you can come to a session and if it's not the right fit, find somewhere else. No contract, no pressure."
   }
 ];
 ---
@@ -41,7 +41,7 @@ const faqSchema = [
     <div class="container hero-content">
       <p class="section-label">Mental Health Therapy in Orem, Utah</p>
       <h1>A Safe Place to Heal, Grow, and Bloom</h1>
-      <h2 class="hero-subtitle">Therapy for women, teens, and children navigating trauma, postpartum struggles, grief, and anxiety.</h2>
+      <h2 class="hero-subtitle">A safe haven for women navigating postpartum depression, birth trauma, childhood abuse, grief, and life's hardest chapters. Because you shouldn't have to carry it alone.</h2>
       <div class="btn-group hero-btns">
         <a href="/contact/" class="btn-primary">Schedule a Free Consultation</a>
         <a href="/services/" class="btn-secondary">Explore Our Services</a>
@@ -130,13 +130,36 @@ const faqSchema = [
     </div>
   </section>
 
-  <!-- ===== CREDENTIALS / THERAPISTS ===== -->
+  <!-- ===== WHY LOTUS ROSE — from Joy's own words ===== -->
   <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Why Lotus Rose</p>
+        <h2>We Don't Just Say We Specialize in Women. It's All We Do.</h2>
+        <p>A lot of practices say they see women for postpartum or perinatal issues — but they also see everyone else for everything else. At Lotus Rose, women's mental health <strong>is</strong> what we do. Not women's issues plus a wide variety of other things. This is our focus, and every training we take is geared toward getting better at it.</p>
+
+        <div class="highlight-box">
+          <h4>What That Specialization Means For You</h4>
+          <ul>
+            <li>Every therapist is trained in trauma treatment — EMDR, ART, IFS, or experiential therapy</li>
+            <li>We understand that childhood abuse often resurfaces during motherhood — and we know how to treat both together</li>
+            <li>We go beyond required continuing education, choosing trainings specifically for women's issues</li>
+            <li>Our space was designed to feel like a safe haven, not a clinical office — especially for women who've experienced traumatic events</li>
+          </ul>
+        </div>
+
+        <p>Joy founded Lotus Rose because she knows what it's like to need help navigating postpartum depression, birth trauma, and the hardest chapters of motherhood. She has three kids and her own journey with each of them. She wanted to create the place she wished existed — warm, specialized, and genuinely safe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CREDENTIALS / THERAPISTS ===== -->
+  <section class="bg-cream">
     <div class="container">
       <div class="text-container text-center">
         <p class="section-label">Your Therapists</p>
         <h2>Meet the Team Behind Lotus Rose</h2>
-        <p>Four therapists, each bringing different specialties and perspectives — united by a shared belief that healing happens in safe, genuine relationships.</p>
+        <p>Four therapists, each bringing different specialties and a shared commitment: every training they take is geared toward the things they're most passionate about — women's mental health.</p>
       </div>
       <div class="therapist-preview-grid">
         <div class="therapist-preview">
@@ -258,7 +281,7 @@ const faqSchema = [
       <p>Your first step is a free 15-minute consultation. No pressure, no commitment — just a conversation about what you're going through and how we might help.</p>
       <div class="btn-group" style="justify-content: center;">
         <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
-        <a href="tel:+18010000000" class="btn-secondary">Call (801) 000-0000</a>
+        <a href="tel:+18016424244" class="btn-secondary">Call (801) 642-4244</a>
       </div>
     </div>
   </section>
