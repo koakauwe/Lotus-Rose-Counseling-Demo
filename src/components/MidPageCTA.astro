@@ -1,0 +1,37 @@
+---
+interface Props {
+  text?: string;
+  linkText?: string;
+}
+
+const {
+  text = "Not sure where to start?",
+  linkText = "Schedule a Free Consultation"
+} = Astro.props;
+---
+
+<div class="mid-cta">
+  <div class="container">
+    <p>{text} <a href="/contact/">{linkText} →</a></p>
+  </div>
+</div>
+
+<style>
+  .mid-cta {
+    background: linear-gradient(135deg, rgba(212,165,116,0.08) 0%, rgba(232,196,184,0.12) 50%, rgba(232,237,229,0.08) 100%);
+    border-top: 1px solid rgba(212,165,116,0.15);
+    border-bottom: 1px solid rgba(212,165,116,0.15);
+    padding: 28px 20px;
+    text-align: center;
+  }
+  .mid-cta p {
+    font-size: 17px;
+    color: var(--text-medium);
+    margin: 0;
+  }
+  .mid-cta a {
+    font-weight: 700;
+    color: var(--peach-gold);
+  }
+  .mid-cta a:hover { color: var(--dusty-mauve); }
+</style>

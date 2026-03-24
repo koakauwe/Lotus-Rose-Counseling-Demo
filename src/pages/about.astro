@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Lotus Rose Counseling in Orem, UT | Our Story"
+  description="Learn about Lotus Rose Counseling — a therapy practice in Orem, Utah founded by Joy Bouchard, LCSW, specializing in trauma, postpartum, grief, and EMDR therapy."
+>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="section-label">Our Story</p>
+      <h1>Why "Lotus Rose"?</h1>
+      <p class="hero-subtitle">Two symbols of strength, resilience, and the ability to bloom after adversity.</p>
+    </div>
+  </section>
+
+  <!-- Origin Story -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <h2>The Meaning Behind the Name</h2>
+        <p>The lotus grows in muddy water and rises above the surface to bloom — a symbol of resilience, inner strength, and the ability to overcome life's most difficult moments.</p>
+        <p>The rose represents rebirth, transformation, and personal growth. Together, these symbols capture what therapy is really about: not erasing the hard parts of your story, but growing through them into something stronger.</p>
+        <p>That's the heart of Lotus Rose Counseling. We believe healing isn't about going back to who you were before. It's about moving forward — with new understanding, new tools, and a deeper connection to yourself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">What We Believe</p>
+        <h2>Therapy That Meets You Where You Are</h2>
+        <p>At Lotus Rose Counseling, we don't believe in one-size-fits-all therapy. Every person who walks through our door (or joins a telehealth session) brings a unique story, unique challenges, and unique strengths.</p>
+        <p>Our therapists are trained in evidence-based modalities — EMDR, Accelerated Resolution Therapy, Internal Family Systems, Cognitive Behavioral Therapy, and more. But techniques are only part of the equation. The other part is the relationship.</p>
+
+        <div class="highlight-box">
+          <h4>Our Core Values</h4>
+          <ul>
+            <li>The therapeutic relationship is the foundation of healing</li>
+            <li>Every client deserves a safe, nonjudgmental space</li>
+            <li>Evidence-based approaches get real results</li>
+            <li>Growth looks different for every person — and that's okay</li>
+            <li>Healing is possible at any stage of life</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Who We Work With</p>
+        <h2>Women, Teens, and Children in Utah County</h2>
+        <p>Our practice primarily serves women navigating life's most challenging moments — postpartum depression, trauma, grief, anxiety, relationship struggles, and identity transitions. We also work with teens and children dealing with behavioral challenges, anxiety, self-esteem issues, and trauma.</p>
+        <p>Whether you're a new mom struggling with intrusive thoughts, a teenager navigating faith transitions, or a woman processing decades-old trauma — there's a therapist at Lotus Rose who understands your experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Space -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Our Space</p>
+        <h2>A Place That Feels Like Home</h2>
+        <p>Our office is located in a cozy basement space under Forever by Ash in Orem. We intentionally designed every room to feel warm, inviting, and nothing like a clinical setting. Comfortable couches, soft lighting, and thoughtful touches — because the environment matters when you're doing vulnerable work.</p>
+      </div>
+      <div class="photo-grid" style="margin-top: 40px;">
+        <div class="photo-placeholder">Therapy Room</div>
+        <div class="photo-placeholder">Waiting Area</div>
+        <div class="photo-placeholder">Therapy Room</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Begin Your Healing Journey?</h2>
+      <p>Schedule a free 15-minute consultation to find the right therapist for you.</p>
+      <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative;
+    background: var(--gradient-hero);
+    padding: 100px 0 80px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 60%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .hero h1 { margin-bottom: 16px; }
+  .hero-subtitle {
+    font-size: 20px;
+    color: var(--text-medium);
+    line-height: 1.6;
+  }
+  .photo-placeholder {
+    background: var(--gradient-hero);
+    border-radius: 12px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-medium);
+    font-size: 14px;
+    box-shadow: var(--shadow-soft);
+  }
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 768px) {
+    .hero { padding: 70px 0 60px; }
+    .photo-grid { grid-template-columns: 1fr; }
+  }
+</style>

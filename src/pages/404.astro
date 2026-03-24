@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | Lotus Rose Counseling"
+  description="The page you're looking for doesn't exist. Visit Lotus Rose Counseling's homepage to find therapy services, therapist information, and contact details."
+>
+
+  <section class="error-section">
+    <div class="container text-center">
+      <p class="error-code">404</p>
+      <h1>This Page Doesn't Exist</h1>
+      <p class="error-message">The page you're looking for may have been moved or removed. Let's get you back on track.</p>
+
+      <div class="error-cards">
+        <a href="/services/" class="card">
+          <h3>Our Services</h3>
+          <p>EMDR, postpartum therapy, grief counseling, and more.</p>
+        </a>
+        <a href="/our-therapists/" class="card">
+          <h3>Our Therapists</h3>
+          <p>Meet Joy, Megan, Pam, and Brynnlee.</p>
+        </a>
+        <a href="/contact/" class="card">
+          <h3>Contact Us</h3>
+          <p>Schedule a free 15-minute consultation.</p>
+        </a>
+      </div>
+
+      <div style="margin-top: 40px;">
+        <a href="/" class="btn-primary">Back to Homepage</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .error-section {
+    padding: 120px 0;
+    background: var(--gradient-subtle);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+  }
+  .error-code {
+    font-family: var(--font-heading);
+    font-size: 120px;
+    font-weight: 700;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .error-message {
+    font-size: 18px;
+    max-width: 500px;
+    margin: 0 auto 48px;
+  }
+  .error-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .error-cards .card {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 28px 24px;
+  }
+  .error-cards .card:hover { color: inherit; }
+  .error-cards h3 { font-size: 22px; }
+
+  @media (max-width: 768px) {
+    .error-cards { grid-template-columns: 1fr; }
+    .error-code { font-size: 80px; }
+    .error-section { padding: 80px 0; }
+  }
+</style>

@@ -1,17 +1,426 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 
+const faqSchema = [
+  {
+    question: "What types of therapy does Lotus Rose Counseling offer?",
+    answer: "Lotus Rose Counseling specializes in EMDR therapy, Accelerated Resolution Therapy (ART), postpartum depression treatment, grief counseling, trauma and PTSD therapy, anxiety and depression treatment, and Internal Family Systems (IFS). Our therapists work with women, teens, and children."
+  },
+  {
+    question: "Do you accept insurance at Lotus Rose Counseling?",
+    answer: "Yes, Lotus Rose Counseling accepts most major insurance plans. Contact us for specific coverage details and to verify your benefits before your first session."
+  },
+  {
+    question: "How do I know if I need therapy?",
+    answer: "If you're experiencing persistent sadness, anxiety, difficulty sleeping, intrusive thoughts, trouble bonding with your baby, grief that feels stuck, or trauma symptoms that interfere with daily life — therapy can help. You don't need to be in crisis to benefit from working with a therapist."
+  },
+  {
+    question: "What is EMDR therapy and how does it work?",
+    answer: "EMDR (Eye Movement Desensitization and Reprocessing) uses bilateral stimulation — typically guided eye movements — to help your brain reprocess traumatic memories. Instead of talking through every detail, EMDR helps your nervous system process the memory so it no longer triggers the same emotional intensity."
+  },
+  {
+    question: "Where is Lotus Rose Counseling located?",
+    answer: "Lotus Rose Counseling is located at 237 W. 520 N. St in Orem, Utah. We serve clients throughout Utah County including Provo, Lehi, American Fork, Pleasant Grove, Lindon, and Vineyard. We also offer telehealth sessions for clients who prefer remote therapy."
+  },
+  {
+    question: "How long does therapy take to work?",
+    answer: "The timeline varies based on your specific situation and goals. Some clients experience relief within a few sessions, especially with targeted approaches like EMDR or ART. Others benefit from longer-term therapy for complex trauma or ongoing life challenges. Your therapist will work with you to set realistic expectations during your first session."
+  }
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Mental Health Therapy for Women & Teens in Orem, UT | Lotus Rose Counseling"
+  description="Lotus Rose Counseling offers EMDR, trauma therapy, postpartum depression treatment, and grief counseling for women, teens, and children in Orem and Utah County."
+  faqSchema={faqSchema}
+>
+
+  <!-- ===== HERO — Emotion ===== -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="section-label">Mental Health Therapy in Orem, Utah</p>
+      <h1>A Safe Place to Heal, Grow, and Bloom</h1>
+      <h2 class="hero-subtitle">Therapy for women, teens, and children navigating trauma, postpartum struggles, grief, and anxiety.</h2>
+      <div class="btn-group hero-btns">
+        <a href="/contact/" class="btn-primary">Schedule a Free Consultation</a>
+        <a href="/services/" class="btn-secondary">Explore Our Services</a>
+      </div>
+      <div class="hero-trust">
+        <span class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Insurance Accepted
+        </span>
+        <span class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          In-Person & Telehealth
+        </span>
+        <span class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Free 15-Min Consultation
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SYMPTOM RECOGNITION ===== -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Does This Sound Familiar?</p>
+        <h2>You Shouldn't Have to Carry This Alone</h2>
+      </div>
+      <div class="recognition-grid">
+        <a href="/postpartum-depression/" class="recognition-item">
+          <span class="recognition-icon">💭</span>
+          <span>You feel disconnected from yourself or your baby — and guilty for feeling that way</span>
+        </a>
+        <a href="/emdr-therapy/" class="recognition-item">
+          <span class="recognition-icon">🔁</span>
+          <span>A past experience keeps replaying, and you can't seem to move past it</span>
+        </a>
+        <a href="/services/" class="recognition-item">
+          <span class="recognition-icon">😰</span>
+          <span>Anxiety runs your day — racing thoughts, trouble sleeping, constant worry</span>
+        </a>
+        <a href="/services/" class="recognition-item">
+          <span class="recognition-icon">💔</span>
+          <span>Grief has settled in and you're not sure how to navigate life without someone</span>
+        </a>
+        <a href="/services/" class="recognition-item">
+          <span class="recognition-icon">😶</span>
+          <span>You're functioning on the outside but barely holding it together on the inside</span>
+        </a>
+        <a href="/services/" class="recognition-item">
+          <span class="recognition-icon">🌪️</span>
+          <span>Life transitions — faith, motherhood, identity — have left you feeling lost</span>
+        </a>
+      </div>
+      <div class="text-center" style="margin-top: 40px;">
+        <p style="max-width: 650px; margin: 0 auto 24px; font-size: 18px;">These feelings are real and valid. They're also treatable. Our therapists use evidence-based approaches to help you process, heal, and move forward.</p>
+        <a href="/contact/" class="btn-primary">Take the First Step</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL PROOF ===== -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">What Clients Say</p>
+        <h2>Real Stories of Healing</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"I finally feel like myself again. Joy helped me process things I'd been carrying for years — in a way that actually felt safe."</p>
+          <p class="testimonial-author">— Postpartum Depression Client</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"EMDR changed everything for me. I was skeptical at first, but after just a few sessions I could think about my trauma without the same overwhelming response."</p>
+          <p class="testimonial-author">— EMDR Therapy Client</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"The office feels like a warm hug. My daughter actually looks forward to her sessions, which says everything about the environment they've created."</p>
+          <p class="testimonial-author">— Parent of Teen Client</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CREDENTIALS / THERAPISTS ===== -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Your Therapists</p>
+        <h2>Meet the Team Behind Lotus Rose</h2>
+        <p>Four therapists, each bringing different specialties and perspectives — united by a shared belief that healing happens in safe, genuine relationships.</p>
+      </div>
+      <div class="therapist-preview-grid">
+        <div class="therapist-preview">
+          <div class="therapist-photo-placeholder">
+            <span>Joy</span>
+          </div>
+          <h3 class="therapist-name">Joy Bouchard</h3>
+          <p class="therapist-title">Owner & LCSW</p>
+          <p>EMDR, ART, IFS, Postpartum, Developmental Trauma, Grief</p>
+        </div>
+        <div class="therapist-preview">
+          <div class="therapist-photo-placeholder">
+            <span>Megan</span>
+          </div>
+          <h3 class="therapist-name">Megan Judd</h3>
+          <p class="therapist-title">Therapist</p>
+          <p>EMDR, IFS, Trauma, PTSD, Anxiety, Depression, Faith Transitions</p>
+        </div>
+        <div class="therapist-preview">
+          <div class="therapist-photo-placeholder">
+            <span>Pam</span>
+          </div>
+          <h3 class="therapist-name">Pam Basinger</h3>
+          <p class="therapist-title">Therapist · Español · Português</p>
+          <p>ART, ADHD, Grief, Life Transitions, Oppositional Defiance</p>
+        </div>
+        <div class="therapist-preview">
+          <div class="therapist-photo-placeholder">
+            <span>Brynnlee</span>
+          </div>
+          <h3 class="therapist-name">Brynnlee Brunt</h3>
+          <p class="therapist-title">Therapist · Telehealth Only</p>
+          <p>CBT, EMDR, EFT, Infertility, Postpartum, Anxiety</p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top: 36px;">
+        <a href="/our-therapists/" class="btn-secondary">Meet Our Full Team →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="bg-blush">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">How We Help</p>
+        <h2>Evidence-Based Therapy That Actually Works</h2>
+        <p>We don't use one-size-fits-all approaches. Each modality targets specific types of struggles — your therapist matches the right approach to your needs.</p>
+      </div>
+      <div class="card-grid" style="margin-top: 48px;">
+        <a href="/postpartum-depression/" class="card service-card">
+          <h3>Postpartum Depression</h3>
+          <p>Sadness, anxiety, intrusive thoughts, emotional numbness, difficulty bonding — these are treatable symptoms, not character flaws.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/emdr-therapy/" class="card service-card">
+          <h3>EMDR Therapy</h3>
+          <p>Helps your brain process traumatic memories without reliving every detail. Effective for PTSD, phobias, anxiety, and childhood trauma.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <div class="card service-card">
+          <h3>Accelerated Resolution Therapy</h3>
+          <p>Combines eye movements with voluntary image replacement to rapidly reduce distress from traumatic memories — often in 1-5 sessions.</p>
+        </div>
+        <div class="card service-card">
+          <h3>Grief & Loss Counseling</h3>
+          <p>Grief doesn't follow a timeline. Whether mourning a loved one, a relationship, or a version of yourself — we meet you where you are.</p>
+        </div>
+        <div class="card service-card">
+          <h3>Anxiety & Depression</h3>
+          <p>Racing thoughts, constant worry, emotional flatness. CBT, IFS, and somatic approaches tailored to what's driving your specific symptoms.</p>
+        </div>
+        <div class="card service-card">
+          <h3>Teen & Child Therapy</h3>
+          <p>Behavioral challenges, school anxiety, self-esteem, trauma. Age-appropriate therapy where young people feel safe to open up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OFFICE GALLERY ===== -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Our Space</p>
+        <h2>Therapy Rooms Designed to Feel Like Home</h2>
+        <p>Located in a cozy basement office under Forever by Ash in Orem. Warm lighting, comfortable seating, and a space that feels nothing like a clinical office.</p>
+      </div>
+      <div class="photo-grid" style="margin-top: 40px;">
+        <div class="photo-placeholder">Therapy Room 1</div>
+        <div class="photo-placeholder">Therapy Room 2</div>
+        <div class="photo-placeholder">Therapy Room 3</div>
+        <div class="photo-placeholder">Waiting Area</div>
+        <div class="photo-placeholder">Therapy Room 4</div>
+        <div class="photo-placeholder">Therapy Room 5</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+      <div class="faq-link">
+        <a href="/contact/">Have another question? Reach out →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Start Feeling Like Yourself Again?</h2>
+      <p>Your first step is a free 15-minute consultation. No pressure, no commitment — just a conversation about what you're going through and how we might help.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+        <a href="tel:+18010000000" class="btn-secondary">Call (801) 000-0000</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    position: relative;
+    background: var(--gradient-hero);
+    padding: 120px 0 100px;
+    overflow: hidden;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 60%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-size: 56px;
+    line-height: 1.15;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+  .hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-medium);
+    line-height: 1.6;
+    margin-bottom: 36px;
+  }
+  .hero-btns {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .hero-trust {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  .trust-item svg { stroke: var(--peach-gold); }
+
+  /* Symptom Recognition */
+  .recognition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .recognition-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 24px;
+    background: var(--warm-cream);
+    border-radius: 12px;
+    border-left: 3px solid var(--peach-gold);
+    color: var(--text-medium);
+    font-size: 16px;
+    line-height: 1.6;
+    transition: all var(--transition-smooth);
+    text-decoration: none;
+  }
+  .recognition-item:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-soft);
+    transform: translateX(4px);
+    color: var(--text-dark);
+  }
+  .recognition-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* Therapist Preview */
+  .therapist-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+    text-align: center;
+  }
+  .therapist-preview p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .therapist-photo-placeholder {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--gradient-hero);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    color: var(--text-medium);
+    border: 4px solid var(--soft-rose);
+  }
+  .therapist-preview .therapist-name {
+    font-size: 26px;
+    margin-bottom: 4px;
+  }
+
+  /* Service cards as links */
+  .service-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .service-card:hover { color: inherit; }
+
+  /* Photo placeholders */
+  .photo-placeholder {
+    background: var(--gradient-hero);
+    border-radius: 12px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-medium);
+    font-size: 14px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  @media (max-width: 1100px) {
+    .hero { padding: 80px 0 70px; }
+    .hero h1 { font-size: 42px; }
+    .therapist-preview-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 34px; }
+    .hero-subtitle { font-size: 17px; }
+    .hero-trust { flex-direction: column; align-items: center; gap: 12px; }
+    .recognition-grid { grid-template-columns: 1fr; }
+    .therapist-preview-grid { grid-template-columns: 1fr; }
+  }
+</style>

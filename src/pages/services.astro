@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = [
+  {
+    question: "What therapy modalities does Lotus Rose Counseling use?",
+    answer: "Our therapists are trained in EMDR (Eye Movement Desensitization and Reprocessing), Accelerated Resolution Therapy (ART), Internal Family Systems (IFS), Cognitive Behavioral Therapy (CBT), Emotionally Focused Therapy (EFT), and Self-Compassion techniques. We match the approach to your specific needs."
+  },
+  {
+    question: "Do you offer both in-person and telehealth therapy?",
+    answer: "Yes. Most of our therapists see clients in-person at our Orem office. Brynnlee Brunt offers telehealth-only sessions, and other therapists may offer telehealth depending on availability. Ask during your free consultation."
+  },
+  {
+    question: "What's the difference between EMDR and ART?",
+    answer: "Both use eye movements to process trauma, but they work differently. EMDR helps your brain reprocess traumatic memories over multiple sessions. ART uses voluntary image replacement to change how distressing memories are stored — often producing results in 1-5 sessions. Your therapist can help determine which is right for you."
+  }
+];
+---
+
+<BaseLayout
+  title="Therapy Services in Orem, UT | Lotus Rose Counseling"
+  description="Explore therapy services at Lotus Rose Counseling: EMDR, trauma therapy, postpartum depression, grief counseling, anxiety treatment, and teen therapy in Orem, Utah."
+  faqSchema={faqSchema}
+>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="section-label">Our Services</p>
+      <h1>Therapy Services in Orem, Utah</h1>
+      <p class="hero-subtitle">Evidence-based therapy matched to your specific needs — not a one-size-fits-all approach.</p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <h2>What We Treat</h2>
+        <p>Every person's experience is different, and treatment should reflect that. Our therapists assess your specific situation and use the modalities that will be most effective for you.</p>
+      </div>
+      <div class="card-grid" style="margin-top: 40px;">
+        <a href="/postpartum-depression/" class="card service-card">
+          <h3>Postpartum Depression</h3>
+          <p>Sadness, anxiety, intrusive thoughts, numbness, difficulty bonding, rage, guilt. Specialized therapy for mothers in the first years after birth — including postpartum anxiety, OCD, and psychosis screening.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/emdr-therapy/" class="card service-card">
+          <h3>EMDR Therapy</h3>
+          <p>Eye Movement Desensitization and Reprocessing for trauma, PTSD, phobias, anxiety, and disturbing memories. Your brain processes the memory so it no longer triggers the same emotional intensity.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <div class="card">
+          <h3>Accelerated Resolution Therapy</h3>
+          <p>Rapid trauma processing using eye movements and voluntary image replacement. Clients often experience significant relief in 1-5 sessions. Effective for single-event trauma, phobias, grief, and anxiety.</p>
+        </div>
+        <div class="card">
+          <h3>Grief & Loss Counseling</h3>
+          <p>Processing the death of a loved one, miscarriage, divorce, estrangement, or loss of identity. We don't rush you through stages — we meet you where you are and help you find your own path forward.</p>
+        </div>
+        <div class="card">
+          <h3>Trauma & PTSD</h3>
+          <p>Childhood trauma, sexual assault, accidents, combat, medical trauma. Using EMDR, ART, and IFS, we help your nervous system process what happened without requiring you to relive every detail.</p>
+        </div>
+        <div class="card">
+          <h3>Anxiety & Depression</h3>
+          <p>Generalized anxiety, panic attacks, social anxiety, persistent depression, emotional numbness. CBT restructures thought patterns while somatic approaches address what's happening in your body.</p>
+        </div>
+        <div class="card">
+          <h3>Teen & Child Therapy</h3>
+          <p>Behavioral challenges, school anxiety, self-esteem, bullying, trauma, ADHD, oppositional defiance. Age-appropriate approaches in an environment where young people feel genuinely safe.</p>
+        </div>
+        <div class="card">
+          <h3>Life Transitions</h3>
+          <p>Faith transitions, motherhood identity shifts, career changes, relationship shifts, moves. When the ground feels unstable, therapy provides a steady place to process and recalibrate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modalities -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Our Approaches</p>
+        <h2>Therapy Modalities We Use</h2>
+        <p>These are the evidence-based tools in our toolkit. Your therapist selects and combines them based on your specific needs.</p>
+      </div>
+      <div class="modalities-grid" style="margin-top: 40px;">
+        <div class="modality">
+          <h3>EMDR</h3>
+          <p>Eye Movement Desensitization and Reprocessing — gold standard for trauma processing</p>
+        </div>
+        <div class="modality">
+          <h3>ART</h3>
+          <p>Accelerated Resolution Therapy — rapid trauma relief, often in 1-5 sessions</p>
+        </div>
+        <div class="modality">
+          <h3>IFS</h3>
+          <p>Internal Family Systems — working with different "parts" of yourself with compassion</p>
+        </div>
+        <div class="modality">
+          <h3>CBT</h3>
+          <p>Cognitive Behavioral Therapy — restructuring thought patterns that drive anxiety and depression</p>
+        </div>
+        <div class="modality">
+          <h3>EFT</h3>
+          <p>Emotionally Focused Therapy — strengthening emotional bonds in relationships</p>
+        </div>
+        <div class="modality">
+          <h3>Self-Compassion</h3>
+          <p>Building a kinder relationship with yourself through structured practice</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>Questions About Our Services</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+      <div class="faq-link">
+        <a href="/contact/">Have another question? Reach out →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Not Sure What You Need?</h2>
+      <p>That's completely normal. Schedule a free 15-minute consultation and we'll help figure out the right approach together.</p>
+      <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative; background: var(--gradient-hero);
+    padding: 100px 0 80px; text-align: center; overflow: hidden;
+  }
+  .hero-overlay { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 60%); }
+  .hero-content { position: relative; z-index: 1; max-width: 750px; margin: 0 auto; }
+  .hero-subtitle { font-size: 19px; color: var(--text-medium); line-height: 1.6; }
+  .service-card { text-decoration: none; color: inherit; display: block; }
+  .service-card:hover { color: inherit; }
+  .modalities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .modality {
+    background: var(--white);
+    padding: 32px 28px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+  }
+  .modality h3 { font-size: 28px; color: var(--peach-gold); margin-bottom: 8px; }
+  .modality p { font-size: 15px; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .hero { padding: 70px 0 60px; }
+    .modalities-grid { grid-template-columns: 1fr; }
+  }
+</style>

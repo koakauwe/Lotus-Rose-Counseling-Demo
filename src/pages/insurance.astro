@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = [
+  {
+    question: "Does Lotus Rose Counseling accept insurance?",
+    answer: "Yes, Lotus Rose Counseling accepts most major insurance plans. Contact us to verify your specific plan and benefits before your first session."
+  },
+  {
+    question: "How much does therapy cost without insurance?",
+    answer: "Session rates vary by therapist and service. Contact us for current self-pay rates. We want therapy to be accessible, so we're happy to discuss options during your free consultation."
+  },
+  {
+    question: "Do you offer a free consultation?",
+    answer: "Yes. We offer a free 15-minute phone consultation so you can ask questions, discuss what you're going through, and determine if Lotus Rose is the right fit before committing to a full session."
+  }
+];
+---
+
+<BaseLayout
+  title="Insurance & Pricing | Lotus Rose Counseling in Orem, UT"
+  description="Insurance information and therapy pricing at Lotus Rose Counseling in Orem, Utah. We accept most major insurance plans. Free 15-minute consultation available."
+  faqSchema={faqSchema}
+>
+
+  <!-- No hero — straight to content per checklist #39 -->
+  <section class="insurance-top bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Insurance & Pricing</p>
+        <h1>Making Therapy Accessible</h1>
+        <p>We believe financial barriers shouldn't prevent you from getting the help you need. Lotus Rose Counseling accepts most major insurance plans and offers a free consultation to help you understand your coverage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white" style="padding-top: 20px;">
+    <div class="container">
+      <div class="text-container">
+        <div class="highlight-box">
+          <h3>Insurance Accepted</h3>
+          <p>We accept most major insurance plans. To verify your specific coverage:</p>
+          <ul>
+            <li>Call us at <a href="tel:+18010000000">(801) 000-0000</a></li>
+            <li>Fill out our <a href="/contact/">contact form</a> and select "Insurance coverage question"</li>
+            <li>Have your insurance card ready — we'll verify your benefits for you</li>
+          </ul>
+        </div>
+
+        <h2>What to Know Before Your First Session</h2>
+
+        <h3>Free 15-Minute Consultation</h3>
+        <p>Every new client starts with a free phone consultation. This isn't a sales pitch — it's a chance for you to ask questions, describe what you're going through, and see if Lotus Rose feels like the right fit. No commitment required.</p>
+
+        <h3>Understanding Your Benefits</h3>
+        <p>Insurance coverage for therapy varies by plan. Some things to check:</p>
+        <ul style="padding-left: 24px; margin-bottom: 24px;">
+          <li style="margin-bottom: 8px;">Does your plan cover outpatient mental health services?</li>
+          <li style="margin-bottom: 8px;">What is your copay or coinsurance for therapy visits?</li>
+          <li style="margin-bottom: 8px;">Do you need a referral from your primary care provider?</li>
+          <li style="margin-bottom: 8px;">Is there a deductible that applies to mental health services?</li>
+          <li style="margin-bottom: 8px;">Is there a limit on the number of sessions per year?</li>
+        </ul>
+        <p>We can help you navigate these questions — just ask during your consultation or contact us beforehand.</p>
+
+        <h3>Self-Pay Options</h3>
+        <p>If you don't have insurance or prefer to pay out of pocket, self-pay rates are available. Contact us for current pricing. Some advantages of self-pay:</p>
+        <ul style="padding-left: 24px; margin-bottom: 24px;">
+          <li style="margin-bottom: 8px;">No diagnosis required on your permanent medical record</li>
+          <li style="margin-bottom: 8px;">No session limits imposed by insurance</li>
+          <li style="margin-bottom: 8px;">Complete privacy — no insurance company involved in your treatment</li>
+        </ul>
+
+        <h3>Cancellation Policy</h3>
+        <p>We ask for 24 hours' notice if you need to cancel or reschedule. Late cancellations and no-shows may be subject to a fee. We understand life happens — especially for moms — so please communicate with us and we'll work with you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>Insurance & Pricing FAQs</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+      <div class="faq-link">
+        <a href="/contact/">Have another question? Reach out →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Get Started?</h2>
+      <p>Schedule a free 15-minute consultation and we'll help you understand your coverage and find the right therapist.</p>
+      <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .insurance-top { padding: 80px 0 20px; }
+  @media (max-width: 768px) {
+    .insurance-top { padding: 60px 0 10px; }
+  }
+</style>

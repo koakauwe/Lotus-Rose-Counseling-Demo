@@ -1,0 +1,11 @@
+{
+  "name": "Lotus Rose Counseling",
+  "short_name": "Lotus Rose",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8F3",
+  "theme_color": "#D4A574",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" }
+  ]
+}

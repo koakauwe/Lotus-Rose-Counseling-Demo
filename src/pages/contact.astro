@@ -1,0 +1,212 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact Lotus Rose Counseling in Orem, UT | Schedule Appointment"
+  description="Contact Lotus Rose Counseling to schedule a free 15-minute consultation. Located at 237 W. 520 N. St, Orem, UT 84057. Call or fill out our contact form."
+>
+
+  <!-- No hero — straight to content per checklist #39 -->
+  <section class="contact-top bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Get in Touch</p>
+        <h1>Schedule a Free Consultation</h1>
+        <p>Fill out the form below and we'll reach out within 1 business day. Your first step is a free 15-minute conversation — no pressure, no commitment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form-wrap">
+          <form action="#" method="post" class="contact-form">
+            <p class="demo-note">This is a demo site — form submissions are not active.</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone *</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="Your email address" required />
+            </div>
+
+            <!-- Intent dropdown per checklist #41 -->
+            <div class="form-group">
+              <label for="intent">What brings you here? *</label>
+              <select id="intent" name="intent" required>
+                <option value="" disabled selected>Select one...</option>
+                <option value="new-client">I'm a new client looking for therapy</option>
+                <option value="returning">I'm a returning client</option>
+                <option value="question">I have a question about services</option>
+                <option value="insurance">I want to check insurance coverage</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <!-- Service dropdown per checklist #41 -->
+            <div class="form-group">
+              <label for="service">Service you're interested in (optional)</label>
+              <select id="service" name="service">
+                <option value="" selected>Not sure yet</option>
+                <option value="postpartum">Postpartum Depression Therapy</option>
+                <option value="emdr">EMDR Therapy</option>
+                <option value="art">Accelerated Resolution Therapy</option>
+                <option value="grief">Grief Counseling</option>
+                <option value="anxiety-depression">Anxiety & Depression</option>
+                <option value="trauma">Trauma & PTSD</option>
+                <option value="teen-child">Teen or Child Therapy</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">What can we help you with? *</label>
+              <textarea id="message" name="message" placeholder="Tell us a little about what you're going through..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-pref">How would you prefer we reach out?</label>
+              <select id="contact-pref" name="contact_preference">
+                <option value="no-preference">No preference</option>
+                <option value="call">Phone call</option>
+                <option value="text">Text message</option>
+                <option value="email">Email</option>
+              </select>
+            </div>
+
+            <!-- Hidden attribution field per checklist #41 -->
+            <input type="hidden" name="source" value="website-contact-form" />
+
+            <button type="submit" class="btn-primary form-submit">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info Sidebar -->
+        <div class="contact-sidebar">
+          <div class="sidebar-card">
+            <h3>Contact Info</h3>
+            <ul class="contact-info-list">
+              <li>
+                <strong>Phone</strong>
+                <a href="tel:+18010000000">(801) 000-0000</a>
+              </li>
+              <li>
+                <strong>Email</strong>
+                <a href="mailto:info@lotusrosecounseling.com">info@lotusrosecounseling.com</a>
+              </li>
+              <li>
+                <strong>Address</strong>
+                <span>237 W. 520 N. St<br>Orem, UT 84057</span>
+              </li>
+              <li>
+                <strong>Hours</strong>
+                <span>Monday – Friday: 9am – 6pm<br>By appointment</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Our Location</h3>
+            <p class="map-note">Located in a basement office underneath Forever by Ash in Orem.</p>
+            <div class="map-embed">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.0!2d-111.696!3d40.305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDE4JzE4LjAiTiAxMTHCsDQxJzQ1LjYiVw!5e0!3m2!1sen!2sus!4v1"
+                width="100%"
+                height="250"
+                style="border:0; border-radius: 12px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Lotus Rose Counseling location in Orem, Utah"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .contact-top {
+    padding: 80px 0 20px;
+  }
+  .contact-section {
+    padding-top: 20px;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .demo-note {
+    background: var(--light-sage);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text-medium);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .form-submit {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .sidebar-card {
+    background: var(--warm-cream);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+  .sidebar-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .contact-info-list {
+    list-style: none;
+  }
+  .contact-info-list li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  .contact-info-list strong {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--peach-gold);
+    margin-bottom: 4px;
+  }
+  .contact-info-list a {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+  .map-note {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .map-embed {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-top { padding: 60px 0 10px; }
+  }
+</style>

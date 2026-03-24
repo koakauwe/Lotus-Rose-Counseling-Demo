@@ -1,0 +1,156 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import MidPageCTA from '../components/MidPageCTA.astro';
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  sectionLabel: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  ctaLabel?: string;
+  ctaTitle?: string;
+  ctaText?: string;
+  faqSchema?: FAQItem[];
+  therapySchema?: {
+    name: string;
+    description: string;
+    alternateName?: string[];
+  };
+}
+
+const {
+  title,
+  description,
+  sectionLabel,
+  heroTitle,
+  heroSubtitle,
+  ctaLabel = "Take the First Step",
+  ctaTitle = "Ready to Start Healing?",
+  ctaText = "Your first step is a free 15-minute consultation. No pressure — just a conversation about what you're going through and how we might help.",
+  faqSchema,
+  therapySchema
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description} faqSchema={faqSchema}>
+
+  <!-- Service Hero -->
+  <section class="service-hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="section-label">{sectionLabel}</p>
+      <h1>{heroTitle}</h1>
+      <p class="hero-subtitle">{heroSubtitle}</p>
+      <div class="btn-group hero-btns">
+        <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+        <a href="/our-therapists/" class="btn-secondary">Meet Our Therapists</a>
+      </div>
+      <p class="hero-phone">
+        <a href="tel:+18010000000">Call (801) 000-0000</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <slot />
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <p class="section-label">{ctaLabel}</p>
+      <h2>{ctaTitle}</h2>
+      <p>{ctaText}</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+        <a href="tel:+18010000000" class="btn-secondary">Call (801) 000-0000</a>
+      </div>
+      <p class="service-area-text">Serving Orem, Provo, Lehi, American Fork, Pleasant Grove, Lindon &amp; surrounding Utah County. In-person and telehealth sessions available.</p>
+    </div>
+  </section>
+
+  {therapySchema && (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "MedicalTherapy",
+      "@id": `https://lotusrosecounseling.com/#${therapySchema.name.toLowerCase().replace(/\s+/g, '-')}`,
+      "name": therapySchema.name,
+      "description": therapySchema.description,
+      ...(therapySchema.alternateName && { "alternateName": therapySchema.alternateName }),
+      "availableService": {
+        "@type": "MedicalTherapy",
+        "name": therapySchema.name,
+        "provider": {
+          "@id": "https://lotusrosecounseling.com/#business"
+        }
+      }
+    }, null, 2)} />
+  )}
+
+</BaseLayout>
+
+<style>
+  .service-hero {
+    position: relative;
+    background: var(--gradient-hero);
+    padding: 100px 0 80px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 60%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .service-hero h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .hero-subtitle {
+    font-size: 19px;
+    color: var(--text-medium);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-btns {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .hero-phone {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  .hero-phone a {
+    color: var(--text-medium);
+    font-weight: 600;
+  }
+  .hero-phone a:hover { color: var(--peach-gold); }
+
+  .service-area-text {
+    margin-top: 28px;
+    font-size: 14px;
+    color: var(--text-medium);
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .service-hero { padding: 70px 0 60px; }
+    .service-hero h1 { font-size: 32px; }
+    .hero-subtitle { font-size: 16px; }
+  }
+</style>

@@ -1,0 +1,213 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import MidPageCTA from '../components/MidPageCTA.astro';
+
+const faqSchema = [
+  {
+    question: "What does EMDR therapy feel like?",
+    answer: "During EMDR, your therapist guides you through sets of bilateral stimulation (usually eye movements following their hand or a light bar) while you briefly focus on a distressing memory. You don't have to describe the memory in detail. Most clients describe feeling a shift — the memory becomes less emotionally charged over the course of the session. Some feel tired afterward, similar to a good workout."
+  },
+  {
+    question: "How many EMDR sessions will I need?",
+    answer: "It depends on the complexity of what you're processing. Single-event traumas (a car accident, one disturbing experience) may resolve in 3-6 sessions. Complex or developmental trauma (childhood abuse, multiple traumatic events) typically takes longer — often 12-20+ sessions. Your therapist will give you a realistic estimate after your initial assessment."
+  },
+  {
+    question: "Is EMDR therapy safe?",
+    answer: "Yes. EMDR is recognized as an effective treatment by the World Health Organization, the American Psychological Association, and the Department of Veterans Affairs. It has over 30 years of clinical research supporting its safety and effectiveness. Some clients experience temporary increases in distress between sessions as memories are being processed, which your therapist will prepare you for."
+  },
+  {
+    question: "What can EMDR therapy treat?",
+    answer: "EMDR was originally developed for PTSD but is now used effectively for anxiety, phobias, panic attacks, grief, childhood trauma, sexual assault, accident trauma, disturbing memories, performance anxiety, and some chronic pain conditions. It works by helping your brain's natural healing process complete what got stuck."
+  },
+  {
+    question: "Do I have to talk about my trauma in detail during EMDR?",
+    answer: "No. Unlike traditional talk therapy, EMDR doesn't require you to describe your traumatic experience in detail. You'll briefly identify the memory and the emotions and body sensations connected to it, but the processing happens internally during bilateral stimulation. Many clients find this less overwhelming than approaches that require detailed retelling."
+  }
+];
+---
+
+<ServiceLayout
+  title="EMDR Therapy in Orem, UT | Lotus Rose Counseling"
+  description="EMDR therapy in Orem, Utah for trauma, PTSD, anxiety, and phobias. Evidence-based trauma processing at Lotus Rose Counseling with trained EMDR therapists."
+  sectionLabel="EMDR Therapy"
+  heroTitle="Your Brain Already Knows How to Heal. EMDR Helps It Finish."
+  heroSubtitle="Eye Movement Desensitization and Reprocessing helps your nervous system process traumatic memories — without requiring you to relive every detail."
+  faqSchema={faqSchema}
+  therapySchema={{
+    name: "EMDR Therapy",
+    description: "Eye Movement Desensitization and Reprocessing (EMDR) is an evidence-based therapy for trauma, PTSD, anxiety, phobias, and disturbing memories.",
+    alternateName: ["Eye Movement Desensitization and Reprocessing", "EMDR Treatment", "EMDR Trauma Therapy"]
+  }}
+>
+
+  <!-- Opening -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <h2>When the Memory Won't Let Go</h2>
+        <p>You know it's in the past. Logically, you understand that. But your body hasn't gotten the message. A sound, a smell, a situation — and suddenly you're right back there. Heart racing, muscles tight, brain screaming danger.</p>
+        <p><strong>That's not a weakness. It's your nervous system doing exactly what it was designed to do</strong> — protect you. The problem is that the traumatic memory got stored in a way that keeps triggering the alarm, even when the threat is long gone.</p>
+        <p>EMDR helps your brain reprocess that memory so the alarm stops firing. Not by erasing what happened, but by allowing your natural healing process to complete what got interrupted by trauma.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">How EMDR Works</p>
+        <h2>The Science Behind EMDR</h2>
+        <p>When something traumatic happens, your brain's normal information-processing system gets overwhelmed. The memory gets stored with all the original emotions, body sensations, and beliefs intact — as if the event is still happening.</p>
+        <p>EMDR uses bilateral stimulation (typically guided eye movements) to activate both hemispheres of your brain while you briefly focus on the disturbing memory. This appears to mimic the processing that happens during REM sleep, allowing your brain to:</p>
+
+        <div class="highlight-box">
+          <h4>What Happens During EMDR Processing</h4>
+          <ul>
+            <li>Separate the memory from the emotional and physical distress</li>
+            <li>Replace negative beliefs about yourself ("I'm not safe," "It was my fault") with adaptive ones</li>
+            <li>Reduce or eliminate the body's stress response to the memory</li>
+            <li>Allow you to recall the event without being emotionally overwhelmed</li>
+          </ul>
+        </div>
+
+        <h3>The 8-Phase Protocol</h3>
+        <p>EMDR isn't just eye movements. It's a structured 8-phase protocol developed by Dr. Francine Shapiro:</p>
+        <ol style="padding-left: 24px; margin-bottom: 24px;">
+          <li style="margin-bottom: 12px;"><strong>History taking</strong> — understanding your story and identifying target memories</li>
+          <li style="margin-bottom: 12px;"><strong>Preparation</strong> — building coping skills and explaining the process</li>
+          <li style="margin-bottom: 12px;"><strong>Assessment</strong> — identifying the specific image, beliefs, emotions, and body sensations connected to the memory</li>
+          <li style="margin-bottom: 12px;"><strong>Desensitization</strong> — bilateral stimulation while processing the memory</li>
+          <li style="margin-bottom: 12px;"><strong>Installation</strong> — strengthening the positive belief you want to hold</li>
+          <li style="margin-bottom: 12px;"><strong>Body scan</strong> — checking for any remaining physical tension</li>
+          <li style="margin-bottom: 12px;"><strong>Closure</strong> — returning to a calm state before leaving the session</li>
+          <li style="margin-bottom: 12px;"><strong>Reevaluation</strong> — checking progress at the start of the next session</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <MidPageCTA text="Wondering if EMDR is right for you?" linkText="Schedule a Free Consultation" />
+
+  <!-- What EMDR Treats -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">What EMDR Treats</p>
+        <h2>Conditions That Respond Well to EMDR</h2>
+      </div>
+      <div class="condition-grid">
+        <div class="card">
+          <h3>PTSD & Complex Trauma</h3>
+          <p>Single-event trauma, childhood abuse, sexual assault, combat trauma, domestic violence, accidents. EMDR is considered a first-line treatment for PTSD by the WHO and APA.</p>
+        </div>
+        <div class="card">
+          <h3>Anxiety & Panic</h3>
+          <p>Generalized anxiety, panic attacks, health anxiety. EMDR addresses the root memories and experiences that drive anxiety patterns.</p>
+        </div>
+        <div class="card">
+          <h3>Phobias</h3>
+          <p>Fear of flying, needles, dogs, driving, medical procedures. EMDR can often resolve specific phobias in just a few sessions.</p>
+        </div>
+        <div class="card">
+          <h3>Grief & Loss</h3>
+          <p>When grief feels "stuck" — unable to move forward, constantly replaying the loss. EMDR helps process the painful aspects without erasing the love.</p>
+        </div>
+        <div class="card">
+          <h3>Disturbing Memories</h3>
+          <p>Memories that keep intruding — flashbacks, nightmares, emotional flooding when triggered. EMDR reduces the intensity so the memory loses its power.</p>
+        </div>
+        <div class="card">
+          <h3>Birth Trauma</h3>
+          <p>Traumatic birth experiences, emergency C-sections, NICU stays, birth complications. EMDR helps mothers process birth trauma and reduce its impact on bonding and daily life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Therapists Who Offer EMDR -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Our EMDR Therapists</p>
+        <h2>Trained EMDR Therapists at Lotus Rose</h2>
+        <p>Three of our four therapists are trained in EMDR, each bringing different specialties:</p>
+      </div>
+      <div class="card-grid" style="margin-top: 32px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div class="card" style="text-align: center;">
+          <h3>Joy Bouchard, LCSW</h3>
+          <p>EMDR for developmental trauma, postpartum issues, and grief. Practice owner with extensive trauma training.</p>
+          <a href="/our-therapists/" class="card-link">Read full bio →</a>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3>Megan Judd</h3>
+          <p>EMDR for trauma, PTSD, anxiety, and faith transitions. Works with teens and adults.</p>
+          <a href="/our-therapists/" class="card-link">Read full bio →</a>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3>Brynnlee Brunt</h3>
+          <p>EMDR for anxiety, postpartum, infertility, and relationship issues. Telehealth only.</p>
+          <a href="/our-therapists/" class="card-link">Read full bio →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Related Services</p>
+        <h2>You May Also Be Interested In</h2>
+      </div>
+      <div class="card-grid" style="margin-top: 32px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <a href="/postpartum-depression/" class="card service-link">
+          <h3>Postpartum Depression</h3>
+          <p>EMDR combined with talk therapy for postpartum depression, anxiety, and birth trauma.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/services/" class="card service-link">
+          <h3>Accelerated Resolution Therapy</h3>
+          <p>A related approach that uses eye movements and image replacement for rapid trauma relief.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>EMDR Therapy FAQs</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+      <div class="faq-link">
+        <a href="/contact/">Have another question? Reach out →</a>
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>
+
+<style>
+  .condition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .service-link { text-decoration: none; color: inherit; display: block; }
+  .service-link:hover { color: inherit; }
+  @media (max-width: 768px) {
+    .condition-grid { grid-template-columns: 1fr; }
+  }
+</style>

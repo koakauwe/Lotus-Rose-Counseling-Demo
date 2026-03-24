@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TherapistCard from '../components/TherapistCard.astro';
+
+const faqSchema = [
+  {
+    question: "How do I choose the right therapist at Lotus Rose?",
+    answer: "Each of our therapists has different specialties and approaches. During your free 15-minute consultation, we'll help match you with the therapist whose experience best fits your needs. You can also read each therapist's bio on this page to see who resonates with you."
+  },
+  {
+    question: "Do all therapists at Lotus Rose accept insurance?",
+    answer: "Yes, our therapists accept most major insurance plans. Contact us to verify your specific coverage before scheduling your first appointment."
+  },
+  {
+    question: "Can I switch therapists if the fit isn't right?",
+    answer: "Absolutely. The therapeutic relationship is the most important factor in your progress. If you feel a different therapist would be a better fit, we'll help you transition smoothly — no judgment."
+  }
+];
+---
+
+<BaseLayout
+  title="Our Therapists in Orem, UT | Lotus Rose Counseling"
+  description="Meet the therapists at Lotus Rose Counseling in Orem, Utah. Joy Bouchard (LCSW), Megan Judd, Pam Basinger, and Brynnlee Brunt specialize in EMDR, trauma, and postpartum therapy."
+  faqSchema={faqSchema}
+>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="section-label">Your Therapists</p>
+      <h1>Meet the Team at Lotus Rose Counseling</h1>
+      <p class="hero-subtitle">Four therapists, each bringing different training and lived experience — all dedicated to creating a space where healing happens.</p>
+    </div>
+  </section>
+
+  <!-- Therapists -->
+  <section class="bg-white">
+    <div class="container">
+      <TherapistCard
+        name="Joy Bouchard"
+        title="Owner & Licensed Clinical Social Worker (LCSW)"
+        specialties={["EMDR", "Accelerated Resolution Therapy", "Internal Family Systems", "Postpartum Depression", "Developmental Trauma", "PTSD", "Grief & Loss", "Perfectionism"]}
+        bio="Joy's approach starts with building genuine rapport — she believes the therapeutic relationship is the foundation for everything that follows. Trained in EMDR and Accelerated Resolution Therapy, she helps clients process trauma without having to relive every detail. Joy specializes in maternal mental health, developmental trauma, and grief, working primarily with women and teens. She integrates IFS, Self-Compassion, and CBT based on each client's unique needs."
+        bookingText="Join Waitlist"
+      />
+
+      <TherapistCard
+        name="Megan Judd"
+        title="Therapist"
+        specialties={["EMDR", "Internal Family Systems", "Trauma", "PTSD", "Anxiety", "Depression", "Faith Transitions", "Self-Harm"]}
+        bio="Megan works with teens and adults navigating trauma, anxiety, depression, and faith transitions. Her approach is grounded in EMDR and Internal Family Systems — two evidence-based modalities that help clients heal at the root rather than just managing symptoms. Clients describe her as warm, understanding, and easy to talk to. She brings creativity, humor, and curiosity into every session."
+        bookingText="Book an Appointment"
+      />
+
+      <TherapistCard
+        name="Pam Basinger"
+        title="Therapist"
+        specialties={["Accelerated Resolution Therapy", "ADHD", "Oppositional Defiance Disorder", "Grief & Loss", "Life Transitions", "Anxiety", "Depression"]}
+        languages="Habla Español · Eu falo Português"
+        bio="Originally from Brazil, Pam brings a multicultural perspective to her work. She earned her Master's in Social Work from Boise State University and has experience in school counseling and hospice care. Pam primarily uses Accelerated Resolution Therapy (ART) to help clients process trauma and find practical strategies for moving forward. She works with women, teens, and children dealing with anxiety, depression, life transitions, and behavioral challenges."
+        bookingText="Book an Appointment"
+      />
+
+      <TherapistCard
+        name="Brynnlee Brunt"
+        title="Therapist"
+        specialties={["CBT", "EMDR", "Emotionally Focused Therapy", "Infertility", "Pregnancy & Postpartum", "Anxiety", "Depression", "Relationship Issues", "Self-Esteem", "OCD"]}
+        telehealth={true}
+        bio="Brynnlee works with women navigating infertility, pregnancy, postpartum challenges, relationship issues, and anxiety. She uses Cognitive Behavioral Therapy, EMDR, and Emotionally Focused Therapy to help clients process emotions and build practical coping skills. Brynnlee sees clients via telehealth only, making therapy accessible from anywhere in Utah."
+        bookingText="Book an Appointment"
+      />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>Questions About Our Therapists</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+      <div class="faq-link">
+        <a href="/contact/">Have another question? Reach out →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Find Your Therapist</h2>
+      <p>Not sure who's the best fit? Schedule a free 15-minute consultation and we'll help match you with the right person.</p>
+      <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Person Schema for each therapist -->
+  <script type="application/ld+json" set:html={JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://lotusrosecounseling.com/#joy-bouchard",
+      "name": "Joy Bouchard",
+      "jobTitle": "Licensed Clinical Social Worker",
+      "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
+      "knowsAbout": ["EMDR Therapy", "Accelerated Resolution Therapy", "Internal Family Systems", "Postpartum Depression", "Developmental Trauma", "Grief Counseling"],
+      "credential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Licensed Clinical Social Worker (LCSW)" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://lotusrosecounseling.com/#megan-judd",
+      "name": "Megan Judd",
+      "jobTitle": "Therapist",
+      "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
+      "knowsAbout": ["EMDR Therapy", "Internal Family Systems", "Trauma", "PTSD", "Anxiety", "Depression", "Faith Transitions"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://lotusrosecounseling.com/#pam-basinger",
+      "name": "Pam Basinger",
+      "jobTitle": "Therapist",
+      "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
+      "knowsAbout": ["Accelerated Resolution Therapy", "ADHD", "Grief", "Life Transitions"],
+      "knowsLanguage": ["English", "Spanish", "Portuguese"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://lotusrosecounseling.com/#brynnlee-brunt",
+      "name": "Brynnlee Brunt",
+      "jobTitle": "Therapist",
+      "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
+      "knowsAbout": ["CBT", "EMDR Therapy", "Emotionally Focused Therapy", "Infertility", "Postpartum", "Anxiety"]
+    }
+  ])} />
+
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative;
+    background: var(--gradient-hero);
+    padding: 100px 0 80px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 60%);
+  }
+  .hero-content {
+    position: relative; z-index: 1;
+    max-width: 750px; margin: 0 auto;
+  }
+  .hero-subtitle {
+    font-size: 19px; color: var(--text-medium); line-height: 1.6;
+  }
+  @media (max-width: 768px) {
+    .hero { padding: 70px 0 60px; }
+  }
+</style>

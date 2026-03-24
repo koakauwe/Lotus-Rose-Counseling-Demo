@@ -1,0 +1,112 @@
+---
+/**
+ * SchemaOrg — MedicalBusiness + LocalBusiness JSON-LD
+ * Renders on every page via BaseLayout
+ */
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness", "LocalBusiness"],
+  "@id": "https://lotusrosecounseling.com/#business",
+  "name": "Lotus Rose Counseling",
+  "description": "Mental health therapy for women, teens, and children in Utah County. Specializing in trauma, EMDR, postpartum depression, grief, and anxiety.",
+  "url": "https://lotusrosecounseling.com",
+  "telephone": "+1-801-000-0000",
+  "email": "info@lotusrosecounseling.com",
+  "priceRange": "$$",
+  "medicalSpecialty": "Psychiatric",
+  "image": "https://lotusrosecounseling.com/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "237 W. 520 N. St",
+    "addressLocality": "Orem",
+    "addressRegion": "UT",
+    "postalCode": "84057",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.3050,
+    "longitude": -111.6960
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Orem", "containedInPlace": { "@type": "State", "name": "Utah" } },
+    { "@type": "City", "name": "Provo", "containedInPlace": { "@type": "State", "name": "Utah" } },
+    { "@type": "City", "name": "Lehi", "containedInPlace": { "@type": "State", "name": "Utah" } },
+    { "@type": "City", "name": "American Fork", "containedInPlace": { "@type": "State", "name": "Utah" } },
+    { "@type": "City", "name": "Pleasant Grove", "containedInPlace": { "@type": "State", "name": "Utah" } },
+    { "@type": "City", "name": "Lindon", "containedInPlace": { "@type": "State", "name": "Utah" } },
+    { "@type": "City", "name": "Vineyard", "containedInPlace": { "@type": "State", "name": "Utah" } },
+    { "@type": "City", "name": "Springville", "containedInPlace": { "@type": "State", "name": "Utah" } }
+  ],
+  "founder": {
+    "@type": "Person",
+    "@id": "https://lotusrosecounseling.com/#joy-bouchard",
+    "name": "Joy Bouchard",
+    "jobTitle": "Licensed Clinical Social Worker",
+    "credential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "license",
+        "name": "Licensed Clinical Social Worker (LCSW)"
+      }
+    ],
+    "knowsAbout": ["EMDR Therapy", "Accelerated Resolution Therapy", "Postpartum Depression", "Trauma", "Grief Counseling", "Internal Family Systems"],
+    "sameAs": [
+      "https://www.psychologytoday.com/us/therapists/joy-bouchard-orem-ut"
+    ]
+  },
+  "employee": [
+    {
+      "@type": "Person",
+      "@id": "https://lotusrosecounseling.com/#megan-judd",
+      "name": "Megan Judd",
+      "jobTitle": "Therapist",
+      "knowsAbout": ["EMDR Therapy", "Internal Family Systems", "Trauma", "PTSD", "Anxiety", "Depression"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lotusrosecounseling.com/#pam-basinger",
+      "name": "Pam Basinger",
+      "jobTitle": "Therapist",
+      "knowsAbout": ["Accelerated Resolution Therapy", "ADHD", "Grief", "Life Transitions", "Oppositional Defiance Disorder"],
+      "knowsLanguage": ["English", "Spanish", "Portuguese"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lotusrosecounseling.com/#brynnlee-brunt",
+      "name": "Brynnlee Brunt",
+      "jobTitle": "Therapist",
+      "knowsAbout": ["CBT", "EMDR Therapy", "Emotionally Focused Therapy", "Infertility", "Postpartum", "Anxiety"]
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Therapy Services",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Individual Therapy",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "@id": "https://lotusrosecounseling.com/#emdr", "name": "EMDR Therapy", "description": "Eye Movement Desensitization and Reprocessing for trauma, PTSD, anxiety, and phobias" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "@id": "https://lotusrosecounseling.com/#art", "name": "Accelerated Resolution Therapy", "description": "Rapid trauma processing therapy using eye movements and voluntary image replacement" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "@id": "https://lotusrosecounseling.com/#ppd", "name": "Postpartum Depression Therapy", "description": "Specialized therapy for postpartum depression, anxiety, OCD, and maternal mental health" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "@id": "https://lotusrosecounseling.com/#grief", "name": "Grief Counseling", "description": "Support for grief, loss, bereavement, and life transitions" } }
+        ]
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.instagram.com/lotusrosecounseling/",
+    "https://www.facebook.com/lotusrosecounseling/"
+  ]
+}, null, 2)} />
