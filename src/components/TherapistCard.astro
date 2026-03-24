@@ -4,6 +4,7 @@ interface Props {
   title: string;
   specialties: string[];
   bio: string;
+  photo?: string;
   languages?: string;
   telehealth?: boolean;
   bookingText?: string;
@@ -15,6 +16,7 @@ const {
   title,
   specialties,
   bio,
+  photo,
   languages,
   telehealth,
   bookingText = "Book an Appointment",
@@ -24,9 +26,13 @@ const {
 
 <div class="therapist-card">
   <div class="therapist-card-photo">
-    <div class="therapist-photo-circle">
-      <span>{name.split(' ')[0]}</span>
-    </div>
+    {photo ? (
+      <img src={photo} alt={`${name} — therapist at Lotus Rose Counseling in Orem, Utah`} class="therapist-photo-img" width="200" height="200" loading="lazy" />
+    ) : (
+      <div class="therapist-photo-circle">
+        <span>{name.split(' ')[0]}</span>
+      </div>
+    )}
   </div>
   <div class="therapist-card-info">
     <h3 class="therapist-name">{name}</h3>
@@ -53,6 +59,15 @@ const {
     border-radius: 16px;
     box-shadow: var(--shadow-soft);
     margin-bottom: 32px;
+  }
+  .therapist-photo-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 4px solid var(--soft-rose);
+    box-shadow: var(--shadow-soft);
   }
   .therapist-photo-circle {
     width: 200px;
@@ -87,6 +102,7 @@ const {
       padding: 32px 24px;
       gap: 24px;
     }
+    .therapist-photo-img { width: 160px; height: 160px; }
     .therapist-photo-circle { width: 160px; height: 160px; }
     .specialties-list { justify-content: center; }
   }
