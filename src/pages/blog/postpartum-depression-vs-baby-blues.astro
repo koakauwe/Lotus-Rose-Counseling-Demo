@@ -1,0 +1,166 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+const faqSchema = [
+  {
+    question: "How long do baby blues last?",
+    answer: "Baby blues typically begin within the first 2-3 days after birth and resolve within 2 weeks. Symptoms include mood swings, crying spells, anxiety, and difficulty sleeping. If symptoms persist beyond 2 weeks or intensify, it may be postpartum depression — not baby blues."
+  },
+  {
+    question: "Can postpartum depression start months after birth?",
+    answer: "Yes. Postpartum depression can develop anytime within the first year after giving birth. Some women don't recognize symptoms for months because they've been powering through, or because the symptoms build gradually. Late-onset postpartum depression is common and just as treatable."
+  },
+  {
+    question: "What are intrusive thoughts and are they normal postpartum?",
+    answer: "Intrusive thoughts are unwanted, disturbing mental images or ideas — often about harm coming to your baby. They're a hallmark of postpartum anxiety and OCD, not postpartum psychosis. Having them does NOT mean you're dangerous. They're extremely common and very treatable with therapy."
+  },
+  {
+    question: "Should I see a therapist or my OB for postpartum depression?",
+    answer: "Both can help. Your OB can screen for PPD and prescribe medication if needed. A therapist provides ongoing support, coping strategies, and evidence-based treatment like EMDR or IFS that address the root causes. Many women benefit from both working together."
+  },
+  {
+    question: "Can postpartum depression affect bonding with my baby?",
+    answer: "Yes — difficulty bonding is one of the most common and most distressing symptoms of PPD. It doesn't mean you don't love your baby. It means your brain chemistry is making it harder to feel connected. Therapy can help rebuild that bond at your own pace, without judgment."
+  }
+];
+
+const articleSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Postpartum Depression vs. Baby Blues: How to Tell the Difference",
+  "author": {
+    "@type": "Person",
+    "@id": "https://lotusrosecounseling.com/#joy-bouchard",
+    "name": "Joy Bouchard",
+    "jobTitle": "Licensed Clinical Social Worker",
+    "url": "https://lotusrosecounseling.com/our-therapists/",
+    "image": "https://lotusrosecounseling.com/photos/joy-bouchard.jpg"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lotusrosecounseling.com/#business",
+    "name": "Lotus Rose Counseling",
+    "url": "https://lotusrosecounseling.com"
+  },
+  "datePublished": "2026-03-24",
+  "dateModified": "2026-03-24",
+  "description": "Up to 80% of new mothers experience baby blues. But when does normal adjustment become something that needs professional help? A therapist explains the difference.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lotusrosecounseling.com/blog/postpartum-depression-vs-baby-blues/"
+  }
+});
+---
+
+<BlogLayout
+  title="Postpartum Depression vs. Baby Blues | Lotus Rose Counseling"
+  description="Up to 80% of new mothers experience baby blues. But when does it become postpartum depression? A therapist explains the difference and what to do about it."
+  sectionLabel="Maternal Mental Health"
+  headline="Postpartum Depression vs. Baby Blues: How to Tell the Difference"
+  subtitle="When 'Normal' New-Mom Feelings Cross the Line Into Something That Needs Help"
+  date="March 24, 2026"
+  readTime="7 min read"
+  faqSchema={faqSchema}
+  articleSchema={articleSchema}
+  authorName="Joy Bouchard"
+  authorTitle="Licensed Clinical Social Worker (LCSW) · Founder"
+  authorBio="Joy Bouchard is the founder of Lotus Rose Counseling in Orem, Utah. As a mom of three with her own journey through birth trauma and postpartum depression, she specializes in perinatal mental health, infant loss, and childhood abuse recovery. She's trained in EMDR, ART, IFS, and experiential therapy."
+  authorPhoto="/photos/joy-bouchard.jpg"
+  authorLink="/our-therapists/"
+  ctaLabel="You Don't Have to Figure This Out Alone"
+  ctaHeadline="Schedule a Free Consultation"
+  ctaDescription="If you're not sure whether what you're feeling is baby blues or something more, a free 15-minute consultation can help you figure out the next step."
+>
+
+  <ul slot="glance">
+    <li>Baby blues affect up to 80% of new mothers and resolve within 2 weeks</li>
+    <li>Postpartum depression is more intense, lasts longer, and interferes with daily functioning</li>
+    <li>PPD can include anxiety, rage, intrusive thoughts, and numbness — not just sadness</li>
+    <li>Symptoms can appear anytime in the first year, not just immediately after birth</li>
+    <li>PPD is a medical condition, not a character flaw — and it responds well to treatment</li>
+  </ul>
+
+  <h2>You Expected to Feel Tired. You Didn't Expect to Feel Like This.</h2>
+
+  <p>Everyone told you it would be hard. The sleep deprivation, the hormonal shifts, the overwhelming responsibility of keeping a tiny human alive. You braced yourself for tired. You were ready for hard.</p>
+
+  <p>What you weren't ready for was <strong>this</strong> — the heaviness that doesn't lift, the disconnection from your baby that makes no sense, the intrusive thoughts at 3 AM that terrify you, the rage that flares at your partner over nothing. Or maybe it's the opposite: feeling nothing at all.</p>
+
+  <p>Here's the question most new moms quietly ask themselves: <em>Is this just how it is after having a baby, or is something actually wrong?</em></p>
+
+  <h2>What Baby Blues Actually Look Like</h2>
+
+  <p>Baby blues are your body's response to the massive hormonal shift that happens after birth. Estrogen and progesterone plummet, and your brain chemistry temporarily scrambles. It's a normal physiological response, and it happens to up to 80% of new mothers.</p>
+
+  <p><strong>Baby blues typically include:</strong></p>
+  <ul>
+    <li>Mood swings — happy one moment, tearful the next</li>
+    <li>Crying spells that seem to come from nowhere</li>
+    <li>Mild anxiety about the baby's health or your ability to cope</li>
+    <li>Feeling overwhelmed by the new reality</li>
+    <li>Irritability and restlessness</li>
+    <li>Difficulty sleeping (beyond what the baby's schedule causes)</li>
+  </ul>
+
+  <p><strong>The key characteristic of baby blues:</strong> they start within the first few days after birth and resolve within 2 weeks. They're uncomfortable, but they don't fundamentally impair your ability to care for yourself or your baby.</p>
+
+  <h2>When It's More Than Baby Blues</h2>
+
+  <p>Postpartum depression is different. It's more intense, lasts longer, and gets in the way of daily life. And it doesn't always look like "depression" the way most people picture it.</p>
+
+  <p><strong>Postpartum depression can include:</strong></p>
+  <ul>
+    <li><strong>Persistent sadness or emptiness</strong> that doesn't lift, even on good days</li>
+    <li><strong>Difficulty bonding with your baby</strong> — going through the motions without feeling connected</li>
+    <li><strong>Intrusive thoughts</strong> — scary, unwanted mental images about harm coming to your baby</li>
+    <li><strong>Rage and irritability</strong> — snapping at your partner, simmering anger disproportionate to the situation</li>
+    <li><strong>Overwhelming anxiety</strong> — checking the baby's breathing obsessively, inability to relax</li>
+    <li><strong>Emotional numbness</strong> — not sad exactly, just... nothing</li>
+    <li><strong>Withdrawal</strong> from your partner, friends, and activities you used to enjoy</li>
+    <li><strong>Physical symptoms</strong> — changes in appetite, headaches, stomach problems</li>
+    <li><strong>Thoughts of self-harm</strong> or feeling like your family would be better off without you</li>
+  </ul>
+
+  <blockquote>"You don't know you need it until you know. People would come in for postpartum depression, and we'd find there's a lot of stuff from childhood they hadn't processed yet. The two really overlap." — Joy Bouchard, LCSW</blockquote>
+
+  <h2>The Symptoms Nobody Talks About</h2>
+
+  <p><strong>Postpartum rage.</strong> You didn't expect to be angry. Nobody warned you about the white-hot flash of rage when your toddler won't stop screaming or your partner leaves their dishes in the sink again. Postpartum rage is an under-discussed but extremely common symptom of PPD — and it's one of the ones that triggers the most guilt.</p>
+
+  <p><strong>Functioning depression.</strong> From the outside, you're doing fine. You're showering, feeding the baby, showing up. Inside, you're barely holding together. This presentation is one of the hardest to recognize — and one of the most common.</p>
+
+  <p><strong>Postpartum OCD.</strong> Intrusive, disturbing thoughts you can't turn off. Images of dropping the baby, of the baby stopping breathing, of terrible things happening. These thoughts don't mean you're dangerous — they're a hallmark of postpartum OCD, and they're very treatable.</p>
+
+  <h2>When to Seek Help</h2>
+
+  <p>If any of these apply, it's time to talk to someone:</p>
+  <ul>
+    <li>Symptoms have lasted longer than 2 weeks</li>
+    <li>Symptoms are getting worse, not better</li>
+    <li>You're having difficulty caring for yourself or your baby</li>
+    <li>You're having intrusive thoughts that scare you</li>
+    <li>You're withdrawing from your partner, friends, or family</li>
+    <li>You're using alcohol, food, or other substances to cope</li>
+    <li>You're having thoughts of harming yourself</li>
+  </ul>
+
+  <p>You don't need to wait until it's a crisis. A free 15-minute consultation is a low-pressure way to describe what you're experiencing and find out if <a href="/postpartum-depression/">postpartum depression therapy</a> could help.</p>
+
+  <h2>What Treatment Looks Like</h2>
+
+  <p>At <a href="/our-therapists/">Lotus Rose Counseling</a>, Joy Bouchard and Brynnlee Brunt both specialize in perinatal mental health. Treatment is tailored to your specific symptoms — not a one-size-fits-all approach.</p>
+
+  <p><a href="/emdr-therapy/">EMDR therapy</a> can help process traumatic birth experiences or underlying trauma that's amplifying postpartum symptoms. <a href="/accelerated-resolution-therapy/">ART</a> offers faster relief for acute symptoms. And talk therapy with IFS or CBT builds coping strategies you can use immediately.</p>
+
+  <p>Yes, you can bring your baby to sessions. Yes, telehealth is available. And no — needing help doesn't mean you're failing at motherhood. It means you're a human being whose brain chemistry got disrupted by one of the most physically and emotionally demanding experiences a body can go through.</p>
+
+  <Fragment slot="faq">
+    {faqSchema.map(faq => (
+      <details class="faq-item">
+        <summary>{faq.question}</summary>
+        <div class="faq-answer"><p>{faq.answer}</p></div>
+      </details>
+    ))}
+  </Fragment>
+
+</BlogLayout>

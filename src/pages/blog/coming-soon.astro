@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Coming Soon | Lotus Rose Counseling Blog"
+  description="This article is coming soon. Check back for new mental health and therapy insights from the therapists at Lotus Rose Counseling."
+>
+
+  <section class="coming-soon-section">
+    <div class="container text-center">
+      <p class="section-label">Coming Soon</p>
+      <h1>This Article Is on the Way</h1>
+      <p class="coming-soon-text">We're working on this one. New articles publish regularly — check back soon or follow us on social media for updates.</p>
+      <div class="btn-group" style="justify-content: center; margin-top: 32px;">
+        <a href="/blog/" class="btn-primary">Browse All Articles</a>
+        <a href="/contact/" class="btn-secondary">Schedule Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .coming-soon-section {
+    padding: 120px 0;
+    background: var(--warm-cream);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+  .coming-soon-text {
+    font-size: 18px;
+    max-width: 500px;
+    margin: 0 auto;
+    color: var(--text-medium);
+  }
+</style>
