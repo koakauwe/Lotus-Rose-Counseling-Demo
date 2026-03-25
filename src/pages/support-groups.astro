@@ -1,0 +1,379 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = [
+  {
+    question: "What is the Tired Mom's Club?",
+    answer: "The Tired Mom's Club is a 6-week online therapy group for burned out and overwhelmed moms. It's facilitated by Brynnlee Brunt, a licensed therapist and mom of 4 young kids who blends clinical expertise with real-life mom experience. The group meets every other Wednesday at 7 PM and covers topics like co-regulation, letting go of 'shoulds,' and communicating with your partner about mental load."
+  },
+  {
+    question: "How much does the Tired Mom's Club cost?",
+    answer: "The group costs $20 per week for the 6-week session. If cost is the only thing holding you back, please reach out — Lotus Rose doesn't want finances to be a barrier to getting support."
+  },
+  {
+    question: "Is the group online or in-person?",
+    answer: "The Tired Mom's Club meets online, so you can join from home after the kids are in bed. No babysitter needed, no getting dressed up, no driving across town. Just you, your couch, and a group of moms who get it."
+  },
+  {
+    question: "Who facilitates the group?",
+    answer: "Brynnlee Brunt facilitates the Tired Mom's Club. She's a licensed therapist who specializes in perinatal mental health — and she's also a mom of 4 young kids. She brings both clinical training and the lived experience of being in the thick of motherhood right now. She's compassionate, understanding, and passionate about helping moms feel refreshed in their parenting."
+  },
+  {
+    question: "Do I need to be a current Lotus Rose client to join?",
+    answer: "No — the Tired Mom's Club is open to anyone. You don't need to be an existing client. If you're a mom who's burned out and looking for support, you're welcome. Call or text (801) 642-4244 to register."
+  },
+  {
+    question: "What topics does the group cover?",
+    answer: "The 6-week curriculum covers: Co-Regulation ('Staying Calm When No One Else Is'), Control and Expectations ('Letting Go of Shoulds'), and Communicating with Your Partner about mental load ('Why Am I the Only One Who Notices?'). Each session blends education, group discussion, and practical strategies you can use immediately."
+  }
+];
+---
+
+<BaseLayout
+  title="Tired Mom's Club — Online Therapy Group for Moms | Lotus Rose Counseling"
+  description="Join the Tired Mom's Club — a 6-week online therapy group for burned out moms. $20/week, facilitated by Brynnlee Brunt. Topics include co-regulation, letting go of shoulds, and mental load. Lotus Rose Counseling, Orem, UT."
+  faqSchema={faqSchema}
+>
+
+  <!-- Floral Hero -->
+  <section class="hero-fullbleed">
+    <div class="hero-fullbleed-bg">
+      <img src="/florals/floral-support-group.jpg" alt="Tired Mom's Club — support group at Lotus Rose Counseling" width="1920" height="1080" fetchpriority="high" />
+    </div>
+    <div class="hero-fullbleed-overlay"></div>
+    <div class="hero-fullbleed-content">
+      <p class="section-label">Support Groups</p>
+      <h1>Tired Mom's Club</h1>
+      <p class="hero-subtitle">We can't give you a nap. But we can help you feel human again.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="tel:+18016424244" class="btn-primary">Call/Text to Register</a>
+        <a href="#details" class="btn-secondary">See Group Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opening — Make them feel seen -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <h2>You're Not a Bad Mom. You're a Burned Out One.</h2>
+        <p>You're running on empty and nobody seems to notice. You're touched out, talked out, and tapped out — but bedtime is still three hours away. You love your kids fiercely and you're also drowning. Both of those things are true at the same time.</p>
+        <p>The Tired Mom's Club is a 6-week online therapy group for moms who are done white-knuckling it through motherhood. Not a venting session. Not a lecture. A real, therapist-led space where you can exhale, learn actual strategies, and connect with other moms who are living the same beautiful, exhausting chaos.</p>
+
+        <div class="rest-reset">
+          <p class="rest-reset-tagline">Rest and Reset</p>
+          <p>A 6-week online therapy group for burned out and overwhelmed moms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You'll Cover -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">What You'll Work On</p>
+        <h2>Real Topics for Real Mom Struggles</h2>
+        <p>This isn't generic self-care advice. Each session tackles a specific challenge that burned out moms face every single day.</p>
+
+        <div class="topic-card">
+          <h3>Co-Regulation</h3>
+          <p class="topic-subtitle">"Staying Calm When No One Else Is"</p>
+          <p>Your toddler is melting down. Your 6-year-old is screaming. Your nervous system is fried. How do you stay regulated when everyone around you is dysregulated? This session gives you tools that actually work in the chaos — not just when everything is quiet.</p>
+        </div>
+
+        <div class="topic-card">
+          <h3>Control & Expectations</h3>
+          <p class="topic-subtitle">"Letting Go of Shoulds"</p>
+          <p>I should be more patient. I should enjoy this. I should have it together by now. The "shoulds" are crushing you. This session helps you identify whose expectations you're carrying, which ones to release, and how to parent from your values instead of your guilt.</p>
+        </div>
+
+        <div class="topic-card">
+          <h3>Communicating with Your Partner</h3>
+          <p class="topic-subtitle">"Why Am I the Only One Who Notices?"</p>
+          <p>The mental load. The invisible labor. The feeling that if you didn't do it, it wouldn't get done. This session isn't about blaming your partner — it's about learning to communicate what you need in a way that actually gets heard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilitator -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="facilitator-section">
+        <div class="facilitator-photo">
+          <img src="/photos/brynnlee-brunt.jpg" alt="Brynnlee Brunt — therapist and facilitator of the Tired Mom's Club" width="280" height="280" loading="lazy" />
+        </div>
+        <div class="facilitator-info">
+          <p class="section-label">Your Facilitator</p>
+          <h2>Brynnlee Brunt</h2>
+          <p class="facilitator-title">Licensed Therapist &amp; Mom of 4</p>
+          <p>Brynnlee is a mom of 4 young kids as well as a therapist who specializes in perinatal mental health. She brings both clinical expertise and real-life mom experience to every session.</p>
+          <p>She's not going to tell you to "practice self-care" and send you on your way. She's in the trenches right now too — and she's passionate about helping other moms feel refreshed in their parenting.</p>
+          <p>With a blend of compassion, understanding, and practical strategies, Brynnlee creates a space where moms can be honest without judgment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Group Details -->
+  <section class="bg-cream" id="details">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Group Details</p>
+        <h2>Everything You Need to Know</h2>
+
+        <div class="details-grid">
+          <div class="detail-item">
+            <span class="detail-label">Format</span>
+            <span class="detail-value">Online (from your couch, after bedtime)</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Schedule</span>
+            <span class="detail-value">Every other Wednesday at 7:00 PM</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Duration</span>
+            <span class="detail-value">6-week group</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Cost</span>
+            <span class="detail-value">$20 per week</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Facilitator</span>
+            <span class="detail-value">Brynnlee Brunt, Licensed Therapist</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">To Register</span>
+            <span class="detail-value">Call or text <a href="tel:+18016424244">(801) 642-4244</a></span>
+          </div>
+        </div>
+
+        <div class="cost-note">
+          <p>Please reach out if cost is the only thing holding you back. We don't want finances to be a barrier to getting the support you need.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Is This For You -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Is This You?</p>
+        <h2>The Tired Mom's Club Is For You If...</h2>
+        <ul class="check-list">
+          <li>You're exhausted in a way that sleep doesn't fix</li>
+          <li>You lose your patience and then feel crushing guilt about it</li>
+          <li>You feel like you're the only one holding everything together</li>
+          <li>You've forgotten what you liked to do before kids</li>
+          <li>You want to enjoy motherhood but most days you're just surviving</li>
+          <li>You need to talk to someone who actually understands — not just says they do</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Register CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Feel Like Yourself Again?</h2>
+      <p>Call or text to register. No intake form, no waiting list — just a conversation about whether the Tired Mom's Club is right for you.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="tel:+18016424244" class="btn-primary">Call/Text (801) 642-4244</a>
+        <a href="mailto:officemanager@lotusrosecounseling.com" class="btn-secondary">Email Us</a>
+      </div>
+      <p class="cta-website">lotusrosecounseling.com</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>Support Group FAQs</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+      <div class="faq-link">
+        <a href="/contact/">Have another question? Reach out →</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Rest and Reset callout */
+  .rest-reset {
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(232, 196, 184, 0.15) 100%);
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-top: 36px;
+    text-align: center;
+  }
+  .rest-reset-tagline {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+  }
+  .rest-reset p:last-child {
+    font-size: 17px;
+    color: var(--text-medium);
+  }
+
+  /* Topic cards */
+  .topic-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin-top: 24px;
+    box-shadow: var(--shadow-soft);
+    border-left: 4px solid var(--peach-gold);
+  }
+  .topic-card h3 {
+    font-size: 26px;
+    margin-bottom: 4px;
+  }
+  .topic-subtitle {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--peach-gold);
+    margin-bottom: 16px;
+  }
+  .topic-card > p:last-child {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* Facilitator section */
+  .facilitator-section {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .facilitator-photo img {
+    width: 280px;
+    height: 280px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: var(--shadow-medium);
+    flex-shrink: 0;
+  }
+  .facilitator-info {
+    flex: 1;
+  }
+  .facilitator-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--peach-gold);
+    margin-bottom: 20px;
+  }
+  .facilitator-info h2 {
+    font-size: 36px;
+    margin-bottom: 4px;
+  }
+
+  /* Details grid */
+  .details-grid {
+    margin-top: 32px;
+  }
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .detail-label {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+    width: 140px;
+  }
+  .detail-value {
+    color: var(--text-medium);
+    font-size: 17px;
+    text-align: right;
+  }
+  .detail-value a {
+    font-weight: 700;
+  }
+
+  /* Cost note */
+  .cost-note {
+    margin-top: 24px;
+    padding: 20px 28px;
+    background: rgba(212, 165, 116, 0.08);
+    border-radius: 12px;
+    text-align: center;
+  }
+  .cost-note p {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--text-medium);
+  }
+
+  /* Checklist */
+  .check-list {
+    list-style: none;
+    padding: 0;
+  }
+  .check-list li {
+    padding: 14px 0 14px 32px;
+    position: relative;
+    color: var(--text-medium);
+    border-bottom: 1px solid var(--border-light);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--peach-gold);
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  /* CTA website */
+  .cta-website {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--text-medium);
+    opacity: 0.6;
+  }
+
+  @media (max-width: 768px) {
+    .facilitator-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .facilitator-photo img { width: 220px; height: 220px; }
+    .detail-item { flex-direction: column; gap: 4px; }
+    .detail-value { text-align: left; }
+    .detail-label { width: auto; }
+    .rest-reset { padding: 28px 24px; }
+    .rest-reset-tagline { font-size: 26px; }
+    .topic-card { padding: 24px; }
+  }
+</style>

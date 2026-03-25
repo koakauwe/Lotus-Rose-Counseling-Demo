@@ -159,11 +159,12 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-medium);
   margin-bottom: 16px;
+}
+
+.hero-fullbleed .section-label {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .gradient-text {
@@ -576,6 +577,358 @@ section {
 .skip-to-content:focus {
   top: 0;
   color: var(--white);
+}
+
+
+/* ============================================
+   EDITORIAL LAYOUT — Split Sections
+   ============================================ */
+
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 500px;
+}
+
+.split-section--reverse {
+  direction: rtl;
+}
+
+.split-section--reverse > * {
+  direction: ltr;
+}
+
+.split-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 72px;
+}
+
+.split-content .section-label {
+  margin-bottom: 12px;
+}
+
+.split-content h2 {
+  margin-bottom: 20px;
+}
+
+.split-content p {
+  max-width: 520px;
+}
+
+.split-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .split-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .split-section--reverse {
+    direction: ltr;
+  }
+  .split-content {
+    padding: 56px 28px;
+    order: 2;
+  }
+  .split-image {
+    order: 1;
+    height: 350px;
+  }
+  .split-content p {
+    max-width: 100%;
+  }
+}
+
+
+/* ============================================
+   FLORAL BACKGROUNDS
+   ============================================ */
+
+.floral-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.floral-section .floral-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 248, 243, 0.88);
+  border-radius: 16px;
+  padding: 48px;
+  max-width: 700px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.floral-section .floral-content h2 {
+  margin-bottom: 16px;
+}
+
+/* Specific floral backgrounds */
+.floral-hero { background-image: url('/florals/hero-peonies.jpg'); }
+.floral-joy { background-image: url('/florals/floral-joy.jpg'); }
+.floral-megan { background-image: url('/florals/floral-megan.jpg'); }
+.floral-pam { background-image: url('/florals/floral-pam.jpg'); }
+.floral-brynnlee { background-image: url('/florals/floral-brynnlee.jpg'); }
+.floral-insurance { background-image: url('/florals/floral-insurance.jpg'); }
+.floral-contact { background-image: url('/florals/floral-contact.jpg'); }
+.floral-subtle { background-image: url('/florals/floral-subtle.jpg'); }
+
+/* Split sections with floral backgrounds */
+.split-section.floral-section .split-content {
+  background: rgba(255, 248, 243, 0.9);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.split-section.floral-section .split-image {
+  display: none;
+}
+
+.split-section.floral-section {
+  grid-template-columns: 1fr;
+}
+
+/* Therapist cards with floral backgrounds */
+.therapist-floral {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.therapist-floral .therapist-card {
+  background: rgba(255, 248, 243, 0.9);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .floral-section .floral-content {
+    padding: 32px 24px;
+    margin: 0 16px;
+    border-radius: 12px;
+  }
+}
+
+
+/* ============================================
+   EDITORIAL LAYOUT — Full-Bleed Hero
+   ============================================ */
+
+.hero-fullbleed {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-fullbleed-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-fullbleed-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-fullbleed-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(61, 51, 48, 0.35) 0%, rgba(61, 51, 48, 0.55) 100%);
+  z-index: 1;
+}
+
+.hero-fullbleed-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  padding: 100px 40px;
+}
+
+.hero-fullbleed h1 {
+  color: var(--white);
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.15);
+}
+
+.hero-fullbleed .hero-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 36px;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.hero-fullbleed .btn-primary {
+  box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+}
+
+.hero-fullbleed .btn-secondary {
+  color: var(--white);
+  border-color: rgba(255,255,255,0.6);
+}
+
+.hero-fullbleed .btn-secondary:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.hero-fullbleed .hero-trust {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.hero-fullbleed .trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+}
+
+.hero-fullbleed .trust-item svg {
+  stroke: var(--peach-gold);
+}
+
+/* section-label is already solid peach-gold — no hero override needed */
+
+@media (max-width: 768px) {
+  .hero-fullbleed { min-height: 480px; }
+  .hero-fullbleed h1 { font-size: 36px; }
+  .hero-fullbleed .hero-subtitle { font-size: 17px; }
+  .hero-fullbleed-content { padding: 80px 24px; }
+  .hero-fullbleed .hero-trust { flex-direction: column; align-items: center; gap: 10px; }
+}
+
+
+/* ============================================
+   EDITORIAL LAYOUT — Full-Bleed Photo Break
+   ============================================ */
+
+.photo-break {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.photo-break img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .photo-break { height: 280px; }
+}
+
+
+/* ============================================
+   EDITORIAL LAYOUT — Pull Quote
+   ============================================ */
+
+.pull-quote {
+  border-left: 4px solid var(--peach-gold);
+  padding: 32px 0 32px 36px;
+  margin: 48px 0;
+  max-width: 700px;
+}
+
+.pull-quote p {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.45;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.pull-quote cite {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--peach-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 768px) {
+  .pull-quote { padding: 24px 0 24px 24px; margin: 32px 0; }
+  .pull-quote p { font-size: 22px; }
+}
+
+
+/* ============================================
+   EDITORIAL LAYOUT — Services List (non-card)
+   ============================================ */
+
+.services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.services-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  color: var(--text-dark);
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 600;
+  transition: all var(--transition-smooth);
+}
+
+.services-list a:hover {
+  color: var(--peach-gold);
+  padding-left: 8px;
+}
+
+.services-list .arrow {
+  color: var(--peach-gold);
+  font-size: 18px;
+  transition: transform var(--transition-smooth);
+}
+
+.services-list a:hover .arrow {
+  transform: translateX(4px);
 }
 
 

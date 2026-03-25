@@ -1,0 +1,135 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import MidPageCTA from '../components/MidPageCTA.astro';
+
+const faqSchema = [
+  {
+    question: "What ages do you work with at Lotus Rose?",
+    answer: "Our therapists work with children, teens, and young adults. The specific age range depends on the therapist — Pam Basinger specializes in children and teens dealing with behavioral challenges, ADHD, and grief. Megan Judd works with teens navigating trauma, anxiety, faith transitions, and self-harm. Contact us and we'll match your child with the right therapist."
+  },
+  {
+    question: "How do I know if my child needs therapy?",
+    answer: "Signs your child may benefit from therapy include persistent behavioral changes, withdrawal from friends or activities, declining grades, excessive worry or fearfulness, angry outbursts disproportionate to the situation, sleep problems, self-harm, talk of death or suicide, difficulty adjusting to divorce or family changes, or a noticeable personality shift. Trust your instincts — if something feels off, a free consultation can help you decide."
+  },
+  {
+    question: "Will I know what's discussed in my child's sessions?",
+    answer: "Confidentiality is important for building trust with your child. Your therapist will communicate with you about general progress and any safety concerns, but specific session content stays between your child and their therapist. This is what allows young people to open up honestly. Your therapist will explain this clearly at the start of treatment."
+  },
+  {
+    question: "What therapy approaches do you use with teens and children?",
+    answer: "We use age-appropriate adaptations of EMDR, ART, IFS, CBT, and experiential therapy. For younger children, this may include play-based elements. For teens, we use the same evidence-based modalities as adults but tailored to their developmental stage and communication style. Pam Basinger also specializes in Oppositional Defiance Disorder using ART and solution-focused approaches."
+  }
+];
+---
+
+<ServiceLayout
+  title="Teen & Child Therapy in Orem, UT | Lotus Rose Counseling"
+  description="Teen and child therapy in Orem, Utah. Treatment for anxiety, behavioral challenges, trauma, ADHD, grief, and self-harm at Lotus Rose Counseling."
+  sectionLabel="Teen & Child Therapy"
+  heroTitle="A Safe Space Where Young People Can Be Honest"
+  heroSubtitle="Behavioral challenges, school anxiety, trauma, self-esteem struggles — age-appropriate therapy in an environment where kids and teens feel genuinely safe to open up."
+  heroImage="/florals/floral-brynnlee.jpg"
+  faqSchema={faqSchema}
+  therapySchema={{
+    name: "Teen and Child Therapy",
+    description: "Therapy for children and teenagers dealing with anxiety, behavioral challenges, trauma, ADHD, grief, self-harm, and life transitions.",
+    alternateName: ["Child Therapy", "Adolescent Therapy", "Teen Counseling", "Child Counseling"]
+  }}
+>
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <h2>When Your Kid Is Struggling and You Don't Know How to Help</h2>
+        <p>You've tried talking. You've tried consequences. You've tried giving space. But something is going on with your child and the usual approaches aren't working. Maybe they're withdrawing. Maybe they're acting out. Maybe they came to you with something you don't know how to handle.</p>
+        <p>At Lotus Rose, our therapists who work with young people understand that kids and teens don't process emotions the way adults do. They need a different approach — one that meets them at their developmental level and gives them tools they can actually use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">What We Treat</p>
+        <h2>Common Reasons Families Come to Us</h2>
+        <div class="highlight-box">
+          <ul>
+            <li>Anxiety — school anxiety, social anxiety, excessive worry, panic</li>
+            <li>Behavioral challenges — defiance, aggression, emotional outbursts</li>
+            <li>Trauma — abuse, witnessing violence, accident, loss of a parent</li>
+            <li>ADHD — managing symptoms, building coping strategies</li>
+            <li>Grief — death of a parent, sibling, friend, or pet</li>
+            <li>Self-harm and suicidal ideation</li>
+            <li>Depression and emotional withdrawal</li>
+            <li>Faith and identity transitions</li>
+            <li>Divorce and family changes</li>
+            <li>Bullying and self-esteem struggles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <MidPageCTA text="Worried about your child?" linkText="Schedule a Free Consultation" />
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Our Therapists for Young People</p>
+        <h2>Who Works With Kids and Teens</h2>
+        <p><strong>Pam Basinger</strong> specializes in children and teens. She uses Accelerated Resolution Therapy (ART) and solution-focused approaches for behavioral challenges, ADHD, oppositional defiance, grief, and anxiety. Originally from Brazil, she brings a multicultural perspective and speaks Spanish and Portuguese. Pam has experience in school counseling and hospice care — she understands young people navigating loss.</p>
+        <p><strong>Megan Judd</strong> works with teens and young adults dealing with trauma, anxiety, depression, faith transitions, and self-harm. She uses EMDR and Internal Family Systems in age-appropriate ways. Clients describe her as warm, easy to talk to, and genuinely curious about their experience.</p>
+        <p>Both therapists create an environment where young people feel safe to be honest — not judged, not lectured, just heard.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Related Services</p>
+        <h2>You May Also Be Interested In</h2>
+      </div>
+      <div class="card-grid" style="margin-top: 32px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <a href="/trauma-therapy/" class="card service-link">
+          <h3>Trauma & PTSD</h3>
+          <p>Evidence-based trauma processing for children, teens, and adults.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/grief-counseling/" class="card service-link">
+          <h3>Grief Counseling</h3>
+          <p>Support for young people processing the death of a parent, sibling, or loved one.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>Teen & Child Therapy FAQs</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+      <div class="faq-link">
+        <a href="/contact/">Have another question? Reach out →</a>
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>
+
+<style>
+  .service-link { text-decoration: none; color: inherit; display: block; }
+  .service-link:hover { color: inherit; }
+</style>

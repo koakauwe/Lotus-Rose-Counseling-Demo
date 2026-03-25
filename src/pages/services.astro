@@ -23,10 +23,13 @@ const faqSchema = [
   faqSchema={faqSchema}
 >
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
+  <!-- Full-Bleed Hero -->
+  <section class="hero-fullbleed">
+    <div class="hero-fullbleed-bg">
+      <img src="/florals/floral-brynnlee.jpg" alt="Therapy services at Lotus Rose Counseling in Orem, Utah" width="1920" height="1080" fetchpriority="high" />
+    </div>
+    <div class="hero-fullbleed-overlay"></div>
+    <div class="hero-fullbleed-content">
       <p class="section-label">Our Services</p>
       <h1>Therapy Services in Orem, Utah</h1>
       <p class="hero-subtitle">Evidence-based therapy matched to your specific needs — not a one-size-fits-all approach.</p>
@@ -51,29 +54,34 @@ const faqSchema = [
           <p>Eye Movement Desensitization and Reprocessing for trauma, PTSD, phobias, anxiety, and disturbing memories. Your brain processes the memory so it no longer triggers the same emotional intensity.</p>
           <span class="card-link">Learn more →</span>
         </a>
-        <div class="card">
+        <a href="/accelerated-resolution-therapy/" class="card service-card">
           <h3>Accelerated Resolution Therapy</h3>
-          <p>Rapid trauma processing using eye movements and voluntary image replacement. Clients often experience significant relief in 1-5 sessions. Effective for single-event trauma, phobias, grief, and anxiety.</p>
-        </div>
-        <div class="card">
+          <p>Rapid trauma processing using eye movements and voluntary image replacement. Significant relief often in 1-5 sessions.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/grief-counseling/" class="card service-card">
           <h3>Grief & Loss Counseling</h3>
-          <p>Processing the death of a loved one, miscarriage, divorce, estrangement, or loss of identity. We don't rush you through stages — we meet you where you are and help you find your own path forward.</p>
-        </div>
-        <div class="card">
+          <p>Processing the death of a loved one, miscarriage, divorce, estrangement, or loss of identity. We meet you where you are.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/trauma-therapy/" class="card service-card">
           <h3>Trauma & PTSD</h3>
-          <p>Childhood trauma, sexual assault, accidents, combat, medical trauma. Using EMDR, ART, and IFS, we help your nervous system process what happened without requiring you to relive every detail.</p>
-        </div>
-        <div class="card">
+          <p>Childhood trauma, sexual assault, birth trauma, complex PTSD. EMDR, ART, and IFS help your nervous system process what happened.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/anxiety-depression/" class="card service-card">
           <h3>Anxiety & Depression</h3>
-          <p>Generalized anxiety, panic attacks, social anxiety, persistent depression, emotional numbness. CBT restructures thought patterns while somatic approaches address what's happening in your body.</p>
-        </div>
-        <div class="card">
+          <p>Generalized anxiety, panic attacks, persistent depression, emotional numbness. CBT, EMDR, and IFS targeted to your symptoms.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/teen-child-therapy/" class="card service-card">
           <h3>Teen & Child Therapy</h3>
-          <p>Behavioral challenges, school anxiety, self-esteem, bullying, trauma, ADHD, oppositional defiance. Age-appropriate approaches in an environment where young people feel genuinely safe.</p>
-        </div>
+          <p>Behavioral challenges, school anxiety, trauma, ADHD, grief, self-harm. Age-appropriate therapy where young people feel safe.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
         <div class="card">
           <h3>Life Transitions</h3>
-          <p>Faith transitions, motherhood identity shifts, career changes, relationship shifts, moves. When the ground feels unstable, therapy provides a steady place to process and recalibrate.</p>
+          <p>Faith transitions, motherhood identity shifts, career changes, relationship struggles. A steady place to process and recalibrate.</p>
         </div>
       </div>
     </div>
@@ -149,13 +157,6 @@ const faqSchema = [
 </BaseLayout>
 
 <style>
-  .hero {
-    position: relative; background: var(--gradient-hero);
-    padding: 100px 0 80px; text-align: center; overflow: hidden;
-  }
-  .hero-overlay { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 60%); }
-  .hero-content { position: relative; z-index: 1; max-width: 750px; margin: 0 auto; }
-  .hero-subtitle { font-size: 19px; color: var(--text-medium); line-height: 1.6; }
   .service-card { text-decoration: none; color: inherit; display: block; }
   .service-card:hover { color: inherit; }
   .modalities-grid {

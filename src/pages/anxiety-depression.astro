@@ -1,0 +1,144 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import MidPageCTA from '../components/MidPageCTA.astro';
+
+const faqSchema = [
+  {
+    question: "How do I know if I have anxiety or depression?",
+    answer: "Anxiety often shows up as racing thoughts, constant worry, physical tension, difficulty sleeping, irritability, and a sense that something bad is about to happen. Depression can present as persistent sadness, loss of interest, fatigue, difficulty concentrating, changes in appetite, withdrawal from people, and feeling empty or hopeless. Many people experience both simultaneously."
+  },
+  {
+    question: "What therapy approaches work best for anxiety?",
+    answer: "At Lotus Rose, we use CBT (Cognitive Behavioral Therapy) to restructure anxious thought patterns, IFS (Internal Family Systems) to understand the 'anxious parts' of yourself with compassion, EMDR to process underlying experiences driving the anxiety, and somatic approaches to address where anxiety lives in your body. Your therapist matches the approach to what's driving your specific symptoms."
+  },
+  {
+    question: "Can therapy help if I've been anxious or depressed for years?",
+    answer: "Yes. Long-standing anxiety and depression often have roots in past experiences, learned patterns, or unprocessed events that therapy can address directly. Many clients who've lived with symptoms for years experience significant improvement once they find the right therapeutic approach. It's never too late to start."
+  },
+  {
+    question: "Do I need medication for anxiety or depression?",
+    answer: "Not necessarily. Many clients improve with therapy alone. However, some people benefit from a combination of therapy and medication. Our therapists can coordinate with your prescribing physician or refer you to a psychiatrist if medication might be helpful alongside therapy. We'll discuss all options during your treatment."
+  }
+];
+---
+
+<ServiceLayout
+  title="Anxiety & Depression Therapy in Orem, UT | Lotus Rose Counseling"
+  description="Anxiety and depression therapy in Orem, Utah. CBT, EMDR, and IFS treatment for generalized anxiety, panic attacks, and persistent depression at Lotus Rose Counseling."
+  sectionLabel="Anxiety & Depression"
+  heroTitle="The Weight Is Real. And It's Treatable."
+  heroSubtitle="Racing thoughts, constant worry, emotional flatness, loss of motivation — these aren't character flaws. They're symptoms with specific causes and effective treatments."
+  heroImage="/florals/hero-peonies.jpg"
+  faqSchema={faqSchema}
+  therapySchema={{
+    name: "Anxiety and Depression Therapy",
+    description: "Evidence-based therapy for generalized anxiety, panic attacks, social anxiety, and persistent depression using CBT, EMDR, IFS, and somatic approaches.",
+    alternateName: ["Anxiety Treatment", "Depression Therapy", "Anxiety Counseling"]
+  }}
+>
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <h2>Functioning Doesn't Mean You're Fine</h2>
+        <p>You get through the day. You show up for work, for your kids, for your partner. From the outside, nobody would guess. But inside, you're running on fumes — and the anxiety or heaviness or numbness has become your baseline.</p>
+        <p>One of the biggest myths Joy hears is that you need to be in crisis to benefit from therapy. You don't. If anxiety or depression is stealing your quality of life — even if you're technically "functioning" — that's enough reason to get help.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">What We Treat</p>
+        <h2>Anxiety and Depression Show Up in Many Forms</h2>
+        <div class="highlight-box">
+          <h4>Anxiety</h4>
+          <ul>
+            <li>Generalized anxiety — constant low-grade worry about everything</li>
+            <li>Panic attacks — sudden, overwhelming episodes of fear</li>
+            <li>Social anxiety — dread of social situations, judgment, or exposure</li>
+            <li>Health anxiety — obsessive worry about illness or symptoms</li>
+            <li>Perfectionism-driven anxiety — never feeling good enough</li>
+          </ul>
+        </div>
+        <div class="highlight-box" style="margin-top: 20px;">
+          <h4>Depression</h4>
+          <ul>
+            <li>Persistent sadness or emotional flatness</li>
+            <li>Loss of interest in things you used to enjoy</li>
+            <li>Fatigue and low energy despite adequate sleep</li>
+            <li>Difficulty concentrating or making decisions</li>
+            <li>Withdrawal from relationships and social life</li>
+            <li>Feelings of worthlessness or excessive guilt</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <MidPageCTA text="Recognizing yourself?" linkText="Schedule a Free Consultation" />
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Our Approach</p>
+        <h2>We Treat the Root, Not Just the Symptoms</h2>
+        <p>Our therapists don't just teach you coping skills (though those matter too). They help you understand <strong>what's driving</strong> the anxiety or depression — whether it's unprocessed experiences, learned patterns, relationship dynamics, or life transitions.</p>
+        <p><strong>CBT</strong> — identifies and restructures the thought patterns fueling your symptoms. Practical, structured, and evidence-based.</p>
+        <p><strong>EMDR</strong> — when anxiety or depression is rooted in past experiences. Processes the memories driving the emotional patterns.</p>
+        <p><strong>IFS</strong> — helps you understand your anxious or depressed "parts" with compassion rather than fighting them. Reduces internal conflict.</p>
+        <p>Therapy at Lotus Rose isn't just talking to a friend. As Joy puts it: "There's so much more to it than that. There's training, hours, and dedication that it takes to show up as a therapist."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Related Services</p>
+        <h2>You May Also Be Interested In</h2>
+      </div>
+      <div class="card-grid" style="margin-top: 32px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <a href="/postpartum-depression/" class="card service-link">
+          <h3>Postpartum Depression</h3>
+          <p>Specialized treatment for depression and anxiety in the postpartum period.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/trauma-therapy/" class="card service-link">
+          <h3>Trauma & PTSD</h3>
+          <p>When anxiety or depression is rooted in past traumatic experiences.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>Anxiety & Depression FAQs</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+      <div class="faq-link">
+        <a href="/contact/">Have another question? Reach out →</a>
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>
+
+<style>
+  .service-link { text-decoration: none; color: inherit; display: block; }
+  .service-link:hover { color: inherit; }
+</style>

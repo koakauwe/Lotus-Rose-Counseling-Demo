@@ -7,36 +7,64 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Learn about Lotus Rose Counseling — a therapy practice in Orem, Utah founded by Joy Bouchard, LCSW, specializing in trauma, postpartum, grief, and EMDR therapy."
 >
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
+  <!-- Full-Bleed Hero -->
+  <section class="hero-fullbleed">
+    <div class="hero-fullbleed-bg">
+      <img src="/florals/floral-contact.jpg" alt="Dried flowers — Lotus Rose Counseling story" width="1920" height="1080" fetchpriority="high" />
+    </div>
+    <div class="hero-fullbleed-overlay"></div>
+    <div class="hero-fullbleed-content">
       <p class="section-label">Our Story</p>
       <h1>Why "Lotus Rose"?</h1>
       <p class="hero-subtitle">Two symbols of strength, resilience, and the ability to bloom after adversity.</p>
     </div>
   </section>
 
-  <!-- Joy's Story -->
-  <section class="bg-white">
+  <!-- Split: Joy's Story -->
+  <div class="split-section">
+    <div class="split-content">
+      <p class="section-label">Joy's Story</p>
+      <h2>"I Know What It's Like to Need Help in That Period of Time"</h2>
+      <p>Joy Bouchard founded Lotus Rose because she's lived the struggle. As a mother of three, she has her own journey with birth trauma, postpartum depression, and postpartum anxiety — each child bringing a different experience.</p>
+      <p>She knows what it's like to be searching for someone you can talk to, someone who can give guidance on how to navigate the hardest chapters of motherhood. That's why she created a place that wasn't just specialized — but that <strong>felt</strong> safe.</p>
+    </div>
+    <div class="split-image">
+      <img src="/photos/joy-bouchard.jpg" alt="Joy Bouchard, LCSW — founder of Lotus Rose Counseling" width="800" height="800" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- Pull Quote -->
+  <section class="bg-cream">
     <div class="container">
       <div class="text-container">
-        <p class="section-label">Joy's Story</p>
-        <h2>"I Know What It's Like to Need Help in That Period of Time"</h2>
-        <p>Joy Bouchard founded Lotus Rose Counseling because she's lived the struggle herself. As a mother of three, she has her own journey with birth trauma, postpartum depression, and postpartum anxiety — with each child bringing a different experience.</p>
-        <p>She knows what it's like to be looking for someone you can talk to, someone who can give you guidance on how to navigate the hardest chapters of motherhood. She wanted to create a place that wasn't just specialized in women's mental health, but that <strong>felt</strong> safe — especially for women who've experienced traumatic events.</p>
-        <p>Two things Joy is most passionate about treating: infant loss, and helping women who experienced childhood abuse and are now watching it resurface as they become mothers themselves. In her clinical work, she's found these two areas deeply overlap — women come in for postpartum depression and discover there's unprocessed childhood trauma underneath.</p>
+        <div class="pull-quote">
+          <p>"I wanted to create a place that was very safe, that felt warm and welcoming. All of our clinicians are trained in how to help specifically with women's issues. I wanted it to be a safe haven."</p>
+          <cite>Joy Bouchard, LCSW — Founder</cite>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Split Reverse: What She's Passionate About -->
+  <div class="split-section split-section--reverse">
+    <div class="split-content">
+      <p class="section-label">What Drives Us</p>
+      <h2>The Two Things Joy Loves Treating Most</h2>
+      <p><strong>Infant loss.</strong> With her own life experience in helping women who've lost an infant or newborn, Joy loves holding space for women during one of the hardest periods of life.</p>
+      <p><strong>Childhood abuse resurfacing in motherhood.</strong> Women come in for postpartum depression and discover there's unprocessed trauma from their childhood underneath. Joy found these two areas deeply overlap — and treating them together is what she's most passionate about.</p>
+    </div>
+    <div class="split-image">
+      <img src="/photos/office-5.jpg" alt="Comfortable therapy environment at Lotus Rose Counseling" width="800" height="600" loading="lazy" />
+    </div>
+  </div>
+
   <!-- What Makes Us Different -->
-  <section class="bg-cream">
+  <section class="bg-white">
     <div class="container">
       <div class="text-container">
         <p class="section-label">What Makes Us Different</p>
-        <h2>We Don't Just Say We Specialize in Women. It's All We Do.</h2>
-        <p>A lot of practices say they see women for postpartum or perinatal issues — but they also see everyone else for everything else. At Lotus Rose, women's mental health <strong>is</strong> the specialty. Not women's issues plus a wide variety of other things.</p>
+        <h2>Women's Mental Health Is Our Specialty. It's What We Do Best.</h2>
+        <p>A lot of practices say they see women for postpartum or perinatal issues — but they also see everyone else for everything else. At Lotus Rose, women's mental health is our core focus. We also work with teens and children — especially those navigating grief, loss, trauma, and behavioral challenges.</p>
         <p>Every therapist is trained in trauma treatment. Every continuing education course is chosen specifically to get better at treating women's issues. The space itself was designed to feel like a safe haven — warm, welcoming, and nothing like a clinical office.</p>
 
         <div class="highlight-box">
@@ -53,6 +81,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Full-Width Photo Break -->
+  <div class="photo-break">
+    <img src="/photos/office-2.jpg" alt="Lotus Rose Counseling therapy room" width="1920" height="800" loading="lazy" />
+  </div>
+
   <!-- Who We Serve -->
   <section class="bg-white">
     <div class="container">
@@ -66,13 +99,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Space -->
+  <!-- Office Gallery -->
   <section class="bg-cream">
     <div class="container">
       <div class="text-container text-center">
         <p class="section-label">Our Space</p>
         <h2>A Place That Feels Like Home</h2>
-        <p>Our office is located in a cozy basement space under Forever by Ash in Orem. We intentionally designed every room to feel warm, inviting, and nothing like a clinical setting. Comfortable couches, soft lighting, and thoughtful touches — because the environment matters when you're doing vulnerable work.</p>
+        <p>Located in a cozy basement space under Forever by Ash in Orem. Joy put a lot of work into making every room feel warm, inviting, and nothing like a clinical setting.</p>
       </div>
       <div class="photo-grid" style="margin-top: 40px;">
         <img src="/photos/office-1.jpg" alt="Therapy room at Lotus Rose Counseling in Orem, Utah" width="768" height="512" loading="lazy" />
@@ -87,44 +120,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <h2>Ready to Begin Your Healing Journey?</h2>
       <p>Schedule a free 15-minute consultation to find the right therapist for you.</p>
-      <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+        <a href="tel:+18016424244" class="btn-secondary">Call (801) 642-4244</a>
+      </div>
     </div>
   </section>
 
 </BaseLayout>
-
-<style>
-  .hero {
-    position: relative;
-    background: var(--gradient-hero);
-    padding: 100px 0 80px;
-    text-align: center;
-    overflow: hidden;
-  }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 60%);
-  }
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  .hero h1 { margin-bottom: 16px; }
-  .hero-subtitle {
-    font-size: 20px;
-    color: var(--text-medium);
-    line-height: 1.6;
-  }
-  .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-  @media (max-width: 768px) {
-    .hero { padding: 70px 0 60px; }
-    .photo-grid { grid-template-columns: 1fr; }
-  }
-</style>

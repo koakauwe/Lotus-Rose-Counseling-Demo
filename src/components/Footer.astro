@@ -80,8 +80,8 @@ const currentYear = new Date().getFullYear();
 
 <style>
   .site-footer {
-    background: var(--text-dark);
-    color: rgba(255,255,255,0.7);
+    background: var(--dusty-mauve);
+    color: rgba(255,255,255,0.85);
     padding: 60px 0 32px;
     font-size: 15px;
   }
@@ -100,10 +100,7 @@ const currentYear = new Date().getFullYear();
     font-family: var(--font-heading);
     font-size: 22px;
     font-weight: 700;
-    background: var(--gradient-brand);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-dark);
     margin-bottom: 20px;
   }
   .footer-col ul {
@@ -113,11 +110,13 @@ const currentYear = new Date().getFullYear();
     margin-bottom: 10px;
   }
   .footer-col a {
-    color: rgba(255,255,255,0.7);
+    color: var(--text-dark);
+    opacity: 0.8;
     transition: all 0.2s;
   }
   .footer-col a:hover {
-    color: var(--peach-gold);
+    color: var(--text-dark);
+    opacity: 1;
     padding-left: 4px;
   }
 
@@ -129,12 +128,12 @@ const currentYear = new Date().getFullYear();
   .contact-list svg {
     flex-shrink: 0;
     margin-top: 3px;
-    stroke: var(--peach-gold);
+    stroke: var(--text-dark);
   }
   .service-area {
     margin-top: 16px;
     font-size: 13px;
-    color: rgba(255,255,255,0.4);
+    color: var(--text-medium);
     line-height: 1.6;
   }
 
@@ -147,19 +146,20 @@ const currentYear = new Date().getFullYear();
     display: flex;
     align-items: center;
     gap: 10px;
-    color: rgba(255,255,255,0.7);
+    color: var(--text-dark);
+    opacity: 0.8;
   }
-  .social-links a:hover { color: var(--peach-gold); }
-  .social-links svg { stroke: var(--peach-gold); }
+  .social-links a:hover { opacity: 1; }
+  .social-links svg { stroke: var(--text-dark); }
 
   .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(61, 51, 48, 0.15);
     padding-top: 24px;
     text-align: center;
   }
-  .footer-bottom p { color: rgba(255,255,255,0.4); font-size: 13px; margin-bottom: 8px; }
-  .footer-bottom a { color: rgba(255,255,255,0.5); }
-  .footer-bottom a:hover { color: var(--peach-gold); }
+  .footer-bottom p { color: var(--text-medium); font-size: 13px; margin-bottom: 8px; }
+  .footer-bottom a { color: var(--text-dark); opacity: 0.7; }
+  .footer-bottom a:hover { opacity: 1; }
   .dot { margin: 0 8px; opacity: 0.3; }
   .copyright { margin-bottom: 0; }
 

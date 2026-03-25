@@ -1,29 +1,30 @@
 ---
 /**
- * Header — Top bar + Navigation + CSS-only mobile menu + Sticky mobile CTA
+ * Header — Stacked layout: big centered logo on top, nav bar below
+ * Mobile: logo + hamburger, slide-out drawer, sticky CTA bar
  */
 ---
 
-<!-- Top Bar -->
+<!-- Top Bar — Centered Logo + Contact Info below -->
 <div class="top-bar">
   <div class="container top-bar-inner">
-    <a href="tel:+18016424244" class="top-bar-link">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      (801) 642-4244
+    <a href="/" class="top-bar-logo-link" aria-label="Lotus Rose Counseling — Home">
+      <img src="/logo.png" alt="Lotus Rose Counseling" class="top-bar-logo" width="400" height="130" />
     </a>
-    <span class="top-bar-divider">|</span>
-    <span class="top-bar-address">237 W. 520 N. St, Orem, UT 84057</span>
+    <div class="top-bar-contact">
+      <a href="tel:+18016424244" class="top-bar-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (801) 642-4244
+      </a>
+      <span class="top-bar-divider">|</span>
+      <span class="top-bar-address">237 W. 520 N. St, Orem, UT 84057</span>
+    </div>
   </div>
 </div>
 
-<!-- Main Header -->
+<!-- Nav Bar — Links only, no logo -->
 <header class="site-header" role="banner">
-  <div class="container header-inner">
-    <a href="/" class="logo-link" aria-label="Lotus Rose Counseling — Home">
-      <img src="/logo.png" alt="Lotus Rose Counseling" class="logo-img" width="220" height="70" />
-    </a>
-
-    <!-- Desktop Nav -->
+  <div class="nav-row">
     <nav class="desktop-nav" aria-label="Main navigation">
       <ul class="nav-list">
         <li><a href="/">Home</a></li>
@@ -33,50 +34,66 @@
           <ul class="dropdown">
             <li><a href="/postpartum-depression/">Postpartum Depression</a></li>
             <li><a href="/emdr-therapy/">EMDR Therapy</a></li>
+            <li><a href="/accelerated-resolution-therapy/">Accelerated Resolution Therapy</a></li>
+            <li><a href="/grief-counseling/">Grief Counseling</a></li>
+            <li><a href="/trauma-therapy/">Trauma & PTSD</a></li>
+            <li><a href="/anxiety-depression/">Anxiety & Depression</a></li>
+            <li><a href="/teen-child-therapy/">Teen & Child Therapy</a></li>
             <li><a href="/services/">All Services</a></li>
           </ul>
         </li>
         <li><a href="/our-therapists/">Our Therapists</a></li>
+        <li><a href="/support-groups/">Support Groups</a></li>
         <li><a href="/insurance/">Insurance</a></li>
         <li><a href="/contact/">Contact</a></li>
+        <li class="nav-cta-item"><a href="/contact/" class="nav-cta">Book Appointment</a></li>
       </ul>
     </nav>
+  </div>
 
-    <a href="/contact/" class="header-cta btn-primary">Book Appointment</a>
-
-    <!-- Mobile Hamburger -->
+  <!-- Mobile: Logo + Hamburger on same row -->
+  <div class="mobile-header-row">
+    <a href="/" class="logo-link" aria-label="Lotus Rose Counseling — Home">
+      <img src="/logo.png" alt="Lotus Rose Counseling" class="mobile-logo-img" width="200" height="60" />
+    </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
     <label for="nav-toggle" class="hamburger" aria-label="Open menu">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
     </label>
-
-    <!-- Mobile Nav Drawer -->
-    <label for="nav-toggle" class="nav-backdrop" aria-hidden="true"></label>
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-      <ul class="mobile-nav-list">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li>
-          <input type="checkbox" id="mobile-services" class="mobile-dropdown-toggle" />
-          <label for="mobile-services" class="mobile-dropdown-label">Services <span class="dropdown-arrow">▾</span></label>
-          <ul class="mobile-dropdown">
-            <li><a href="/postpartum-depression/">Postpartum Depression</a></li>
-            <li><a href="/emdr-therapy/">EMDR Therapy</a></li>
-            <li><a href="/services/">All Services</a></li>
-          </ul>
-        </li>
-        <li><a href="/our-therapists/">Our Therapists</a></li>
-        <li><a href="/insurance/">Insurance</a></li>
-        <li><a href="/contact/">Contact</a></li>
-      </ul>
-      <div class="mobile-nav-footer">
-        <a href="tel:+18016424244" class="mobile-phone">(801) 642-4244</a>
-        <a href="/contact/" class="btn-primary mobile-nav-cta">Book Appointment</a>
-      </div>
-    </nav>
   </div>
+
+  <!-- Mobile Nav Drawer -->
+  <label for="nav-toggle" class="nav-backdrop" aria-hidden="true"></label>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li>
+        <input type="checkbox" id="mobile-services" class="mobile-dropdown-toggle" />
+        <label for="mobile-services" class="mobile-dropdown-label">Services <span class="dropdown-arrow">▾</span></label>
+        <ul class="mobile-dropdown">
+          <li><a href="/postpartum-depression/">Postpartum Depression</a></li>
+          <li><a href="/emdr-therapy/">EMDR Therapy</a></li>
+          <li><a href="/accelerated-resolution-therapy/">Accelerated Resolution Therapy</a></li>
+          <li><a href="/grief-counseling/">Grief Counseling</a></li>
+          <li><a href="/trauma-therapy/">Trauma & PTSD</a></li>
+          <li><a href="/anxiety-depression/">Anxiety & Depression</a></li>
+          <li><a href="/teen-child-therapy/">Teen & Child Therapy</a></li>
+          <li><a href="/services/">All Services</a></li>
+        </ul>
+      </li>
+      <li><a href="/our-therapists/">Our Therapists</a></li>
+      <li><a href="/support-groups/">Support Groups</a></li>
+      <li><a href="/insurance/">Insurance</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <a href="tel:+18016424244" class="mobile-phone">(801) 642-4244</a>
+      <a href="/contact/" class="btn-primary mobile-nav-cta">Book Appointment</a>
+    </div>
+  </nav>
 </header>
 
 <!-- Sticky Mobile CTA Bar -->
@@ -89,72 +106,95 @@
 </div>
 
 <style>
-  /* ---- Top Bar ---- */
+  /* ---- Top Bar — Centered Logo + Contact ---- */
   .top-bar {
-    background: var(--text-dark);
-    color: rgba(255,255,255,0.8);
-    font-size: 13px;
-    padding: 8px 0;
+    background: var(--blush-pink);
+    padding: 28px 0 16px;
   }
   .top-bar-inner {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .top-bar-logo-link {
+    display: flex;
+    align-items: center;
+  }
+  .top-bar-logo {
+    height: 110px;
+    width: auto;
+  }
+  .top-bar-contact {
+    display: flex;
     align-items: center;
     gap: 16px;
+    font-size: 13px;
   }
   .top-bar-link {
-    color: rgba(255,255,255,0.8);
+    color: var(--text-dark);
     display: flex;
     align-items: center;
     gap: 6px;
+    font-weight: 600;
   }
   .top-bar-link:hover { color: var(--peach-gold); }
-  .top-bar-divider { opacity: 0.3; }
-  .top-bar-address { color: rgba(255,255,255,0.6); }
+  .top-bar-divider { color: var(--dusty-mauve); opacity: 0.5; }
+  .top-bar-address { color: var(--text-medium); }
 
-  /* ---- Header ---- */
+  /* ---- Nav Bar — Links only ---- */
   .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
     background: var(--white);
     box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-    padding: 12px 0;
   }
-  .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
-  .logo-link { display: flex; align-items: center; }
-  .logo-img { height: 55px; width: auto; }
 
-  /* ---- Desktop Nav ---- */
+  .nav-row {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
   .nav-list {
     display: flex;
     list-style: none;
-    gap: 8px;
+    gap: 4px;
     align-items: center;
+    justify-content: center;
   }
   .nav-list > li > a,
   .nav-list > li > .dropdown-toggle {
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-dark);
-    padding: 10px 14px;
-    border-radius: 8px;
+    padding: 14px 16px;
     transition: all var(--transition-smooth);
     text-decoration: none;
     display: block;
+    white-space: nowrap;
   }
   .nav-list > li > a:hover,
   .nav-list > li > .dropdown-toggle:hover {
     color: var(--peach-gold);
-    background: rgba(212,165,116,0.06);
   }
   .dropdown-arrow { font-size: 11px; opacity: 0.5; }
+
+  /* Nav CTA button inline */
+  .nav-cta {
+    background: var(--gradient-brand);
+    color: var(--white) !important;
+    padding: 10px 24px !important;
+    border-radius: 50px;
+    font-size: 13px !important;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 16px rgba(212,165,116,0.3);
+    transition: all var(--transition-smooth);
+  }
+  .nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(212,165,116,0.4);
+    color: var(--white) !important;
+  }
 
   /* Dropdown */
   .has-dropdown { position: relative; }
@@ -162,11 +202,12 @@
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--white);
     border-radius: 12px;
     box-shadow: var(--shadow-medium);
-    min-width: 240px;
+    min-width: 260px;
     padding: 12px 0;
     list-style: none;
     z-index: 110;
@@ -175,7 +216,7 @@
   .dropdown li a {
     display: block;
     padding: 10px 24px;
-    font-size: 15px;
+    font-size: 14px;
     color: var(--text-dark);
     transition: all 0.2s;
   }
@@ -185,24 +226,27 @@
     padding-left: 28px;
   }
 
-  /* Header CTA */
-  .header-cta {
-    padding: 12px 28px;
-    font-size: 14px;
-    white-space: nowrap;
-  }
-
-  /* ---- Mobile Nav ---- */
+  /* ---- Mobile ---- */
+  .mobile-header-row { display: none; }
   .nav-toggle { display: none; }
-  .hamburger { display: none; }
   .nav-backdrop { display: none; }
   .mobile-nav { display: none; }
   .mobile-cta-bar { display: none; }
 
   @media (max-width: 1100px) {
-    .desktop-nav { display: none; }
-    .header-cta { display: none; }
+    .nav-row { display: none; }
     .top-bar { display: none; }
+
+    .mobile-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 28px;
+    }
+    .mobile-logo-img {
+      height: 50px;
+      width: auto;
+    }
 
     .hamburger {
       display: flex;
@@ -221,13 +265,13 @@
     }
 
     /* Hamburger animation */
-    .nav-toggle:checked ~ .hamburger .hamburger-line:nth-child(1) {
+    .nav-toggle:checked ~ .mobile-header-row .hamburger .hamburger-line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
     }
-    .nav-toggle:checked ~ .hamburger .hamburger-line:nth-child(2) {
+    .nav-toggle:checked ~ .mobile-header-row .hamburger .hamburger-line:nth-child(2) {
       opacity: 0;
     }
-    .nav-toggle:checked ~ .hamburger .hamburger-line:nth-child(3) {
+    .nav-toggle:checked ~ .mobile-header-row .hamburger .hamburger-line:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
     }
 

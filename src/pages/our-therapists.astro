@@ -24,25 +24,28 @@ const faqSchema = [
   faqSchema={faqSchema}
 >
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
+  <!-- Floral Hero -->
+  <section class="hero-fullbleed">
+    <div class="hero-fullbleed-bg">
+      <img src="/florals/floral-pam.jpg" alt="Pink magnolias — Lotus Rose Counseling" width="1920" height="1080" fetchpriority="high" />
+    </div>
+    <div class="hero-fullbleed-overlay"></div>
+    <div class="hero-fullbleed-content">
       <p class="section-label">Your Therapists</p>
       <h1>Meet the Team at Lotus Rose Counseling</h1>
       <p class="hero-subtitle">Four therapists, each bringing different training and lived experience — all dedicated to creating a space where healing happens.</p>
     </div>
   </section>
 
-  <!-- Therapists -->
+  <!-- All Therapists — Equal Weight -->
   <section class="bg-white">
     <div class="container">
       <TherapistCard
         name="Joy Bouchard"
         title="Owner & Licensed Clinical Social Worker (LCSW)"
         photo="/photos/joy-bouchard.jpg"
-        specialties={["EMDR", "Accelerated Resolution Therapy", "Internal Family Systems", "Postpartum Depression", "Developmental Trauma", "PTSD", "Grief & Loss", "Perfectionism"]}
-        bio="Joy's approach starts with building genuine rapport — she believes the therapeutic relationship is the foundation for everything that follows. Trained in EMDR and Accelerated Resolution Therapy, she helps clients process trauma without having to relive every detail. Joy specializes in maternal mental health, developmental trauma, and grief, working primarily with women and teens. She integrates IFS, Self-Compassion, and CBT based on each client's unique needs."
+        specialties={["EMDR", "Accelerated Resolution Therapy", "Internal Family Systems", "Postpartum Depression", "Birth Trauma", "Infant Loss", "Childhood Abuse Recovery", "Grief & Loss"]}
+        bio="Joy founded Lotus Rose because she's lived the struggle — as a mom of three with her own journey through birth trauma, postpartum depression, and postpartum anxiety. She builds genuine rapport first, because she believes the therapeutic relationship is the foundation for everything. Her two deepest passions: holding space for women who've experienced infant loss, and helping mothers process childhood abuse that resurfaces during parenthood. She integrates EMDR, ART, IFS, and Self-Compassion based on each client's needs."
         bookingText="Join Waitlist"
       />
 
@@ -107,7 +110,7 @@ const faqSchema = [
     </div>
   </section>
 
-  <!-- Person Schema for each therapist -->
+  <!-- Person Schema -->
   <script type="application/ld+json" set:html={JSON.stringify([
     {
       "@context": "https://schema.org",
@@ -116,7 +119,7 @@ const faqSchema = [
       "name": "Joy Bouchard",
       "jobTitle": "Licensed Clinical Social Worker",
       "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
-      "knowsAbout": ["EMDR Therapy", "Accelerated Resolution Therapy", "Internal Family Systems", "Postpartum Depression", "Developmental Trauma", "Grief Counseling"],
+      "knowsAbout": ["EMDR Therapy", "Accelerated Resolution Therapy", "Internal Family Systems", "Postpartum Depression", "Birth Trauma", "Infant Loss", "Childhood Abuse Recovery", "Grief Counseling"],
       "credential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Licensed Clinical Social Worker (LCSW)" }
     },
     {
@@ -150,27 +153,3 @@ const faqSchema = [
   ])} />
 
 </BaseLayout>
-
-<style>
-  .hero {
-    position: relative;
-    background: var(--gradient-hero);
-    padding: 100px 0 80px;
-    text-align: center;
-    overflow: hidden;
-  }
-  .hero-overlay {
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 60%);
-  }
-  .hero-content {
-    position: relative; z-index: 1;
-    max-width: 750px; margin: 0 auto;
-  }
-  .hero-subtitle {
-    font-size: 19px; color: var(--text-medium); line-height: 1.6;
-  }
-  @media (max-width: 768px) {
-    .hero { padding: 70px 0 60px; }
-  }
-</style>

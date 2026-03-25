@@ -1,0 +1,138 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import MidPageCTA from '../components/MidPageCTA.astro';
+
+const faqSchema = [
+  {
+    question: "When should I seek grief counseling?",
+    answer: "There's no timeline for when grief 'should' bring you to therapy. Some people come within weeks of a loss, others come years later when grief resurfaces. If grief is interfering with your daily life, relationships, work, or ability to function — or if you feel stuck and can't move forward — therapy can help. You don't need to wait for grief to become a crisis."
+  },
+  {
+    question: "What types of loss does Lotus Rose help with?",
+    answer: "We work with all forms of loss: death of a loved one, infant loss, miscarriage, stillbirth, divorce or relationship endings, estrangement from family, loss of identity (motherhood transitions, faith transitions, career changes), loss of health, and anticipatory grief. Grief isn't limited to death — any significant loss can benefit from professional support."
+  },
+  {
+    question: "Do you use EMDR for grief?",
+    answer: "Yes. When grief feels 'stuck' — when you can't stop replaying the loss, when the pain isn't softening with time, or when a specific memory keeps triggering overwhelming emotions — EMDR can help your brain process the painful aspects of the loss. It doesn't erase the love or the memories. It reduces the intensity so you can carry the loss without being crushed by it."
+  },
+  {
+    question: "How long does grief counseling take?",
+    answer: "There's no standard timeline. Some clients find relief in a few months. Others, especially those dealing with complex or layered grief, benefit from longer-term support. Grief isn't linear, and we don't rush the process. Your therapist works at your pace and adjusts the approach as you progress."
+  }
+];
+---
+
+<ServiceLayout
+  title="Grief Counseling in Orem, UT | Lotus Rose Counseling"
+  description="Grief counseling in Orem, Utah for loss, bereavement, infant loss, miscarriage, and life transitions. Evidence-based support at Lotus Rose Counseling."
+  sectionLabel="Grief & Loss Counseling"
+  heroTitle="Grief Doesn't Follow a Timeline. Neither Do We."
+  heroSubtitle="Whether you're mourning a loved one, a baby, a relationship, or a version of yourself — we meet you where you are and help you find your own way forward."
+  heroImage="/florals/floral-contact.jpg"
+  faqSchema={faqSchema}
+  therapySchema={{
+    name: "Grief Counseling",
+    description: "Therapy for grief, loss, bereavement, infant loss, miscarriage, and life transitions using EMDR, IFS, and evidence-based approaches.",
+    alternateName: ["Grief Therapy", "Bereavement Counseling", "Loss Counseling"]
+  }}
+>
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <h2>When the Weight of Loss Won't Lift</h2>
+        <p>Everyone says time heals. But sometimes time passes and the grief doesn't soften — it just settles deeper. You go through the motions. You function. But underneath, something fundamental has shifted and you don't know how to carry it.</p>
+        <p>At Lotus Rose, grief counseling isn't about "getting over it" or moving through stages on a checklist. It's about learning to carry the loss in a way that doesn't consume you — while honoring what was lost.</p>
+        <p>Joy Bouchard has a particular passion for this work. Infant loss is one of the two areas she's most drawn to treating, because she understands how isolating and devastating it can be.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">What We Treat</p>
+        <h2>Types of Loss We Work With</h2>
+
+        <div class="highlight-box">
+          <ul>
+            <li>Death of a spouse, parent, child, or close friend</li>
+            <li>Infant loss, miscarriage, and stillbirth</li>
+            <li>Divorce and relationship endings</li>
+            <li>Estrangement from family or faith community</li>
+            <li>Loss of identity — motherhood, career, health, faith</li>
+            <li>Anticipatory grief (caring for someone who is dying)</li>
+            <li>Complicated grief that hasn't softened with time</li>
+          </ul>
+        </div>
+
+        <p>Grief isn't limited to death. Any significant loss — a relationship, an identity, a belief system, a version of yourself — can trigger a grief response that deserves professional support.</p>
+      </div>
+    </div>
+  </section>
+
+  <MidPageCTA text="Carrying something heavy?" linkText="Schedule a Free Consultation" />
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Our Approach</p>
+        <h2>How We Help You Process Grief</h2>
+        <p>Our therapists use several evidence-based approaches depending on your specific experience:</p>
+        <p><strong>EMDR</strong> — when grief feels stuck and specific memories keep triggering overwhelming emotions. EMDR helps your brain process the painful aspects without erasing the love.</p>
+        <p><strong>Internal Family Systems (IFS)</strong> — for understanding and working with the different "parts" of yourself that are responding to the loss — the part that's angry, the part that's numb, the part that feels guilty.</p>
+        <p><strong>ART</strong> — for rapid relief from acute grief symptoms, especially when nightmares, intrusive images, or physical distress are severe.</p>
+        <p>Your therapist won't push you through stages or tell you how you should grieve. They'll create a space where you can process at your own pace, with the right tools to help you move forward when you're ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Related Services</p>
+        <h2>You May Also Be Interested In</h2>
+      </div>
+      <div class="card-grid" style="margin-top: 32px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <a href="/emdr-therapy/" class="card service-link">
+          <h3>EMDR Therapy</h3>
+          <p>Process stuck grief and traumatic memories without reliving every detail.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/postpartum-depression/" class="card service-link">
+          <h3>Postpartum Depression</h3>
+          <p>For mothers experiencing grief layered with postpartum mood and anxiety disorders.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>Grief Counseling FAQs</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+      <div class="faq-link">
+        <a href="/contact/">Have another question? Reach out →</a>
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>
+
+<style>
+  .service-link { text-decoration: none; color: inherit; display: block; }
+  .service-link:hover { color: inherit; }
+</style>

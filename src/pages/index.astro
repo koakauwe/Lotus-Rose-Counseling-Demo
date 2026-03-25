@@ -8,7 +8,7 @@ const faqSchema = [
   },
   {
     question: "What makes Lotus Rose different from other therapy practices?",
-    answer: "We truly specialize in seeing women — not women's issues plus everything else. As Joy puts it: 'A lot of places will say they see women, but they have a wide variety of what they see. With us, women's mental health is what we do.' Every training the team takes is specifically geared toward women's issues, and the space was designed to feel like a safe haven for women who've experienced traumatic events."
+    answer: "Women's mental health is our core specialty — not a side offering alongside everything else. As Joy puts it: 'A lot of places will say they see women, but they have a wide variety of what they see. With us, women's mental health is what we do.' Every training the team takes is specifically geared toward women's issues, and the space was designed to feel like a safe haven for women who've experienced traumatic events."
   },
   {
     question: "How do I know if I need therapy?",
@@ -35,14 +35,17 @@ const faqSchema = [
   faqSchema={faqSchema}
 >
 
-  <!-- ===== HERO — Emotion ===== -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
+  <!-- ===== FULL-BLEED HERO — Floral Peonies ===== -->
+  <section class="hero-fullbleed">
+    <div class="hero-fullbleed-bg">
+      <img src="/florals/hero-peonies.jpg" alt="White peonies — Lotus Rose Counseling" width="1920" height="1080" fetchpriority="high" />
+    </div>
+    <div class="hero-fullbleed-overlay"></div>
+    <div class="hero-fullbleed-content">
       <p class="section-label">Mental Health Therapy in Orem, Utah</p>
       <h1>A Safe Place to Heal, Grow, and Bloom</h1>
-      <h2 class="hero-subtitle">A safe haven for women navigating postpartum depression, birth trauma, childhood abuse, grief, and life's hardest chapters. Because you shouldn't have to carry it alone.</h2>
-      <div class="btn-group hero-btns">
+      <p class="hero-subtitle">A safe haven for women navigating postpartum depression, birth trauma, childhood abuse, grief, and life's hardest chapters.</p>
+      <div class="btn-group" style="justify-content: center;">
         <a href="/contact/" class="btn-primary">Schedule a Free Consultation</a>
         <a href="/services/" class="btn-secondary">Explore Our Services</a>
       </div>
@@ -63,54 +66,113 @@ const faqSchema = [
     </div>
   </section>
 
-  <!-- ===== SYMPTOM RECOGNITION ===== -->
-  <section class="bg-white">
+  <!-- ===== SPLIT: Joy's Story (text left, photo right) ===== -->
+  <div class="split-section">
+    <div class="split-content">
+      <p class="section-label">Why Lotus Rose</p>
+      <h2>Built by a Woman Who Knows What It's Like</h2>
+      <p>Joy Bouchard founded Lotus Rose because she's lived the struggle. As a mom of three, she has her own journey with birth trauma, postpartum depression, and postpartum anxiety — each child bringing a different experience.</p>
+      <p>She knows what it's like to need someone to talk to during the hardest chapters of motherhood. She wanted to create a place that felt genuinely safe — especially for women who've experienced traumatic events.</p>
+      <a href="/about/" class="btn-secondary" style="margin-top: 16px; align-self: flex-start;">Read Our Story →</a>
+    </div>
+    <div class="split-image">
+      <img src="/photos/joy-bouchard.jpg" alt="Joy Bouchard, LCSW — founder of Lotus Rose Counseling" width="800" height="800" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- ===== SPLIT REVERSE: What Makes Us Different (photo left, text right) ===== -->
+  <div class="split-section split-section--reverse">
+    <div class="split-content">
+      <p class="section-label">What Makes Us Different</p>
+      <h2>Women's Mental Health Is Our Specialty. It's What We Do Best.</h2>
+      <p>A lot of practices say they see women for postpartum or perinatal issues — but they also see everyone else for everything else. At Lotus Rose, women's mental health is our core focus. We also work with teens and children — especially those navigating grief, trauma, and behavioral challenges.</p>
+      <p>Every therapist is trained in trauma treatment. Every continuing education course is chosen specifically for women's issues. The space itself was designed to feel like a safe haven — warm, welcoming, and nothing like a clinical office.</p>
+    </div>
+    <div class="split-image">
+      <img src="/photos/office-3.jpg" alt="Warm therapy space at Lotus Rose Counseling" width="800" height="600" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- ===== PULL QUOTE — Floral Background ===== -->
+  <section class="floral-section floral-subtle" style="padding: 100px 0;">
     <div class="container">
-      <div class="text-container text-center">
-        <p class="section-label">Does This Sound Familiar?</p>
-        <h2>You Shouldn't Have to Carry This Alone</h2>
-      </div>
-      <div class="recognition-grid">
-        <a href="/postpartum-depression/" class="recognition-item">
-          <span class="recognition-icon">💭</span>
-          <span>You feel disconnected from yourself or your baby — and guilty for feeling that way</span>
-        </a>
-        <a href="/emdr-therapy/" class="recognition-item">
-          <span class="recognition-icon">🔁</span>
-          <span>A past experience keeps replaying, and you can't seem to move past it</span>
-        </a>
-        <a href="/services/" class="recognition-item">
-          <span class="recognition-icon">😰</span>
-          <span>Anxiety runs your day — racing thoughts, trouble sleeping, constant worry</span>
-        </a>
-        <a href="/services/" class="recognition-item">
-          <span class="recognition-icon">💔</span>
-          <span>Grief has settled in and you're not sure how to navigate life without someone</span>
-        </a>
-        <a href="/services/" class="recognition-item">
-          <span class="recognition-icon">😶</span>
-          <span>You're functioning on the outside but barely holding it together on the inside</span>
-        </a>
-        <a href="/services/" class="recognition-item">
-          <span class="recognition-icon">🌪️</span>
-          <span>Life transitions — faith, motherhood, identity — have left you feeling lost</span>
-        </a>
-      </div>
-      <div class="text-center" style="margin-top: 40px;">
-        <p style="max-width: 650px; margin: 0 auto 24px; font-size: 18px;">These feelings are real and valid. They're also treatable. Our therapists use evidence-based approaches to help you process, heal, and move forward.</p>
-        <a href="/contact/" class="btn-primary">Take the First Step</a>
+      <div class="floral-content" style="margin: 0 auto;">
+        <div class="pull-quote" style="margin: 0;">
+          <p>"You don't know you need it until you know. People would come in for postpartum depression, and we'd find there's a lot of stuff from childhood they hadn't processed yet. The two really overlap."</p>
+          <cite>Joy Bouchard, LCSW — Founder</cite>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SOCIAL PROOF ===== -->
+  <!-- ===== THERAPISTS ===== -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Your Therapists</p>
+        <h2>Meet the Team Behind Lotus Rose</h2>
+        <p>Four therapists, each bringing different specialties and a shared commitment: every training they take is geared toward the things they're most passionate about — women's mental health.</p>
+      </div>
+      <div class="therapist-preview-grid">
+        <div class="therapist-preview">
+          <img src="/photos/joy-bouchard.jpg" alt="Joy Bouchard, LCSW — owner and therapist at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" loading="lazy" />
+          <h3 class="therapist-name">Joy Bouchard</h3>
+          <p class="therapist-title">Owner & LCSW</p>
+          <p>EMDR, ART, IFS, Postpartum, Birth Trauma, Infant Loss, Childhood Abuse</p>
+        </div>
+        <div class="therapist-preview">
+          <img src="/photos/megan-judd.jpg" alt="Megan Judd — therapist at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" loading="lazy" />
+          <h3 class="therapist-name">Megan Judd</h3>
+          <p class="therapist-title">Therapist</p>
+          <p>EMDR, IFS, Trauma, PTSD, Anxiety, Depression, Faith Transitions</p>
+        </div>
+        <div class="therapist-preview">
+          <img src="/photos/pam-basinger.jpg" alt="Pam Basinger — bilingual therapist at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" loading="lazy" />
+          <h3 class="therapist-name">Pam Basinger</h3>
+          <p class="therapist-title">Therapist · Español · Português</p>
+          <p>ART, ADHD, Grief, Life Transitions, Oppositional Defiance</p>
+        </div>
+        <div class="therapist-preview">
+          <img src="/photos/brynnlee-brunt.jpg" alt="Brynnlee Brunt — telehealth therapist at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" loading="lazy" />
+          <h3 class="therapist-name">Brynnlee Brunt</h3>
+          <p class="therapist-title">Therapist · Telehealth Only</p>
+          <p>CBT, EMDR, EFT, Infertility, Postpartum, Anxiety</p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top: 36px;">
+        <a href="/our-therapists/" class="btn-secondary">Meet Our Full Team →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SPLIT: Services (text left, photo right) ===== -->
+  <div class="split-section">
+    <div class="split-content">
+      <p class="section-label">How We Help</p>
+      <h2>Evidence-Based Therapy Matched to Your Needs</h2>
+      <p style="margin-bottom: 28px;">We don't use one-size-fits-all approaches. Your therapist assesses your specific situation and uses the modalities that will be most effective for you.</p>
+      <ul class="services-list">
+        <li><a href="/postpartum-depression/">Postpartum Depression <span class="arrow">→</span></a></li>
+        <li><a href="/emdr-therapy/">EMDR Therapy <span class="arrow">→</span></a></li>
+        <li><a href="/accelerated-resolution-therapy/">Accelerated Resolution Therapy <span class="arrow">→</span></a></li>
+        <li><a href="/grief-counseling/">Grief & Loss Counseling <span class="arrow">→</span></a></li>
+        <li><a href="/trauma-therapy/">Trauma & PTSD <span class="arrow">→</span></a></li>
+        <li><a href="/anxiety-depression/">Anxiety & Depression <span class="arrow">→</span></a></li>
+      </ul>
+    </div>
+    <div class="split-image">
+      <img src="/photos/office-2.jpg" alt="Comfortable therapy space at Lotus Rose Counseling" width="800" height="600" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- ===== TESTIMONIALS ===== -->
   <section class="bg-cream">
     <div class="container">
       <div class="text-container text-center">
         <p class="section-label">What Clients Say</p>
         <h2>Real Stories of Healing</h2>
       </div>
-      <div class="testimonial-grid">
+      <div class="testimonial-grid" style="margin-top: 40px;">
         <div class="testimonial-card">
           <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-quote">"I finally feel like myself again. Joy helped me process things I'd been carrying for years — in a way that actually felt safe."</p>
@@ -130,123 +192,16 @@ const faqSchema = [
     </div>
   </section>
 
-  <!-- ===== WHY LOTUS ROSE — from Joy's own words ===== -->
-  <section class="bg-white">
+  <!-- ===== WHAT TO EXPECT — Floral Background ===== -->
+  <section class="floral-section floral-contact" style="padding: 100px 0;">
     <div class="container">
-      <div class="text-container">
-        <p class="section-label">Why Lotus Rose</p>
-        <h2>We Don't Just Say We Specialize in Women. It's All We Do.</h2>
-        <p>A lot of practices say they see women for postpartum or perinatal issues — but they also see everyone else for everything else. At Lotus Rose, women's mental health <strong>is</strong> what we do. Not women's issues plus a wide variety of other things. This is our focus, and every training we take is geared toward getting better at it.</p>
-
-        <div class="highlight-box">
-          <h4>What That Specialization Means For You</h4>
-          <ul>
-            <li>Every therapist is trained in trauma treatment — EMDR, ART, IFS, or experiential therapy</li>
-            <li>We understand that childhood abuse often resurfaces during motherhood — and we know how to treat both together</li>
-            <li>We go beyond required continuing education, choosing trainings specifically for women's issues</li>
-            <li>Our space was designed to feel like a safe haven, not a clinical office — especially for women who've experienced traumatic events</li>
-          </ul>
-        </div>
-
-        <p>Joy founded Lotus Rose because she knows what it's like to need help navigating postpartum depression, birth trauma, and the hardest chapters of motherhood. She has three kids and her own journey with each of them. She wanted to create the place she wished existed — warm, specialized, and genuinely safe.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CREDENTIALS / THERAPISTS ===== -->
-  <section class="bg-cream">
-    <div class="container">
-      <div class="text-container text-center">
-        <p class="section-label">Your Therapists</p>
-        <h2>Meet the Team Behind Lotus Rose</h2>
-        <p>Four therapists, each bringing different specialties and a shared commitment: every training they take is geared toward the things they're most passionate about — women's mental health.</p>
-      </div>
-      <div class="therapist-preview-grid">
-        <div class="therapist-preview">
-          <img src="/photos/joy-bouchard.jpg" alt="Joy Bouchard, LCSW — owner and therapist at Lotus Rose Counseling in Orem, Utah" class="therapist-photo" width="160" height="160" />
-          <h3 class="therapist-name">Joy Bouchard</h3>
-          <p class="therapist-title">Owner & LCSW</p>
-          <p>EMDR, ART, IFS, Postpartum, Developmental Trauma, Grief</p>
-        </div>
-        <div class="therapist-preview">
-          <img src="/photos/megan-judd.jpg" alt="Megan Judd — therapist at Lotus Rose Counseling specializing in EMDR and trauma" class="therapist-photo" width="160" height="160" />
-          <h3 class="therapist-name">Megan Judd</h3>
-          <p class="therapist-title">Therapist</p>
-          <p>EMDR, IFS, Trauma, PTSD, Anxiety, Depression, Faith Transitions</p>
-        </div>
-        <div class="therapist-preview">
-          <img src="/photos/pam-basinger.jpg" alt="Pam Basinger — bilingual therapist at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" />
-          <h3 class="therapist-name">Pam Basinger</h3>
-          <p class="therapist-title">Therapist · Español · Português</p>
-          <p>ART, ADHD, Grief, Life Transitions, Oppositional Defiance</p>
-        </div>
-        <div class="therapist-preview">
-          <img src="/photos/brynnlee-brunt.jpg" alt="Brynnlee Brunt — telehealth therapist at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" />
-          <h3 class="therapist-name">Brynnlee Brunt</h3>
-          <p class="therapist-title">Therapist · Telehealth Only</p>
-          <p>CBT, EMDR, EFT, Infertility, Postpartum, Anxiety</p>
-        </div>
-      </div>
-      <div class="text-center" style="margin-top: 36px;">
-        <a href="/our-therapists/" class="btn-secondary">Meet Our Full Team →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SERVICES ===== -->
-  <section class="bg-blush">
-    <div class="container">
-      <div class="text-container text-center">
-        <p class="section-label">How We Help</p>
-        <h2>Evidence-Based Therapy That Actually Works</h2>
-        <p>We don't use one-size-fits-all approaches. Each modality targets specific types of struggles — your therapist matches the right approach to your needs.</p>
-      </div>
-      <div class="card-grid" style="margin-top: 48px;">
-        <a href="/postpartum-depression/" class="card service-card">
-          <h3>Postpartum Depression</h3>
-          <p>Sadness, anxiety, intrusive thoughts, emotional numbness, difficulty bonding — these are treatable symptoms, not character flaws.</p>
-          <span class="card-link">Learn more →</span>
-        </a>
-        <a href="/emdr-therapy/" class="card service-card">
-          <h3>EMDR Therapy</h3>
-          <p>Helps your brain process traumatic memories without reliving every detail. Effective for PTSD, phobias, anxiety, and childhood trauma.</p>
-          <span class="card-link">Learn more →</span>
-        </a>
-        <div class="card service-card">
-          <h3>Accelerated Resolution Therapy</h3>
-          <p>Combines eye movements with voluntary image replacement to rapidly reduce distress from traumatic memories — often in 1-5 sessions.</p>
-        </div>
-        <div class="card service-card">
-          <h3>Grief & Loss Counseling</h3>
-          <p>Grief doesn't follow a timeline. Whether mourning a loved one, a relationship, or a version of yourself — we meet you where you are.</p>
-        </div>
-        <div class="card service-card">
-          <h3>Anxiety & Depression</h3>
-          <p>Racing thoughts, constant worry, emotional flatness. CBT, IFS, and somatic approaches tailored to what's driving your specific symptoms.</p>
-        </div>
-        <div class="card service-card">
-          <h3>Teen & Child Therapy</h3>
-          <p>Behavioral challenges, school anxiety, self-esteem, trauma. Age-appropriate therapy where young people feel safe to open up.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== OFFICE GALLERY ===== -->
-  <section class="bg-white">
-    <div class="container">
-      <div class="text-container text-center">
-        <p class="section-label">Our Space</p>
-        <h2>Therapy Rooms Designed to Feel Like Home</h2>
-        <p>Located in a cozy basement office under Forever by Ash in Orem. Warm lighting, comfortable seating, and a space that feels nothing like a clinical office.</p>
-      </div>
-      <div class="photo-grid" style="margin-top: 40px;">
-        <img src="/photos/office-1.jpg" alt="Therapy room at Lotus Rose Counseling in Orem, Utah" width="768" height="512" loading="lazy" />
-        <img src="/photos/office-2.jpg" alt="Comfortable seating in therapy room at Lotus Rose Counseling" width="768" height="513" loading="lazy" />
-        <img src="/photos/office-3.jpg" alt="Warm, inviting therapy space at Lotus Rose Counseling" width="768" height="512" loading="lazy" />
-        <img src="/photos/office-4.jpg" alt="Cozy therapy room designed for comfort at Lotus Rose" width="768" height="512" loading="lazy" />
-        <img src="/photos/office-5.jpg" alt="Lotus Rose Counseling office interior in Orem" width="768" height="512" loading="lazy" />
-        <img src="/photos/office-6.jpg" alt="Welcoming atmosphere at Lotus Rose Counseling office" width="768" height="512" loading="lazy" />
+      <div class="floral-content">
+        <p class="section-label">What to Expect</p>
+        <h2>Therapy Isn't What You Think It Is</h2>
+        <p>One of the biggest misconceptions Joy hears is that therapy is just talking — something you could do with a friend. There's training, technique, and years of dedication behind every session.</p>
+        <p>The other myth? That it's a fast fix. Healing takes time. Most clients work with their therapist for 6-12 months. The first phase is about building genuine rapport and getting comfortable. Then the deep work begins.</p>
+        <p>Joy keeps it human: open dialog, education, and yes — humor. Because the topics are hard, and the space needs to feel real.</p>
+        <a href="/contact/" class="btn-primary" style="margin-top: 20px;">Book Free Consultation</a>
       </div>
     </div>
   </section>
@@ -289,93 +244,7 @@ const faqSchema = [
 </BaseLayout>
 
 <style>
-  /* Hero */
-  .hero {
-    position: relative;
-    background: var(--gradient-hero);
-    padding: 120px 0 100px;
-    overflow: hidden;
-  }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 60%);
-  }
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .hero h1 {
-    font-size: 56px;
-    line-height: 1.15;
-    color: var(--text-dark);
-    margin-bottom: 20px;
-  }
-  .hero-subtitle {
-    font-family: var(--font-body);
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text-medium);
-    line-height: 1.6;
-    margin-bottom: 36px;
-  }
-  .hero-btns {
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-  .hero-trust {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
-  }
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text-dark);
-  }
-  .trust-item svg { stroke: var(--peach-gold); }
-
-  /* Symptom Recognition */
-  .recognition-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-    margin-top: 40px;
-  }
-  .recognition-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 20px 24px;
-    background: var(--warm-cream);
-    border-radius: 12px;
-    border-left: 3px solid var(--peach-gold);
-    color: var(--text-medium);
-    font-size: 16px;
-    line-height: 1.6;
-    transition: all var(--transition-smooth);
-    text-decoration: none;
-  }
-  .recognition-item:hover {
-    background: var(--white);
-    box-shadow: var(--shadow-soft);
-    transform: translateX(4px);
-    color: var(--text-dark);
-  }
-  .recognition-icon {
-    font-size: 24px;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  /* Therapist Preview */
+  /* Therapist Preview Grid */
   .therapist-preview-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -401,25 +270,10 @@ const faqSchema = [
     margin-bottom: 4px;
   }
 
-  /* Service cards as links */
-  .service-card {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-  .service-card:hover { color: inherit; }
-
-
   @media (max-width: 1100px) {
-    .hero { padding: 80px 0 70px; }
-    .hero h1 { font-size: 42px; }
     .therapist-preview-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
-    .hero h1 { font-size: 34px; }
-    .hero-subtitle { font-size: 17px; }
-    .hero-trust { flex-direction: column; align-items: center; gap: 12px; }
-    .recognition-grid { grid-template-columns: 1fr; }
     .therapist-preview-grid { grid-template-columns: 1fr; }
   }
 </style>

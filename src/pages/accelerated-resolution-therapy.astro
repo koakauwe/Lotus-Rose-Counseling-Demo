@@ -1,0 +1,140 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import MidPageCTA from '../components/MidPageCTA.astro';
+
+const faqSchema = [
+  {
+    question: "What is Accelerated Resolution Therapy (ART)?",
+    answer: "ART is an evidence-based psychotherapy that uses eye movements and a technique called voluntary image replacement to help clients rapidly process traumatic memories. Unlike traditional talk therapy, ART can produce significant relief in as few as 1-5 sessions. It was developed by Laney Rosenzweig and draws on principles from EMDR, CBT, and gestalt therapy."
+  },
+  {
+    question: "How is ART different from EMDR?",
+    answer: "Both use bilateral eye movements, but they work differently. EMDR helps your brain reprocess traumatic memories over multiple sessions. ART uses voluntary image replacement — you actively replace the distressing images stored in your memory with new ones you choose. ART often works faster, with many clients experiencing significant relief in 1-5 sessions versus the longer timeline typical of EMDR."
+  },
+  {
+    question: "What can ART treat?",
+    answer: "ART is effective for PTSD, trauma, anxiety, depression, phobias, grief, sleep problems, and substance cravings. It's particularly effective for single-event traumas and for clients who want rapid relief. Research has shown ART to be effective in reducing symptoms of PTSD, depression, anxiety, and trauma-related guilt."
+  },
+  {
+    question: "How many ART sessions will I need?",
+    answer: "Many clients experience significant improvement in 1-5 sessions. Single-event traumas often resolve in 1-3 sessions. More complex trauma histories may require additional sessions, but ART is generally faster than most other trauma therapies."
+  },
+  {
+    question: "Which therapists at Lotus Rose are trained in ART?",
+    answer: "Joy Bouchard (LCSW, owner) and Pam Basinger are both trained in Accelerated Resolution Therapy. During your free consultation, we'll help match you with the right therapist based on your specific needs."
+  }
+];
+---
+
+<ServiceLayout
+  title="Accelerated Resolution Therapy (ART) in Orem, UT | Lotus Rose Counseling"
+  description="Accelerated Resolution Therapy in Orem, Utah. Rapid trauma processing in 1-5 sessions at Lotus Rose Counseling. Treats PTSD, anxiety, grief, and phobias."
+  sectionLabel="Accelerated Resolution Therapy"
+  heroTitle="Rapid Trauma Relief — Often in Just a Few Sessions"
+  heroSubtitle="Accelerated Resolution Therapy uses eye movements and voluntary image replacement to change how traumatic memories are stored — without requiring you to relive every detail."
+  heroImage="/florals/floral-subtle.jpg"
+  faqSchema={faqSchema}
+  therapySchema={{
+    name: "Accelerated Resolution Therapy",
+    description: "A rapid eye-movement therapy that uses voluntary image replacement to process trauma, PTSD, anxiety, and grief — often in 1-5 sessions.",
+    alternateName: ["ART Therapy", "ART Treatment", "Accelerated Resolution Therapy Treatment"]
+  }}
+>
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <h2>When You Need Relief and Can't Wait Months to Get It</h2>
+        <p>Some people don't have months to spend in weekly therapy before they start feeling better. Maybe the nightmares are ruining your sleep tonight. Maybe the anxiety is affecting your ability to parent right now. Maybe you just need the weight of a specific memory to stop crushing you.</p>
+        <p><strong>ART was designed for exactly this.</strong> It's one of the fastest evidence-based trauma therapies available. Many clients experience significant relief in 1-5 sessions — not months, not years.</p>
+        <p>At Lotus Rose, Joy Bouchard and Pam Basinger are both trained in ART and use it regularly with clients who need faster results or who want an alternative to longer-term trauma processing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">How ART Works</p>
+        <h2>The Science Behind Voluntary Image Replacement</h2>
+        <p>During an ART session, your therapist guides you through sets of eye movements while you focus on the traumatic memory. Here's where ART differs from other therapies: you then actively <strong>replace the distressing images</strong> in your memory with new images you choose.</p>
+        <p>The facts of what happened don't change — you still remember the event. But the images, emotions, and physical sensations attached to it shift dramatically. Clients often describe it as the memory losing its "charge."</p>
+
+        <div class="highlight-box">
+          <h4>What ART Can Help With</h4>
+          <ul>
+            <li>PTSD and single-event trauma (accidents, assault, witnessing violence)</li>
+            <li>Anxiety, panic attacks, and phobias</li>
+            <li>Grief and loss that feels stuck</li>
+            <li>Depression linked to past experiences</li>
+            <li>Sleep disturbances and nightmares</li>
+            <li>Substance cravings and addictive behaviors</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <MidPageCTA text="Want to know if ART is right for your situation?" linkText="Schedule a Free Consultation" />
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">ART vs. Other Therapies</p>
+        <h2>Why Choose ART Over Traditional Therapy?</h2>
+        <p>Traditional talk therapy typically requires months of weekly sessions before clients feel significant improvement. ART compresses that timeline dramatically.</p>
+        <p>ART also doesn't require you to describe your trauma in detail or retell your story repeatedly. The processing happens through eye movements and image replacement — which many clients find less overwhelming than approaches that require extensive verbal processing.</p>
+        <p>That said, ART isn't the right fit for everyone. Complex developmental trauma, ongoing abuse situations, and some chronic conditions may benefit from longer-term approaches like EMDR or IFS. Your therapist will assess your situation and recommend the best approach.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Related Services</p>
+        <h2>You May Also Be Interested In</h2>
+      </div>
+      <div class="card-grid" style="margin-top: 32px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <a href="/emdr-therapy/" class="card service-link">
+          <h3>EMDR Therapy</h3>
+          <p>A related eye-movement therapy for complex trauma, PTSD, and anxiety — typically over more sessions.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/trauma-therapy/" class="card service-link">
+          <h3>Trauma & PTSD</h3>
+          <p>Our full range of trauma treatment approaches including ART, EMDR, IFS, and experiential therapy.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>ART Therapy FAQs</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+      <div class="faq-link">
+        <a href="/contact/">Have another question? Reach out →</a>
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>
+
+<style>
+  .service-link { text-decoration: none; color: inherit; display: block; }
+  .service-link:hover { color: inherit; }
+</style>

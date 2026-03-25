@@ -1,0 +1,139 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import MidPageCTA from '../components/MidPageCTA.astro';
+
+const faqSchema = [
+  {
+    question: "What types of trauma does Lotus Rose treat?",
+    answer: "We treat childhood abuse (physical, sexual, emotional), sexual assault, domestic violence, birth trauma, combat trauma, accidents, medical trauma, developmental trauma, and complex PTSD. Joy Bouchard specializes in childhood abuse that resurfaces during motherhood — she's found these two areas deeply overlap."
+  },
+  {
+    question: "Do I have to talk about my trauma in detail?",
+    answer: "No. Our primary trauma treatments — EMDR and ART — don't require you to retell your story in detail. You'll briefly identify the memory and the emotions connected to it, but the processing happens through eye movements and internal work. Many clients find this less overwhelming than approaches that require detailed verbal retelling."
+  },
+  {
+    question: "How do I know if I have PTSD?",
+    answer: "Common signs include flashbacks or intrusive memories, nightmares, avoiding things that remind you of the event, feeling on edge or easily startled, emotional numbness, difficulty sleeping, irritability, and feeling disconnected from yourself or others. You don't need a formal diagnosis to benefit from trauma therapy — if past experiences are affecting your daily life, we can help."
+  },
+  {
+    question: "What trauma therapies do you use?",
+    answer: "Our therapists use EMDR (Eye Movement Desensitization and Reprocessing), ART (Accelerated Resolution Therapy), IFS (Internal Family Systems), experiential therapy, and CBT. Every therapist at Lotus Rose is trained in at least one trauma-specific modality. Your therapist will assess your situation and recommend the best approach."
+  },
+  {
+    question: "Can childhood trauma really affect me as an adult?",
+    answer: "Absolutely. Joy sees this constantly in her practice — women come in for postpartum depression or anxiety, and underneath they discover unprocessed childhood trauma that's been driving their symptoms. Childhood experiences shape your nervous system, your attachment patterns, and your beliefs about yourself. Processing them can dramatically reduce current symptoms."
+  }
+];
+---
+
+<ServiceLayout
+  title="Trauma & PTSD Therapy in Orem, UT | Lotus Rose Counseling"
+  description="Trauma and PTSD therapy in Orem, Utah. EMDR, ART, and IFS treatment for childhood abuse, sexual assault, birth trauma, and complex PTSD at Lotus Rose Counseling."
+  sectionLabel="Trauma & PTSD Therapy"
+  heroTitle="What Happened to You Still Lives in Your Body. We Can Help It Heal."
+  heroSubtitle="Childhood abuse, sexual assault, birth trauma, accidents — your nervous system is still protecting you from something that's already over. Specialized therapy helps it let go."
+  heroImage="/florals/floral-insurance.jpg"
+  faqSchema={faqSchema}
+  therapySchema={{
+    name: "Trauma Therapy",
+    description: "Evidence-based trauma and PTSD therapy using EMDR, ART, IFS, and experiential therapy for childhood abuse, sexual assault, birth trauma, and complex PTSD.",
+    alternateName: ["PTSD Treatment", "Trauma Counseling", "PTSD Therapy"]
+  }}
+>
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <h2>You're Not Broken. Your Nervous System Is Doing Its Job.</h2>
+        <p>The hypervigilance, the flashbacks, the emotional numbness, the way your body tenses at certain sounds or touches — these aren't signs of weakness. They're your nervous system doing exactly what it was designed to do: protect you.</p>
+        <p>The problem is that it's still running the threat response for something that happened in the past. Trauma therapy helps your brain and body recognize that the danger is over, so the alarm system can finally stand down.</p>
+        <p>At Lotus Rose, every therapist is trained in at least one trauma-specific modality. Joy Bouchard's deepest passion is helping women process childhood abuse — especially when it resurfaces during motherhood. As she puts it: "People would come in for postpartum depression, and we'd find there's a lot of stuff from childhood they hadn't processed yet."</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">What We Treat</p>
+        <h2>Types of Trauma We Specialize In</h2>
+        <div class="highlight-box">
+          <ul>
+            <li>Childhood abuse — physical, sexual, emotional, neglect</li>
+            <li>Sexual assault and domestic violence</li>
+            <li>Birth trauma and traumatic medical experiences</li>
+            <li>Complex PTSD from ongoing or repeated trauma</li>
+            <li>Developmental trauma (growing up in an unsafe environment)</li>
+            <li>Accidents, natural disasters, witnessing violence</li>
+            <li>Unprocessed trauma resurfacing during motherhood</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <MidPageCTA text="Ready to start processing?" linkText="Schedule a Free Consultation" />
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Our Approach</p>
+        <h2>Evidence-Based Trauma Therapies</h2>
+        <p>We don't use one approach for everyone. Your therapist selects from multiple evidence-based modalities based on your specific trauma history:</p>
+        <p><strong>EMDR</strong> — the gold standard for PTSD. Uses bilateral eye movements to help your brain reprocess traumatic memories. Recognized by the WHO, APA, and VA.</p>
+        <p><strong>ART</strong> — rapid trauma processing using voluntary image replacement. Often produces relief in 1-5 sessions. Effective for single-event trauma and acute symptoms.</p>
+        <p><strong>IFS (Internal Family Systems)</strong> — works with the different "parts" of yourself that carry trauma. Helps you understand why you react the way you do and develop compassion for your protective responses.</p>
+        <p><strong>Experiential Therapy</strong> — the newest addition to our toolkit. Goes beyond talking to engage your body and emotions directly in the healing process.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Related Services</p>
+        <h2>You May Also Be Interested In</h2>
+      </div>
+      <div class="card-grid" style="margin-top: 32px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <a href="/emdr-therapy/" class="card service-link">
+          <h3>EMDR Therapy</h3>
+          <p>Deep dive into how EMDR works, the 8-phase protocol, and what to expect.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="/accelerated-resolution-therapy/" class="card service-link">
+          <h3>Accelerated Resolution Therapy</h3>
+          <p>Rapid trauma relief — often in 1-5 sessions — using voluntary image replacement.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>Trauma Therapy FAQs</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+      <div class="faq-link">
+        <a href="/contact/">Have another question? Reach out →</a>
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>
+
+<style>
+  .service-link { text-decoration: none; color: inherit; display: block; }
+  .service-link:hover { color: inherit; }
+</style>
