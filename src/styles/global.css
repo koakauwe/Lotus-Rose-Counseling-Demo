@@ -35,9 +35,13 @@
   /* Transitions */
   --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 
+  /* Accent — one bold contrast point */
+  --accent: #B85C38;
+  --accent-soft: rgba(184, 92, 56, 0.12);
+
   /* Typography */
   --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --font-body: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 
@@ -1025,4 +1029,224 @@ section {
   h2 { font-size: 26px; }
   .photo-grid { grid-template-columns: 1fr; }
   .cta-section { padding: 56px 20px; }
+}
+
+
+/* ============================================
+   ANTI-SLOP: Noise Texture Overlay
+   ============================================ */
+
+.bg-cream,
+.bg-white {
+  position: relative;
+}
+
+.bg-cream::after,
+.bg-white::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  z-index: 0;
+}
+
+.bg-cream > *,
+.bg-white > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ============================================
+   ANTI-SLOP: Page-Load Stagger Animation
+   ============================================ */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fullbleed .section-label {
+  animation: fadeUp 0.6s ease-out both;
+  animation-delay: 0.1s;
+}
+
+.hero-fullbleed h1 {
+  animation: fadeUp 0.6s ease-out both;
+  animation-delay: 0.25s;
+}
+
+.hero-fullbleed .hero-subtitle {
+  animation: fadeUp 0.6s ease-out both;
+  animation-delay: 0.4s;
+}
+
+.hero-fullbleed .btn-group {
+  animation: fadeUp 0.6s ease-out both;
+  animation-delay: 0.55s;
+}
+
+.hero-fullbleed .hero-trust {
+  animation: fadeUp 0.6s ease-out both;
+  animation-delay: 0.7s;
+}
+
+
+/* ============================================
+   ANTI-SLOP: Bold Accent Color
+   ============================================ */
+
+/* Accent on interactive hovers */
+.nav-list > li > a:hover,
+.nav-list > li > .dropdown-toggle:hover {
+  color: var(--accent);
+}
+
+.services-list a:hover {
+  color: var(--accent);
+}
+
+.services-list .arrow {
+  color: var(--accent);
+}
+
+/* Accent on pull quote border */
+.pull-quote {
+  border-left-color: var(--accent);
+}
+
+.pull-quote cite {
+  color: var(--accent);
+}
+
+/* Active nav link */
+.nav-list > li > a[aria-current="page"],
+.nav-list > li > a.active {
+  color: var(--accent);
+}
+
+/* Card hover accent flash */
+.card:hover {
+  border-left-color: var(--accent);
+}
+
+/* Highlight box accent */
+.highlight-box li::before {
+  color: var(--accent);
+}
+
+/* Footer link hover */
+.footer-col a:hover {
+  color: var(--accent) !important;
+}
+
+
+/* ============================================
+   ANTI-SLOP: Grid-Breaking Overlap
+   ============================================ */
+
+.overlap-photo {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -80px;
+}
+
+.overlap-photo img {
+  width: 60%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: var(--shadow-medium);
+}
+
+.overlap-target {
+  padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+  .overlap-photo {
+    margin-bottom: -40px;
+  }
+  .overlap-photo img {
+    width: 85%;
+  }
+  .overlap-target {
+    padding-top: 60px;
+  }
+}
+
+
+/* ============================================
+   ANTI-SLOP: Varied Section Rhythm
+   ============================================ */
+
+/* Full-bleed statement — big text, no label, no heading */
+.statement-section {
+  padding: 100px 40px;
+  text-align: center;
+  background: var(--blush-pink);
+}
+
+.statement-section p {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  line-height: 1.35;
+  color: var(--text-dark);
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.statement-section .statement-accent {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .statement-section { padding: 60px 24px; }
+  .statement-section p { font-size: 26px; }
+}
+
+/* Stat callout strip */
+.stat-strip {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  padding: 48px 40px;
+  background: var(--warm-cream);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-medium);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 768px) {
+  .stat-strip { flex-direction: column; gap: 32px; padding: 40px 24px; }
+  .stat-number { font-size: 40px; }
 }
