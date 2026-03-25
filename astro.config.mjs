@@ -3,11 +3,13 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://lotus-rose-counseling.pages.dev',
+  site: 'https://lotusrosecounseling.com',
   trailingSlash: 'always',
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/thank-you/'),
+      filter: (page) =>
+        !page.includes('/thank-you/') &&
+        !page.includes('/blog/coming-soon/'),
     }),
   ],
 });

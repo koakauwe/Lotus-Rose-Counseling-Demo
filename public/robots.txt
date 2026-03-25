@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /blog/coming-soon/
 
-Sitemap: https://lotus-rose-counseling.pages.dev/sitemap-index.xml
+Sitemap: https://lotusrosecounseling.com/sitemap-index.xml
