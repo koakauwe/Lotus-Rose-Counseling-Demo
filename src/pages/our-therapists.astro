@@ -80,6 +80,42 @@ const faqSchema = [
     </div>
   </section>
 
+  <!-- Trusted Partners -->
+  <section class="bg-blush">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Trusted Partners</p>
+        <h2>Providers We Work With</h2>
+        <p>Healing often requires a team. We partner with specialists we trust to provide care beyond talk therapy — so your treatment plan covers the full picture.</p>
+      </div>
+
+      <div class="partner-card">
+        <div class="partner-photo">
+          <img src="/photos/dr-danaya-kauwe.jpg" alt="Dr. Danaya Kauwe, PT, DPT, PRPC — Pelvic Floor Physical Therapist in Utah Valley" width="200" height="200" loading="lazy" />
+        </div>
+        <div class="partner-info">
+          <h3>Dr. Danaya Kauwe, PT, DPT, PRPC</h3>
+          <p class="partner-title">Pelvic Floor Physical Therapist — Radiant Pelvic Health & Wellness</p>
+          <p class="partner-bio">Dr. Danaya is a board-certified Pelvic Rehabilitation Practitioner (PRPC) — a credential requiring 2,000+ hours of direct pelvic patient care and a 150-question proctored exam. She's a 4x postpartum mom, former NCAA Division I athlete, and Gold Star widow who built her practice around treating the whole person.</p>
+          <p class="partner-bio">She specializes in postpartum recovery, pelvic pain, incontinence, prolapse, return to running, and diastasis recti. Her in-home model means she comes to you — no childcare needed, no waiting rooms. Many of our clients work with both Lotus Rose for mental health and Dr. Danaya for the physical recovery side.</p>
+          <div class="partner-specialties">
+            <span>Postpartum Recovery</span>
+            <span>Pelvic Pain</span>
+            <span>Incontinence</span>
+            <span>Prolapse</span>
+            <span>Return to Sport</span>
+            <span>Diastasis Recti</span>
+            <span>Dry Needling</span>
+          </div>
+          <div class="partner-links">
+            <a href="https://radiantpelvichealth.com" target="_blank" rel="noopener noreferrer" class="btn-primary partner-btn">Visit Radiant Pelvic Health</a>
+            <a href="tel:+13852044135" class="btn-secondary partner-btn">Call (385) 204-4135</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section class="bg-cream">
     <div class="container">
@@ -153,3 +189,79 @@ const faqSchema = [
   ])} />
 
 </BaseLayout>
+
+<style>
+  .partner-card {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 48px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    max-width: 900px;
+    margin: 40px auto 0;
+  }
+  .partner-photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 4px solid var(--soft-rose);
+    box-shadow: var(--shadow-soft);
+  }
+  .partner-info h3 {
+    font-size: 28px;
+    margin-bottom: 4px;
+  }
+  .partner-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent, var(--peach-gold));
+    margin-bottom: 16px;
+  }
+  .partner-bio {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  .partner-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .partner-specialties span {
+    background: var(--panel-bg, var(--warm-cream));
+    color: var(--text-dark);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .partner-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .partner-btn {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .partner-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 32px 24px;
+      gap: 24px;
+    }
+    .partner-photo img { width: 150px; height: 150px; }
+    .partner-specialties { justify-content: center; }
+    .partner-links { justify-content: center; }
+  }
+</style>
