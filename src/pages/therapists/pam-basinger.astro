@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqSchema = [
+  {
+    question: "What does Pam Basinger specialize in?",
+    answer: "Pam specializes in Accelerated Resolution Therapy (ART), ADHD, oppositional defiance disorder, grief and loss, life transitions, anxiety, and depression. She works with women, teens, and children."
+  },
+  {
+    question: "Does Pam speak Spanish or Portuguese?",
+    answer: "Yes. Pam is originally from Brazil and is fluent in English, Spanish, and Portuguese. She provides therapy in all three languages, making mental health care accessible to Spanish-speaking and Portuguese-speaking clients in Utah County."
+  },
+  {
+    question: "What is Accelerated Resolution Therapy (ART)?",
+    answer: "ART is a form of psychotherapy that uses eye movements and voluntary image replacement to rapidly reduce the distress of traumatic memories. It's similar to EMDR but often produces results in fewer sessions — typically 1-5. Pam is trained in ART and uses it as her primary trauma processing modality."
+  }
+];
+---
+
+<BaseLayout
+  title="Pam Basinger — Therapist in Orem, UT | Lotus Rose Counseling"
+  description="Pam Basinger is a bilingual therapist (English, Spanish, Portuguese) at Lotus Rose Counseling in Orem, Utah. She specializes in ART, ADHD, grief, life transitions, and teen therapy."
+  faqSchema={faqSchema}
+>
+
+  <!-- Hero -->
+  <section class="hero-fullbleed">
+    <div class="hero-fullbleed-bg">
+      <img src="/florals/floral-pam.jpg" alt="Floral background — Pam Basinger" width="1920" height="1080" fetchpriority="high" />
+    </div>
+    <div class="hero-fullbleed-overlay"></div>
+    <div class="hero-fullbleed-content">
+      <p class="section-label">Meet Your Therapist</p>
+      <h1>Pam Basinger</h1>
+      <p class="hero-subtitle">Therapist · Habla Español · Eu falo Português</p>
+    </div>
+  </section>
+
+  <!-- Profile -->
+  <div class="split-section">
+    <div class="split-content">
+      <div class="therapist-detail-meta">
+        <span class="detail-badge">Accepting New Clients</span>
+        <span class="detail-badge">Trilingual</span>
+      </div>
+      <h2>About Pam</h2>
+      <p>Originally from Brazil, Pam brings a multicultural perspective to her work that few therapists in Utah County can match. She earned her Master's in Social Work from Boise State University and has experience in school counseling and hospice care.</p>
+      <p>Pam primarily uses Accelerated Resolution Therapy (ART) to help clients process trauma and find practical strategies for moving forward. She works with women, teens, and children dealing with anxiety, depression, life transitions, and behavioral challenges.</p>
+      <p>Her ability to provide therapy in English, Spanish, and Portuguese makes mental health care accessible to communities that are often underserved in the Utah County area.</p>
+    </div>
+    <div class="split-image">
+      <img src="/photos/pam-basinger.jpg" alt="Pam Basinger — bilingual therapist at Lotus Rose Counseling in Orem, Utah" width="800" height="800" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- Specialties -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Specialties</p>
+        <h2>What Pam Treats</h2>
+
+        <div class="highlight-box">
+          <h4>Conditions & Populations</h4>
+          <ul>
+            <li>ADHD</li>
+            <li>Oppositional Defiance Disorder</li>
+            <li>Grief and loss</li>
+            <li>Life transitions</li>
+            <li>Anxiety and depression</li>
+            <li>Women, teens, and children</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box">
+          <h4>Training & Modalities</h4>
+          <ul>
+            <li>ART (Accelerated Resolution Therapy)</li>
+            <li>Experiential Therapy</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box">
+          <h4>Languages</h4>
+          <ul>
+            <li>English</li>
+            <li>Spanish (Habla Español)</li>
+            <li>Portuguese (Eu falo Português)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>About Pam</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Work With Pam?</h2>
+      <p>Schedule a free 15-minute consultation to see if Pam is the right fit for you.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+        <a href="tel:+18016424244" class="btn-secondary">Call (801) 642-4244</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://lotusrosecounseling.com/#pam-basinger",
+    "name": "Pam Basinger",
+    "jobTitle": "Therapist",
+    "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
+    "knowsAbout": ["Accelerated Resolution Therapy", "ADHD", "Grief", "Life Transitions"],
+    "knowsLanguage": ["English", "Spanish", "Portuguese"]
+  })} />
+
+</BaseLayout>
+
+<style>
+  .therapist-detail-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .detail-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+  }
+</style>

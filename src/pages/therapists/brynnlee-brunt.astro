@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqSchema = [
+  {
+    question: "What does Brynnlee Brunt specialize in?",
+    answer: "Brynnlee specializes in EMDR, postpartum depression and anxiety, birth trauma, infant loss, infertility, and marital conflict. She works primarily with women navigating these challenges."
+  },
+  {
+    question: "Does Brynnlee offer in-person sessions?",
+    answer: "Brynnlee currently sees clients via telehealth only, making therapy accessible from anywhere in Utah. This is especially convenient for new moms, women on bed rest, or anyone who prefers the comfort and privacy of their own home."
+  },
+  {
+    question: "What is the Tired Mom's Club?",
+    answer: "The Tired Mom's Club is a 6-week online support group facilitated by Brynnlee for burned out and overwhelmed moms. Topics include co-regulation, letting go of 'shoulds,' communicating with partners about mental load, and building self-care practices. The group meets every other Wednesday evening. Cost is $20 per week."
+  }
+];
+---
+
+<BaseLayout
+  title="Brynnlee Brunt — Therapist in Orem, UT | Lotus Rose Counseling"
+  description="Brynnlee Brunt is a telehealth therapist at Lotus Rose Counseling specializing in EMDR, postpartum depression, birth trauma, infant loss, infertility, and marital conflict."
+  faqSchema={faqSchema}
+>
+
+  <!-- Hero -->
+  <section class="hero-fullbleed">
+    <div class="hero-fullbleed-bg">
+      <img src="/florals/floral-brynnlee.jpg" alt="Floral background — Brynnlee Brunt" width="1920" height="1080" fetchpriority="high" />
+    </div>
+    <div class="hero-fullbleed-overlay"></div>
+    <div class="hero-fullbleed-content">
+      <p class="section-label">Meet Your Therapist</p>
+      <h1>Brynnlee Brunt</h1>
+      <p class="hero-subtitle">Therapist · Telehealth Only</p>
+    </div>
+  </section>
+
+  <!-- Profile -->
+  <div class="split-section">
+    <div class="split-content">
+      <div class="therapist-detail-meta">
+        <span class="detail-badge">Accepting New Clients</span>
+        <span class="detail-badge">Telehealth Only</span>
+      </div>
+      <h2>About Brynnlee</h2>
+      <p>Brynnlee is a mom of four young kids — which means she doesn't just understand perinatal mental health from a clinical perspective, she lives it. That combination of clinical expertise and real-life mom experience shapes every session.</p>
+      <p>She works with women navigating infertility, pregnancy, postpartum challenges, birth trauma, infant loss, marital conflict, and anxiety. She uses EMDR and Emotionally Focused Therapy to help clients process emotions and build practical coping skills.</p>
+      <p>Brynnlee sees all clients via telehealth, making therapy accessible from anywhere in Utah — no childcare needed, no drive time, no waiting rooms.</p>
+    </div>
+    <div class="split-image">
+      <img src="/photos/brynnlee-brunt.jpg" alt="Brynnlee Brunt — telehealth therapist at Lotus Rose Counseling" width="800" height="800" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- Specialties -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Specialties</p>
+        <h2>What Brynnlee Treats</h2>
+
+        <div class="highlight-box">
+          <h4>Conditions & Populations</h4>
+          <ul>
+            <li>Postpartum depression and anxiety</li>
+            <li>Birth trauma</li>
+            <li>Infant loss</li>
+            <li>Infertility</li>
+            <li>Marital conflict</li>
+            <li>Anxiety and depression</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box">
+          <h4>Training & Modalities</h4>
+          <ul>
+            <li>EMDR (Eye Movement Desensitization and Reprocessing)</li>
+            <li>EFT (Emotionally Focused Therapy)</li>
+            <li>Experiential Therapy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tired Mom's Club -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Support Group</p>
+        <h2>Tired Mom's Club</h2>
+        <p>Brynnlee facilitates the Tired Mom's Club — a 6-week online therapy group for burned out and overwhelmed moms. It's not just venting. It's structured therapeutic work in a group setting, with women who get it.</p>
+
+        <div class="highlight-box">
+          <h4>Topics Covered</h4>
+          <ul>
+            <li>Co-Regulation — "Staying Calm When No One Else Is"</li>
+            <li>Control/Expectations — "Letting Go of Shoulds"</li>
+            <li>Communicating with Partner — "Why Am I the Only One Who Notices?"</li>
+          </ul>
+        </div>
+
+        <p><strong>Format:</strong> Online, every other Wednesday at 7 PM<br>
+        <strong>Duration:</strong> 6 weeks<br>
+        <strong>Cost:</strong> $20 per week<br>
+        <em>If cost is the only thing holding you back, reach out — Brynnlee doesn't want that to be a barrier.</em></p>
+
+        <a href="/support-groups/" class="btn-secondary" style="margin-top: 16px;">Learn More About Support Groups →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>About Brynnlee</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Work With Brynnlee?</h2>
+      <p>Schedule a free 15-minute consultation to see if Brynnlee is the right fit for you.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+        <a href="tel:+18016424244" class="btn-secondary">Call (801) 642-4244</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://lotusrosecounseling.com/#brynnlee-brunt",
+    "name": "Brynnlee Brunt",
+    "jobTitle": "Therapist",
+    "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
+    "knowsAbout": ["EMDR Therapy", "Emotionally Focused Therapy", "Postpartum Depression", "Postpartum Anxiety", "Birth Trauma", "Infant Loss", "Infertility", "Marital Conflict"]
+  })} />
+
+</BaseLayout>
+
+<style>
+  .therapist-detail-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .detail-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+  }
+</style>

@@ -5,6 +5,7 @@ interface Props {
   specialties: string[];
   bio: string;
   photo?: string;
+  profileUrl?: string;
   languages?: string;
   telehealth?: boolean;
   bookingText?: string;
@@ -17,6 +18,7 @@ const {
   specialties,
   bio,
   photo,
+  profileUrl,
   languages,
   telehealth,
   bookingText = "Book an Appointment",
@@ -45,7 +47,10 @@ const {
       {specialties.map(s => <li>{s}</li>)}
     </ul>
     <p class="therapist-bio">{bio}</p>
-    <a href={bookingUrl} class="btn-primary therapist-cta">{bookingText}</a>
+    <div class="therapist-actions">
+      <a href={bookingUrl} class="btn-primary therapist-cta">{bookingText}</a>
+      {profileUrl && <a href={profileUrl} class="therapist-profile-link">Read full profile →</a>}
+    </div>
   </div>
 </div>
 
@@ -95,9 +100,23 @@ const {
     line-height: 1.8;
     margin-bottom: 24px;
   }
+  .therapist-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
   .therapist-cta {
     padding: 14px 32px;
     font-size: 15px;
+  }
+  .therapist-profile-link {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--peach-gold);
+  }
+  .therapist-profile-link:hover {
+    color: var(--text-dark);
   }
 
   @media (max-width: 768px) {

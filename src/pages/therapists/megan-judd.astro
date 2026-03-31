@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqSchema = [
+  {
+    question: "What does Megan Judd specialize in?",
+    answer: "Megan specializes in trauma, PTSD, anxiety, depression, faith transitions, and self-harm. She works with teens and adults using EMDR and Internal Family Systems (IFS) — two evidence-based modalities that help clients heal at the root rather than just managing symptoms."
+  },
+  {
+    question: "Is Megan Judd accepting new clients?",
+    answer: "Contact Lotus Rose Counseling at (801) 642-4244 or fill out the contact form to check Megan's current availability. You can also schedule a free 15-minute consultation to see if she's the right fit."
+  },
+  {
+    question: "What is Megan's approach to therapy?",
+    answer: "Megan's approach is grounded in EMDR and Internal Family Systems. Clients describe her as warm, understanding, and easy to talk to. She brings creativity, humor, and curiosity into every session, helping clients feel safe enough to do the deeper work."
+  }
+];
+---
+
+<BaseLayout
+  title="Megan Judd — Therapist in Orem, UT | Lotus Rose Counseling"
+  description="Megan Judd is a therapist at Lotus Rose Counseling in Orem, Utah specializing in EMDR, IFS, trauma, PTSD, anxiety, depression, faith transitions, and teen therapy."
+  faqSchema={faqSchema}
+>
+
+  <!-- Hero -->
+  <section class="hero-fullbleed">
+    <div class="hero-fullbleed-bg">
+      <img src="/florals/floral-megan.jpg" alt="Floral background — Megan Judd" width="1920" height="1080" fetchpriority="high" />
+    </div>
+    <div class="hero-fullbleed-overlay"></div>
+    <div class="hero-fullbleed-content">
+      <p class="section-label">Meet Your Therapist</p>
+      <h1>Megan Judd</h1>
+      <p class="hero-subtitle">Therapist</p>
+    </div>
+  </section>
+
+  <!-- Profile -->
+  <div class="split-section">
+    <div class="split-content">
+      <div class="therapist-detail-meta">
+        <span class="detail-badge">Accepting New Clients</span>
+      </div>
+      <h2>About Megan</h2>
+      <p>Megan works with teens and adults navigating trauma, anxiety, depression, and faith transitions. Her approach is grounded in EMDR and Internal Family Systems — two evidence-based modalities that help clients heal at the root rather than just managing symptoms.</p>
+      <p>Clients describe her as warm, understanding, and easy to talk to. She brings creativity, humor, and curiosity into every session, creating a space where clients feel safe enough to be vulnerable and do the deeper work.</p>
+    </div>
+    <div class="split-image">
+      <img src="/photos/megan-judd.jpg" alt="Megan Judd — therapist at Lotus Rose Counseling in Orem, Utah" width="800" height="800" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- Specialties -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Specialties</p>
+        <h2>What Megan Treats</h2>
+
+        <div class="highlight-box">
+          <h4>Conditions & Populations</h4>
+          <ul>
+            <li>Trauma and PTSD</li>
+            <li>Anxiety and depression</li>
+            <li>Faith transitions</li>
+            <li>Self-harm</li>
+            <li>Teen therapy</li>
+            <li>Adult women's mental health</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box">
+          <h4>Training & Modalities</h4>
+          <ul>
+            <li>EMDR (Eye Movement Desensitization and Reprocessing)</li>
+            <li>IFS (Internal Family Systems)</li>
+            <li>Experiential Therapy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>About Megan</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Work With Megan?</h2>
+      <p>Schedule a free 15-minute consultation to see if Megan is the right fit for you.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+        <a href="tel:+18016424244" class="btn-secondary">Call (801) 642-4244</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://lotusrosecounseling.com/#megan-judd",
+    "name": "Megan Judd",
+    "jobTitle": "Therapist",
+    "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
+    "knowsAbout": ["EMDR Therapy", "Internal Family Systems", "Trauma", "PTSD", "Anxiety", "Depression", "Faith Transitions"]
+  })} />
+
+</BaseLayout>
+
+<style>
+  .therapist-detail-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .detail-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+  }
+</style>
