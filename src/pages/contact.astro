@@ -23,8 +23,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="contact-grid">
         <!-- Form -->
         <div class="contact-form-wrap">
-          <form action="#" method="post" class="contact-form">
-            <p class="demo-note">This is a demo site — form submissions are not active.</p>
+          <!-- Success Message (hidden until form submits) -->
+          <div id="form-success" class="form-success" style="display: none;">
+            <div class="success-icon">✓</div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. We'll get back to you within one business day.</p>
+            <p class="success-sub">In the meantime, <a href="/our-therapists/">meet our therapists</a> or explore our <a href="/services/">services</a>.</p>
+          </div>
+
+          <!-- Error Message (hidden) -->
+          <div id="form-error" class="form-error" style="display: none;">
+            <p>Something went wrong. Please call <a href="tel:+18016424244">(801) 642-4244</a> instead.</p>
+          </div>
+
+          <form id="contact-form" action="/api/contact" method="post" class="contact-form">
+            <!-- Honeypot -->
+            <div style="position: absolute; left: -9999px;" aria-hidden="true">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" />
+            </div>
 
             <div class="form-row">
               <div class="form-group">
@@ -91,9 +107,49 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </label>
             </div>
 
-            <button type="submit" class="btn-primary form-submit">Send Message</button>
+            <button type="submit" class="btn-primary form-submit" id="submit-btn">Send Message</button>
           </form>
         </div>
+
+        <script>
+          document.getElementById('contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = document.getElementById('submit-btn');
+            const successDiv = document.getElementById('form-success');
+            const errorDiv = document.getElementById('form-error');
+
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            errorDiv.style.display = 'none';
+
+            try {
+              const response = await fetch('/api/contact', {
+                method: 'POST',
+                body: new FormData(form),
+              });
+
+              if (response.ok) {
+                form.style.display = 'none';
+                successDiv.style.display = 'block';
+                successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              } else if (response.status === 429) {
+                errorDiv.querySelector('p').textContent = 'Too many submissions. Please wait a bit and try again, or call (801) 642-4244.';
+                errorDiv.style.display = 'block';
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+              } else {
+                errorDiv.style.display = 'block';
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+              }
+            } catch (err) {
+              errorDiv.style.display = 'block';
+              btn.textContent = 'Send Message';
+              btn.disabled = false;
+            }
+          });
+        </script>
 
         <!-- Contact Info Sidebar -->
         <div class="contact-sidebar">
@@ -143,6 +199,48 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+  .form-success {
+    text-align: center;
+    padding: 48px 24px;
+  }
+  .success-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--btn-primary);
+    color: white;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+  .form-success h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+  .form-success p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  .success-sub {
+    font-size: 15px;
+    margin-top: 16px;
+  }
+  .success-sub a { color: var(--peach-gold); font-weight: 700; }
+  .form-error {
+    background: #fff0f0;
+    border-left: 4px solid #d44;
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 20px;
+  }
+  .form-error p {
+    color: #a33;
+    margin: 0;
+    font-size: 15px;
+  }
+  .form-error a { color: #a33; font-weight: 700; }
   .contact-top {
     padding: 80px 0 20px;
   }
@@ -154,15 +252,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     grid-template-columns: 1.4fr 1fr;
     gap: 48px;
     align-items: start;
-  }
-  .demo-note {
-    background: var(--light-sage);
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 14px;
-    color: var(--text-medium);
-    margin-bottom: 24px;
-    text-align: center;
   }
   .form-submit {
     width: 100%;
