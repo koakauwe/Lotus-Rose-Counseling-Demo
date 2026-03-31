@@ -87,26 +87,20 @@ const faqSchema = [
   <!-- Professional References -->
   <section class="bg-blush" id="professional-references">
     <div class="container">
-      <div class="text-container text-center">
-        <p class="section-label">Professional References</p>
-        <h2>Providers We Trust & Refer To</h2>
-        <p>Healing often requires a team. These are specialists we work alongside to make sure you get the full support you need.</p>
-      </div>
-
       <div class="references-list">
-        <details class="reference-item" open>
-          <summary class="reference-summary">
-            <div class="reference-header">
-              <img src="/photos/dr-danaya-kauwe.jpg" alt="Dr. Danaya Kauwe, PT, DPT, PRPC" width="60" height="60" class="reference-photo" loading="lazy" />
-              <div>
-                <h3>Dr. Danaya Kauwe, PT, DPT, PRPC</h3>
-                <p class="reference-role">Pelvic Floor Physical Therapist — Radiant Pelvic Health & Wellness</p>
+        <details class="reference-section-accordion">
+          <summary class="reference-section-toggle"><h2>Professional References</h2></summary>
+          <div class="reference-section-content">
+            <div class="reference-item">
+              <div class="reference-header">
+                <img src="/photos/dr-danaya-kauwe.jpg" alt="Dr. Danaya Kauwe, PT, DPT, PRPC" width="60" height="60" class="reference-photo" loading="lazy" />
+                <div>
+                  <h3>Dr. Danaya Kauwe, PT, DPT, PRPC</h3>
+                  <p class="reference-role">Pelvic Floor Physical Therapist — Radiant Pelvic Health & Wellness</p>
+                </div>
               </div>
-            </div>
-          </summary>
-          <div class="reference-detail">
-            <p>Dr. Danaya is a board-certified Pelvic Rehabilitation Practitioner (PRPC) specializing in postpartum recovery, pelvic pain, incontinence, prolapse, return to running, and diastasis recti. Her in-home model means she comes to you — no childcare needed, no waiting rooms.</p>
-            <p>Many of our clients work with both Lotus Rose for mental health and Dr. Danaya for the physical recovery side.</p>
+              <div class="reference-detail">
+                <p>Dr. Danaya is a board-certified Pelvic Rehabilitation Practitioner (PRPC) specializing in postpartum recovery, pelvic pain, incontinence, prolapse, return to running, and diastasis recti. Her in-home model means she comes to you — no childcare needed, no waiting rooms.</p>
             <div class="reference-specialties">
               <span>Postpartum Recovery</span>
               <span>Pelvic Pain</span>
@@ -118,6 +112,8 @@ const faqSchema = [
             <div class="reference-links">
               <a href="https://radiantpelvichealth.com" target="_blank" rel="noopener noreferrer" class="btn-primary reference-btn">Visit Radiant Pelvic Health</a>
               <a href="tel:+13852044135" class="btn-secondary reference-btn">Call (385) 204-4135</a>
+            </div>
+              </div>
             </div>
           </div>
         </details>
@@ -200,6 +196,33 @@ const faqSchema = [
 </BaseLayout>
 
 <style>
+  .reference-section-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .reference-section-toggle {
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    padding: 8px 0;
+  }
+  .reference-section-toggle::-webkit-details-marker { display: none; }
+  .reference-section-toggle h2 {
+    display: inline;
+    position: relative;
+  }
+  .reference-section-toggle h2::after {
+    content: ' +';
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--text-medium);
+  }
+  .reference-section-accordion[open] .reference-section-toggle h2::after {
+    content: ' −';
+  }
+  .reference-section-content {
+    padding-top: 24px;
+  }
   .references-list {
     max-width: 900px;
     margin: 40px auto 0;
