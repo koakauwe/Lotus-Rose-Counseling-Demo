@@ -4,9 +4,10 @@
 
 Moving lotusrosecounseling.com from the old Zyro/Hostinger website to the new Astro site hosted on Cloudflare Pages. After this:
 - Your new website is live at lotusrosecounseling.com
-- Hosting is free (Cloudflare Pages)
+- Website hosting is free (Cloudflare Pages)
 - Contact form sends you email notifications via Resend
-- You can cancel your Hostinger/Zyro subscription
+
+**IMPORTANT: Do NOT cancel your Hostinger account.** Your business email (info@lotusrosecounseling.com) runs through Hostinger/Titan. If you cancel Hostinger, your email stops working. You are only changing where your domain points for the website — your email will continue working through Hostinger.
 
 **Time needed:** About 1 hour together, then 1-24 hours for DNS to propagate.
 
@@ -73,8 +74,8 @@ Resend is the service that sends you email notifications when someone fills out 
 
 **You'll see two nameservers that look something like:**
 ```
-anna.ns.cloudflare.com
-bob.ns.cloudflare.com
+clay.ns.cloudflare.com
+connie.ns.cloudflare.com
 ```
 (The actual names will be different — Cloudflare assigns random ones)
 
@@ -110,8 +111,8 @@ When you're ready:
 7. Click **Change nameservers** (or **Edit**, or **Use custom nameservers**)
 8. Replace them with the two Cloudflare nameservers you wrote down in Step 3:
    ```
-   Nameserver 1: [the first one Cloudflare gave you]
-   Nameserver 2: [the second one Cloudflare gave you]
+   Nameserver 1: clay.ns.cloudflare.com
+   Nameserver 2: connie.ns.cloudflare.com
    ```
 9. Click **Save** or **Update**
 10. Go back to Cloudflare and click **Done, check nameservers**
@@ -244,14 +245,14 @@ Once your domain is active on Cloudflare (green checkmark in dashboard):
 - [ ] Submit a test contact form — do you receive the email notification?
 - [ ] Check the SSL padlock — does the browser show the site as secure (https)?
 
-### Step 11: Cancel Your Old Hosting
+### Step 11: Downgrade Hostinger (Keep Email)
 
-**Only do this after everything above checks out.**
+**Do NOT cancel Hostinger entirely — your business email depends on it.**
 
 1. Log into Hostinger
-2. Find your hosting plan / subscription
-3. Cancel the auto-renewal or cancel the subscription
-4. You are now saving that monthly cost — Cloudflare Pages hosting is free forever
+2. Contact Hostinger support and ask: "I want to cancel my website hosting but keep my Titan email. What are my options?"
+3. Downgrade to an **email-only plan** (Business Starter is ~$1/month per mailbox)
+4. Your website hosting is now free through Cloudflare Pages, and you're only paying Hostinger for email
 
 ---
 
