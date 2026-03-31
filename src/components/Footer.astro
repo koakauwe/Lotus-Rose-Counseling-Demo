@@ -15,6 +15,7 @@ const currentYear = new Date().getFullYear();
           <li><a href="/services/">Services</a></li>
           <li><a href="/insurance/">Insurance & Pricing</a></li>
           <li><a href="/contact/">Contact</a></li>
+          <li><a href="/our-therapists/#professional-references">Professional References</a></li>
         </ul>
       </div>
 
@@ -67,24 +68,6 @@ const currentYear = new Date().getFullYear();
     </div>
 
     <!-- Bottom -->
-    <!-- Professional References -->
-    <div class="footer-references">
-      <details class="references-accordion">
-        <summary class="references-toggle">Professional References</summary>
-        <div class="references-content">
-          <ul>
-            <li><a href="https://www.psychologytoday.com/us/therapists/joy-bouchard-orem-ut" target="_blank" rel="noopener noreferrer">Joy Bouchard — Psychology Today Profile</a></li>
-            <li><a href="https://www.psychologytoday.com/" target="_blank" rel="noopener noreferrer">Psychology Today Therapist Directory</a></li>
-            <li><a href="https://www.emdria.org/" target="_blank" rel="noopener noreferrer">EMDRIA — EMDR International Association</a></li>
-            <li><a href="https://acceleratedresolutiontherapy.com/" target="_blank" rel="noopener noreferrer">Accelerated Resolution Therapy (ART) International</a></li>
-            <li><a href="https://ifs-institute.com/" target="_blank" rel="noopener noreferrer">IFS Institute — Internal Family Systems</a></li>
-            <li><a href="https://www.postpartum.net/" target="_blank" rel="noopener noreferrer">Postpartum Support International</a></li>
-            <li><a href="https://www.nasw.org/" target="_blank" rel="noopener noreferrer">National Association of Social Workers</a></li>
-          </ul>
-        </div>
-      </details>
-    </div>
-
     <div class="footer-bottom">
       <p>
         <a href="/privacy-policy/">Privacy Policy</a>
@@ -169,51 +152,6 @@ const currentYear = new Date().getFullYear();
   }
   .social-links a:hover { opacity: 1; }
   .social-links svg { stroke: var(--text-dark); }
-
-  .footer-references {
-    border-top: 1px solid rgba(61, 51, 48, 0.1);
-    padding: 20px 0;
-    margin-bottom: 16px;
-  }
-  .references-toggle {
-    cursor: pointer;
-    font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text-dark);
-    opacity: 0.7;
-    list-style: none;
-    padding: 4px 0;
-  }
-  .references-toggle::-webkit-details-marker { display: none; }
-  .references-toggle::after {
-    content: ' +';
-    font-weight: 400;
-  }
-  .references-accordion[open] .references-toggle::after {
-    content: ' −';
-  }
-  .references-content {
-    padding-top: 12px;
-  }
-  .references-content ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 24px;
-  }
-  .references-content li {
-    margin: 0;
-  }
-  .references-content a {
-    font-size: 13px;
-    color: var(--text-dark);
-    opacity: 0.6;
-  }
-  .references-content a:hover {
-    opacity: 1;
-    padding-left: 0;
-  }
 
   .footer-bottom {
     border-top: 1px solid rgba(61, 51, 48, 0.12);

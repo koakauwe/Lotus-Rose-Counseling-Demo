@@ -84,38 +84,43 @@ const faqSchema = [
     </div>
   </section>
 
-  <!-- Trusted Partners -->
-  <section class="bg-blush">
+  <!-- Professional References -->
+  <section class="bg-blush" id="professional-references">
     <div class="container">
       <div class="text-container text-center">
-        <p class="section-label">Trusted Partners</p>
-        <h2>Providers We Work With</h2>
-        <p>Healing often requires a team. We partner with specialists we trust to provide care beyond talk therapy — so your treatment plan covers the full picture.</p>
+        <p class="section-label">Professional References</p>
+        <h2>Providers We Trust & Refer To</h2>
+        <p>Healing often requires a team. These are specialists we work alongside to make sure you get the full support you need.</p>
       </div>
 
-      <div class="partner-card">
-        <div class="partner-photo">
-          <img src="/photos/dr-danaya-kauwe.jpg" alt="Dr. Danaya Kauwe, PT, DPT, PRPC — Pelvic Floor Physical Therapist in Utah Valley" width="200" height="200" loading="lazy" />
-        </div>
-        <div class="partner-info">
-          <h3>Dr. Danaya Kauwe, PT, DPT, PRPC</h3>
-          <p class="partner-title">Pelvic Floor Physical Therapist — Radiant Pelvic Health & Wellness</p>
-          <p class="partner-bio">Dr. Danaya is a board-certified Pelvic Rehabilitation Practitioner (PRPC) — a credential requiring 2,000+ hours of direct pelvic patient care and a 150-question proctored exam. She's a 4x postpartum mom, former NCAA Division I athlete, and Gold Star widow who built her practice around treating the whole person.</p>
-          <p class="partner-bio">She specializes in postpartum recovery, pelvic pain, incontinence, prolapse, return to running, and diastasis recti. Her in-home model means she comes to you — no childcare needed, no waiting rooms. Many of our clients work with both Lotus Rose for mental health and Dr. Danaya for the physical recovery side.</p>
-          <div class="partner-specialties">
-            <span>Postpartum Recovery</span>
-            <span>Pelvic Pain</span>
-            <span>Incontinence</span>
-            <span>Prolapse</span>
-            <span>Return to Sport</span>
-            <span>Diastasis Recti</span>
-            <span>Dry Needling</span>
+      <div class="references-list">
+        <details class="reference-item" open>
+          <summary class="reference-summary">
+            <div class="reference-header">
+              <img src="/photos/dr-danaya-kauwe.jpg" alt="Dr. Danaya Kauwe, PT, DPT, PRPC" width="60" height="60" class="reference-photo" loading="lazy" />
+              <div>
+                <h3>Dr. Danaya Kauwe, PT, DPT, PRPC</h3>
+                <p class="reference-role">Pelvic Floor Physical Therapist — Radiant Pelvic Health & Wellness</p>
+              </div>
+            </div>
+          </summary>
+          <div class="reference-detail">
+            <p>Dr. Danaya is a board-certified Pelvic Rehabilitation Practitioner (PRPC) specializing in postpartum recovery, pelvic pain, incontinence, prolapse, return to running, and diastasis recti. Her in-home model means she comes to you — no childcare needed, no waiting rooms.</p>
+            <p>Many of our clients work with both Lotus Rose for mental health and Dr. Danaya for the physical recovery side.</p>
+            <div class="reference-specialties">
+              <span>Postpartum Recovery</span>
+              <span>Pelvic Pain</span>
+              <span>Incontinence</span>
+              <span>Prolapse</span>
+              <span>Return to Sport</span>
+              <span>Diastasis Recti</span>
+            </div>
+            <div class="reference-links">
+              <a href="https://radiantpelvichealth.com" target="_blank" rel="noopener noreferrer" class="btn-primary reference-btn">Visit Radiant Pelvic Health</a>
+              <a href="tel:+13852044135" class="btn-secondary reference-btn">Call (385) 204-4135</a>
+            </div>
           </div>
-          <div class="partner-links">
-            <a href="https://radiantpelvichealth.com" target="_blank" rel="noopener noreferrer" class="btn-primary partner-btn">Visit Radiant Pelvic Health</a>
-            <a href="tel:+13852044135" class="btn-secondary partner-btn">Call (385) 204-4135</a>
-          </div>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -195,53 +200,63 @@ const faqSchema = [
 </BaseLayout>
 
 <style>
-  .partner-card {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    padding: 48px;
-    background: var(--white);
-    border-radius: 16px;
-    box-shadow: var(--shadow-soft);
+  .references-list {
     max-width: 900px;
     margin: 40px auto 0;
   }
-  .partner-photo {
-    flex-shrink: 0;
+  .reference-item {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    margin-bottom: 16px;
   }
-  .partner-photo img {
-    width: 180px;
-    height: 180px;
-    aspect-ratio: 1;
+  .reference-summary {
+    padding: 24px 32px;
+    cursor: pointer;
+    list-style: none;
+  }
+  .reference-summary::-webkit-details-marker { display: none; }
+  .reference-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .reference-photo {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--soft-rose);
-    box-shadow: var(--shadow-soft);
+    border: 3px solid var(--soft-rose);
+    flex-shrink: 0;
   }
-  .partner-info h3 {
-    font-size: 28px;
-    margin-bottom: 4px;
+  .reference-header h3 {
+    font-size: 22px;
+    margin-bottom: 2px;
   }
-  .partner-title {
-    font-size: 14px;
+  .reference-role {
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: var(--accent, var(--peach-gold));
-    margin-bottom: 16px;
+    color: var(--peach-gold);
+    margin-bottom: 0;
   }
-  .partner-bio {
+  .reference-detail {
+    padding: 0 32px 32px;
+  }
+  .reference-detail p {
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 16px;
   }
-  .partner-specialties {
+  .reference-specialties {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 24px;
   }
-  .partner-specialties span {
+  .reference-specialties span {
     background: var(--panel-bg, var(--warm-cream));
     color: var(--text-dark);
     padding: 6px 16px;
@@ -249,26 +264,22 @@ const faqSchema = [
     font-size: 13px;
     font-weight: 600;
   }
-  .partner-links {
+  .reference-links {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
   }
-  .partner-btn {
+  .reference-btn {
     padding: 12px 28px;
     font-size: 14px;
   }
 
   @media (max-width: 768px) {
-    .partner-card {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 32px 24px;
-      gap: 24px;
-    }
-    .partner-photo img { width: 150px; height: 150px; }
-    .partner-specialties { justify-content: center; }
-    .partner-links { justify-content: center; }
+    .reference-summary { padding: 20px 24px; }
+    .reference-detail { padding: 0 24px 24px; }
+    .reference-header { gap: 14px; }
+    .reference-header h3 { font-size: 19px; }
+    .reference-specialties { justify-content: center; }
+    .reference-links { justify-content: center; }
   }
 </style>
