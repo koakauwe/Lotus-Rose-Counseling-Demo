@@ -52,12 +52,13 @@
     </nav>
   </div>
 
-  <!-- Mobile: Logo + Hamburger on same row -->
+  <!-- Mobile: checkbox must be sibling of backdrop/drawer for CSS ~ selector -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+
   <div class="mobile-header-row">
     <a href="/" class="logo-link" aria-label="Lotus Rose Counseling — Home">
       <img src="/logo.png" alt="Lotus Rose Counseling" class="mobile-logo-img" width="200" height="60" />
     </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
     <label for="nav-toggle" class="hamburger" aria-label="Open menu">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
