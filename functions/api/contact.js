@@ -50,7 +50,9 @@ export async function onRequestPost(context) {
     }
 
     const RESEND_API_KEY = env.RESEND_API_KEY;
-    const NOTIFICATION_EMAIL = env.NOTIFICATION_EMAIL || 'info@lotusrosecounseling.com';
+    // Support comma-separated emails in NOTIFICATION_EMAIL
+    const rawEmails = env.NOTIFICATION_EMAIL || 'joy.bouchard@lotusrosecounseling.com,officemanager@lotusrosecounseling.com';
+    const NOTIFICATION_EMAILS = rawEmails.split(',').map(e => e.trim()).filter(Boolean);
 
     if (!RESEND_API_KEY) {
       console.error('RESEND_API_KEY not configured');
@@ -150,7 +152,7 @@ export async function onRequestPost(context) {
         },
         body: JSON.stringify({
           from: 'Lotus Rose Website <noreply@lotusrosecounseling.com>',
-          to: [NOTIFICATION_EMAIL],
+          to: NOTIFICATION_EMAILS,
           subject: `New Consultation Request — ${name}${intentSuffix}`,
           html: notificationHtml,
           reply_to: email || undefined,
