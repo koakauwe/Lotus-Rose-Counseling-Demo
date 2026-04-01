@@ -194,10 +194,6 @@ export async function onRequestPost(context) {
                   <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.8; color: #6B5B54;">
                     We received your consultation request and will get back to you within one business day.
                   </p>
-                  <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.8; color: #6B5B54;">
-                    Your free 15-minute consultation is a chance to ask questions, learn about our approach, and see if Lotus Rose feels like the right fit. There's no commitment and no pressure.
-                  </p>
-
                   <!-- What to Expect Box -->
                   <table width="100%" cellpadding="0" cellspacing="0" style="margin: 24px 0;">
                     <tr>
