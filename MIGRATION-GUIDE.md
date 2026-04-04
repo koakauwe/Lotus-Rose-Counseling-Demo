@@ -58,16 +58,24 @@ You need to change your domain's nameservers at Hostinger. This tells the intern
 
 ## Koa's Checklist (For Koa, Not Joy)
 
+### Account Access
+- **Cloudflare:** Danaya.olmstead@gmail.com (manages DNS + Pages hosting)
+- **Resend:** koakauwe@gmail.com (manages contact form email delivery)
+- **GitHub:** koakauwe (repo: Lotus-Rose-Counseling-Demo)
+- **NOTIFICATION_EMAIL:** joy.bouchard@lotusrosecounseling.com, officemanager@lotusrosecounseling.com
+
+### Migration Steps
+
 Once Joy changes the nameservers:
 
-- [ ] Watch Cloudflare dashboard — wait for lotusrosecounseling.com to show "Active"
-- [ ] Add custom domain `lotusrosecounseling.com` to the Pages project (Custom domains tab)
-- [ ] Add custom domain `www.lotusrosecounseling.com` to the Pages project
-- [ ] Create Resend account and get API key
-- [ ] Add Resend DNS records (SPF, DKIM, CNAME) to Cloudflare DNS
-- [ ] Verify domain in Resend
-- [ ] Add `RESEND_API_KEY` and `NOTIFICATION_EMAIL` environment variables to Cloudflare Pages settings
-- [ ] Test the contact form — submit a test and verify email arrives
+- [x] Watch Cloudflare dashboard — wait for lotusrosecounseling.com to show "Active"
+- [x] Add custom domain `lotusrosecounseling.com` to the Pages project (Custom domains tab)
+- [x] Add custom domain `www.lotusrosecounseling.com` to the Pages project
+- [x] Create Resend account and get API key
+- [x] Add Resend DNS records (SPF, DKIM, CNAME) to Cloudflare DNS
+- [x] Verify domain in Resend
+- [x] Add `RESEND_API_KEY` and `NOTIFICATION_EMAIL` environment variables to Cloudflare Pages settings
+- [x] Test the contact form — submit a test and verify email arrives
 - [ ] Test all pages on desktop and mobile
 - [ ] Verify SSL (https) is working
 - [ ] Check that phone number links dial correctly
