@@ -134,30 +134,30 @@ const faqSchema = [
         <p>Four therapists, each bringing different specialties and a shared commitment: every training they take is geared toward the things they're most passionate about — women's mental health.</p>
       </div>
       <div class="therapist-preview-grid">
-        <div class="therapist-preview">
+        <a href="/therapists/joy-bouchard/" class="therapist-preview therapist-link">
           <img src="/photos/joy-bouchard.jpg" alt="Joy Bouchard, LCSW — owner and therapist at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" loading="lazy" />
           <h3 class="therapist-name">Joy Bouchard</h3>
           <p class="therapist-title">Owner & LCSW</p>
           <p>EMDR, ART, IFS, Postpartum, Birth Trauma, Infant Loss, Childhood Abuse</p>
-        </div>
-        <div class="therapist-preview">
+        </a>
+        <a href="/therapists/megan-judd/" class="therapist-preview therapist-link">
           <img src="/photos/megan-judd.jpg" alt="Megan Judd — therapist at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" loading="lazy" />
           <h3 class="therapist-name">Megan Judd</h3>
           <p class="therapist-title">Therapist</p>
           <p>EMDR, IFS, Trauma, PTSD, Anxiety, Depression, Faith Transitions</p>
-        </div>
-        <div class="therapist-preview">
+        </a>
+        <a href="/therapists/pam-basinger/" class="therapist-preview therapist-link">
           <img src="/photos/pam-basinger.jpg" alt="Pam Basinger — bilingual therapist at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" loading="lazy" />
           <h3 class="therapist-name">Pam Basinger</h3>
           <p class="therapist-title">Therapist · Español · Português</p>
           <p>ART, ADHD, Grief, Life Transitions, Oppositional Defiance</p>
-        </div>
-        <div class="therapist-preview">
+        </a>
+        <a href="/therapists/brynnlee-brunt/" class="therapist-preview therapist-link">
           <img src="/photos/brynnlee-brunt.jpg" alt="Brynnlee Brunt — telehealth therapist at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" loading="lazy" />
           <h3 class="therapist-name">Brynnlee Brunt</h3>
           <p class="therapist-title">Therapist · Telehealth Only</p>
-          <p>CBT, EMDR, EFT, Infertility, Postpartum, Anxiety</p>
-        </div>
+          <p>EMDR, Postpartum Depression/Anxiety, Birth Trauma, Infant Loss, Infertility, Marital Conflict</p>
+        </a>
       </div>
       <div class="text-center" style="margin-top: 36px;">
         <a href="/our-therapists/" class="btn-secondary">Meet Our Full Team →</a>
@@ -261,6 +261,20 @@ const faqSchema = [
   .therapist-preview .therapist-name {
     font-size: 26px;
     margin-bottom: 4px;
+  }
+  .therapist-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform var(--transition-smooth);
+  }
+  .therapist-link:hover {
+    color: inherit;
+    transform: translateY(-4px);
+  }
+  .therapist-link:hover .therapist-photo {
+    border-color: var(--peach-gold);
+    box-shadow: var(--shadow-medium);
   }
 
   @media (max-width: 1100px) {

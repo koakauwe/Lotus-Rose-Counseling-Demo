@@ -28,12 +28,24 @@ const {
 
 <div class="therapist-card">
   <div class="therapist-card-photo">
-    {photo ? (
-      <img src={photo} alt={`${name} — therapist at Lotus Rose Counseling in Orem, Utah`} class="therapist-photo-img" width="200" height="200" loading="lazy" />
+    {profileUrl ? (
+      <a href={profileUrl}>
+        {photo ? (
+          <img src={photo} alt={`${name} — therapist at Lotus Rose Counseling in Orem, Utah`} class="therapist-photo-img" width="200" height="200" loading="lazy" />
+        ) : (
+          <div class="therapist-photo-circle">
+            <span>{name.split(' ')[0]}</span>
+          </div>
+        )}
+      </a>
     ) : (
-      <div class="therapist-photo-circle">
-        <span>{name.split(' ')[0]}</span>
-      </div>
+      photo ? (
+        <img src={photo} alt={`${name} — therapist at Lotus Rose Counseling in Orem, Utah`} class="therapist-photo-img" width="200" height="200" loading="lazy" />
+      ) : (
+        <div class="therapist-photo-circle">
+          <span>{name.split(' ')[0]}</span>
+        </div>
+      )
     )}
   </div>
   <div class="therapist-card-info">
