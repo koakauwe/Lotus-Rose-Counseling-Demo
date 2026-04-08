@@ -81,6 +81,16 @@ const faqSchema = [
         bio="Brynnlee works with women navigating infertility, pregnancy, postpartum challenges, relationship issues, and anxiety. She uses Cognitive Behavioral Therapy, EMDR, and Emotionally Focused Therapy to help clients process emotions and build practical coping skills. Brynnlee sees clients via telehealth only, making therapy accessible from anywhere in Utah."
         bookingText="Book an Appointment"
       />
+
+      <TherapistCard
+        name="Jaclyn Craig"
+        title="Clinical Social Worker (CSW)"
+        photo="/photos/jaclyn-craig.jpg"
+        profileUrl="/therapists/jaclyn-craig/"
+        specialties={["Perinatal Mood Disorders", "Postpartum Depression/Anxiety", "Infertility", "Life Transitions", "CBT", "DBT", "ACT"]}
+        bio="As a mother of two, Jaclyn brings both clinical expertise and lived experience in perinatal mood disorders. Through her own journey with infertility and perinatal and postpartum anxiety, she found therapy to be deeply healing. After undergoing IVF to grow her family, she developed a deep passion for supporting individuals at every stage of that journey. Jaclyn also has experience in child welfare, domestic violence, and working with families and individuals experiencing trauma."
+        bookingText="Book an Appointment"
+      />
     </div>
   </section>
 
@@ -190,6 +200,15 @@ const faqSchema = [
       "jobTitle": "Therapist",
       "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
       "knowsAbout": ["CBT", "EMDR Therapy", "Emotionally Focused Therapy", "Infertility", "Postpartum", "Anxiety"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://lotusrosecounseling.com/#jaclyn-craig",
+      "name": "Jaclyn Craig",
+      "jobTitle": "Clinical Social Worker",
+      "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
+      "knowsAbout": ["Perinatal Mood Disorders", "Postpartum Depression", "Postpartum Anxiety", "Infertility", "Life Transitions", "CBT", "DBT", "ACT"]
     }
   ])} />
 

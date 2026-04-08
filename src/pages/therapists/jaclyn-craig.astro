@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqSchema = [
+  {
+    question: "What does Jaclyn Craig specialize in?",
+    answer: "Jaclyn specializes in perinatal mood disorders including postpartum depression and postpartum anxiety, infertility, and life transitions. She brings both clinical training and personal experience — including her own journey with IVF and perinatal anxiety — to her work with clients."
+  },
+  {
+    question: "Is Jaclyn Craig accepting new clients?",
+    answer: "Contact Lotus Rose Counseling at (801) 642-4244 or fill out the contact form to check Jaclyn's current availability. You can also schedule a free 15-minute consultation to see if she's the right fit."
+  },
+  {
+    question: "What therapy approaches does Jaclyn use?",
+    answer: "Jaclyn draws from Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), and Acceptance and Commitment Therapy (ACT). These approaches help clients build practical tools, better understand their emotions, and feel more in control of their lives."
+  }
+];
+---
+
+<BaseLayout
+  title="Jaclyn Craig, CSW — Therapist in Orem, UT | Lotus Rose Counseling"
+  description="Jaclyn Craig is a Clinical Social Worker at Lotus Rose Counseling in Orem, Utah specializing in perinatal mood disorders, postpartum depression, postpartum anxiety, infertility, and life transitions."
+  faqSchema={faqSchema}
+>
+
+  <!-- Hero -->
+  <section class="hero-fullbleed">
+    <div class="hero-fullbleed-bg">
+      <img src="/florals/floral-contact.jpg" alt="Floral background — Jaclyn Craig, CSW" width="1920" height="1080" fetchpriority="high" />
+    </div>
+    <div class="hero-fullbleed-overlay"></div>
+    <div class="hero-fullbleed-content">
+      <p class="section-label">Meet Your Therapist</p>
+      <h1>Jaclyn Craig, CSW</h1>
+      <p class="hero-subtitle">Clinical Social Worker</p>
+    </div>
+  </section>
+
+  <!-- Profile -->
+  <div class="split-section">
+    <div class="split-content">
+      <div class="therapist-detail-meta">
+        <span class="detail-badge">Accepting New Clients</span>
+      </div>
+      <h2>About Jaclyn</h2>
+      <p>As a mother of two, Jaclyn brings both clinical expertise and lived experience in perinatal mood disorders. Through her own journey with infertility and perinatal and postpartum anxiety, Jaclyn found therapy to be deeply healing for herself.</p>
+      <p>After undergoing IVF to grow her family, she developed a deep passion for supporting individuals at every stage of that journey. She is passionate about helping clients feel less alone and more supported as they navigate some of life's most tender transitions.</p>
+    </div>
+    <div class="split-image">
+      <img src="/photos/jaclyn-craig.jpg" alt="Jaclyn Craig, CSW — therapist at Lotus Rose Counseling in Orem, Utah" width="800" height="1000" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- Full Bio -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Background & Training</p>
+        <h2>Jaclyn's Experience</h2>
+        <p>Jaclyn also has experience in child welfare, domestic violence, and working with families and individuals experiencing trauma. She draws from approaches like Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), and Acceptance and Commitment Therapy (ACT) to help clients build practical tools, better understand their emotions, and feel more in control of their lives.</p>
+        <p>Her clients describe her as a compassionate listener who prioritizes creating a safe and validating space, and isn't afraid to incorporate humor when it feels helpful and appropriate.</p>
+
+        <div class="highlight-box">
+          <h4>Conditions Jaclyn Treats</h4>
+          <ul>
+            <li>Perinatal mood disorders</li>
+            <li>Postpartum depression and anxiety</li>
+            <li>Infertility and IVF support</li>
+            <li>Life transitions</li>
+            <li>Trauma</li>
+            <li>Domestic violence</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box">
+          <h4>Training & Modalities</h4>
+          <ul>
+            <li>CBT (Cognitive Behavioral Therapy)</li>
+            <li>DBT (Dialectical Behavior Therapy)</li>
+            <li>ACT (Acceptance and Commitment Therapy)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="text-container">
+        <p class="section-label">Outside the Office</p>
+        <h2>Getting to Know Jaclyn</h2>
+        <p>When Jaclyn isn't in the therapy office, she enjoys time with her family, jamming out to Taylor Swift or Olivia Dean with some car karaoke, reading a book on her Kindle, going to concerts, or attempting some amateur sewing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Common Questions</p>
+        <h2>About Jaclyn</h2>
+      </div>
+      <div class="faq-section">
+        {faqSchema.map(faq => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer"><p>{faq.answer}</p></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Work With Jaclyn?</h2>
+      <p>Schedule a free 15-minute consultation to see if Jaclyn is the right fit for you.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="/contact/" class="btn-primary">Schedule Free Consultation</a>
+        <a href="tel:+18016424244" class="btn-secondary">Call (801) 642-4244</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://lotusrosecounseling.com/#jaclyn-craig",
+    "name": "Jaclyn Craig",
+    "jobTitle": "Clinical Social Worker",
+    "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
+    "knowsAbout": ["Perinatal Mood Disorders", "Postpartum Depression", "Postpartum Anxiety", "Infertility", "Life Transitions", "CBT", "DBT", "ACT"]
+  })} />
+
+</BaseLayout>
+
+<style>
+  .therapist-detail-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .detail-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+  }
+</style>
