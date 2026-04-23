@@ -40,14 +40,14 @@
             <li><a href="/teen-child-therapy/">Teen & Child Therapy</a></li>
             <li class="dropdown-divider"></li>
             <li class="dropdown-heading">Therapy Approaches</li>
-            <li><a href="/emdr-therapy/">EMDR</a></li>
-            <li><a href="/accelerated-resolution-therapy/">ART</a></li>
-            <li><a href="/modalities/internal-family-systems/">IFS</a></li>
-            <li><a href="/modalities/cognitive-behavioral-therapy/">CBT</a></li>
-            <li><a href="/modalities/dialectical-behavior-therapy/">DBT</a></li>
-            <li><a href="/modalities/acceptance-commitment-therapy/">ACT</a></li>
-            <li><a href="/modalities/emotionally-focused-therapy/">EFT</a></li>
-            <li><a href="/modalities/experiential-therapy/">Experiential</a></li>
+            <li><a href="/emdr-therapy/">EMDR <span class="dropdown-expansion">(Eye Movement Desensitization &amp; Reprocessing)</span></a></li>
+            <li><a href="/accelerated-resolution-therapy/">ART <span class="dropdown-expansion">(Accelerated Resolution Therapy)</span></a></li>
+            <li><a href="/modalities/internal-family-systems/">IFS <span class="dropdown-expansion">(Internal Family Systems)</span></a></li>
+            <li><a href="/modalities/cognitive-behavioral-therapy/">CBT <span class="dropdown-expansion">(Cognitive Behavioral Therapy)</span></a></li>
+            <li><a href="/modalities/dialectical-behavior-therapy/">DBT <span class="dropdown-expansion">(Dialectical Behavior Therapy)</span></a></li>
+            <li><a href="/modalities/acceptance-commitment-therapy/">ACT <span class="dropdown-expansion">(Acceptance &amp; Commitment Therapy)</span></a></li>
+            <li><a href="/modalities/emotionally-focused-therapy/">EFT <span class="dropdown-expansion">(Emotionally Focused Therapy)</span></a></li>
+            <li><a href="/modalities/experiential-therapy/">Experiential Therapy</a></li>
             <li class="dropdown-divider"></li>
             <li><a href="/services/">All Services</a></li>
           </ul>
@@ -93,14 +93,14 @@
           <li><a href="/anxiety-depression/">Anxiety & Depression</a></li>
           <li><a href="/teen-child-therapy/">Teen & Child Therapy</a></li>
           <li class="mobile-dropdown-heading">Therapy Approaches</li>
-          <li><a href="/emdr-therapy/">EMDR</a></li>
-          <li><a href="/accelerated-resolution-therapy/">ART</a></li>
-          <li><a href="/modalities/internal-family-systems/">IFS</a></li>
-          <li><a href="/modalities/cognitive-behavioral-therapy/">CBT</a></li>
-          <li><a href="/modalities/dialectical-behavior-therapy/">DBT</a></li>
-          <li><a href="/modalities/acceptance-commitment-therapy/">ACT</a></li>
-          <li><a href="/modalities/emotionally-focused-therapy/">EFT</a></li>
-          <li><a href="/modalities/experiential-therapy/">Experiential</a></li>
+          <li><a href="/emdr-therapy/">EMDR <span class="dropdown-expansion">(Eye Movement Desensitization &amp; Reprocessing)</span></a></li>
+          <li><a href="/accelerated-resolution-therapy/">ART <span class="dropdown-expansion">(Accelerated Resolution Therapy)</span></a></li>
+          <li><a href="/modalities/internal-family-systems/">IFS <span class="dropdown-expansion">(Internal Family Systems)</span></a></li>
+          <li><a href="/modalities/cognitive-behavioral-therapy/">CBT <span class="dropdown-expansion">(Cognitive Behavioral Therapy)</span></a></li>
+          <li><a href="/modalities/dialectical-behavior-therapy/">DBT <span class="dropdown-expansion">(Dialectical Behavior Therapy)</span></a></li>
+          <li><a href="/modalities/acceptance-commitment-therapy/">ACT <span class="dropdown-expansion">(Acceptance &amp; Commitment Therapy)</span></a></li>
+          <li><a href="/modalities/emotionally-focused-therapy/">EFT <span class="dropdown-expansion">(Emotionally Focused Therapy)</span></a></li>
+          <li><a href="/modalities/experiential-therapy/">Experiential Therapy</a></li>
           <li><a href="/services/">All Services</a></li>
         </ul>
       </li>
@@ -227,7 +227,7 @@
     background: var(--white);
     border-radius: 12px;
     box-shadow: var(--shadow-medium);
-    min-width: 260px;
+    min-width: 360px;
     padding: 12px 0;
     list-style: none;
     z-index: 110;
@@ -257,6 +257,16 @@
     height: 1px;
     background: rgba(212,165,116,0.2);
     margin: 8px 24px;
+  }
+  .dropdown-expansion {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-medium);
+    opacity: 0.75;
+  }
+  .dropdown li a:hover .dropdown-expansion {
+    color: var(--peach-gold);
+    opacity: 1;
   }
 
   .mobile-dropdown .mobile-dropdown-heading {
