@@ -24,6 +24,47 @@ const {
   bookingText = "Book an Appointment",
   bookingUrl = "/contact/"
 } = Astro.props;
+
+// Map specialty names to modality pages. Case-insensitive, trimmed.
+// Also handles common variants (e.g., "Postpartum Depression/Anxiety" -> PPD page).
+const modalityMap: Record<string, string> = {
+  // Modalities
+  "emdr": "/emdr-therapy/",
+  "accelerated resolution therapy": "/accelerated-resolution-therapy/",
+  "art": "/accelerated-resolution-therapy/",
+  "internal family systems": "/modalities/internal-family-systems/",
+  "ifs": "/modalities/internal-family-systems/",
+  "cbt": "/modalities/cognitive-behavioral-therapy/",
+  "cognitive behavioral therapy": "/modalities/cognitive-behavioral-therapy/",
+  "dbt": "/modalities/dialectical-behavior-therapy/",
+  "dialectical behavior therapy": "/modalities/dialectical-behavior-therapy/",
+  "act": "/modalities/acceptance-commitment-therapy/",
+  "acceptance and commitment therapy": "/modalities/acceptance-commitment-therapy/",
+  "eft": "/modalities/emotionally-focused-therapy/",
+  "emotionally focused therapy": "/modalities/emotionally-focused-therapy/",
+  "experiential": "/modalities/experiential-therapy/",
+  "experiential therapy": "/modalities/experiential-therapy/",
+
+  // Conditions (link to service pages)
+  "postpartum depression": "/postpartum-depression/",
+  "postpartum depression/anxiety": "/postpartum-depression/",
+  "postpartum": "/postpartum-depression/",
+  "perinatal mood disorders": "/postpartum-depression/",
+  "trauma": "/trauma-therapy/",
+  "ptsd": "/trauma-therapy/",
+  "trauma & ptsd": "/trauma-therapy/",
+  "anxiety": "/anxiety-depression/",
+  "depression": "/anxiety-depression/",
+  "anxiety & depression": "/anxiety-depression/",
+  "grief": "/grief-counseling/",
+  "grief & loss": "/grief-counseling/",
+  "grief counseling": "/grief-counseling/",
+};
+
+function getModalityUrl(specialty: string): string | null {
+  const key = specialty.toLowerCase().trim();
+  return modalityMap[key] || null;
+}
 ---
 
 <div class="therapist-card">
@@ -56,7 +97,12 @@ const {
       {telehealth && <span> · Telehealth Only</span>}
     </p>
     <ul class="specialties-list">
-      {specialties.map(s => <li>{s}</li>)}
+      {specialties.map(s => {
+        const url = getModalityUrl(s);
+        return url
+          ? <li class="specialty-link-wrap"><a href={url} class="specialty-link">{s}</a></li>
+          : <li>{s}</li>;
+      })}
     </ul>
     <p class="therapist-bio">{bio}</p>
     <div class="therapist-actions">

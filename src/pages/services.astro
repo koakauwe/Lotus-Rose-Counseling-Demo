@@ -85,30 +85,46 @@ const faqSchema = [
         <p>These are the evidence-based tools in our toolkit. Your therapist selects and combines them based on your specific needs.</p>
       </div>
       <div class="modalities-grid" style="margin-top: 40px;">
-        <div class="modality">
+        <a href="/emdr-therapy/" class="modality modality-link">
           <h3>EMDR</h3>
           <p>Eye Movement Desensitization and Reprocessing — gold standard for trauma processing</p>
-        </div>
-        <div class="modality">
+          <span class="modality-learn">Learn more →</span>
+        </a>
+        <a href="/accelerated-resolution-therapy/" class="modality modality-link">
           <h3>ART</h3>
           <p>Accelerated Resolution Therapy — rapid trauma relief, often in 1-5 sessions</p>
-        </div>
-        <div class="modality">
+          <span class="modality-learn">Learn more →</span>
+        </a>
+        <a href="/modalities/internal-family-systems/" class="modality modality-link">
           <h3>IFS</h3>
           <p>Internal Family Systems — working with different "parts" of yourself with compassion</p>
-        </div>
-        <div class="modality">
+          <span class="modality-learn">Learn more →</span>
+        </a>
+        <a href="/modalities/cognitive-behavioral-therapy/" class="modality modality-link">
+          <h3>CBT</h3>
+          <p>Cognitive Behavioral Therapy — restructuring thought patterns that drive anxiety and depression</p>
+          <span class="modality-learn">Learn more →</span>
+        </a>
+        <a href="/modalities/dialectical-behavior-therapy/" class="modality modality-link">
+          <h3>DBT</h3>
+          <p>Dialectical Behavior Therapy — mindfulness-based skills for emotion regulation and distress tolerance</p>
+          <span class="modality-learn">Learn more →</span>
+        </a>
+        <a href="/modalities/acceptance-commitment-therapy/" class="modality modality-link">
           <h3>ACT</h3>
           <p>Acceptance and Commitment Therapy — building psychological flexibility and living aligned with your values</p>
-        </div>
-        <div class="modality">
+          <span class="modality-learn">Learn more →</span>
+        </a>
+        <a href="/modalities/emotionally-focused-therapy/" class="modality modality-link">
           <h3>EFT</h3>
           <p>Emotionally Focused Therapy — strengthening emotional bonds in relationships</p>
-        </div>
-        <div class="modality">
+          <span class="modality-learn">Learn more →</span>
+        </a>
+        <a href="/modalities/experiential-therapy/" class="modality modality-link">
           <h3>Experiential</h3>
           <p>Experiential Therapy — processing emotions through guided experience rather than just talk</p>
-        </div>
+          <span class="modality-learn">Learn more →</span>
+        </a>
       </div>
     </div>
   </section>
@@ -159,9 +175,29 @@ const faqSchema = [
     border-radius: 12px;
     box-shadow: var(--shadow-soft);
     text-align: center;
+    transition: all 0.25s ease;
+  }
+  .modality-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .modality-link:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+    color: inherit;
   }
   .modality h3 { font-size: 28px; color: var(--peach-gold); margin-bottom: 8px; }
-  .modality p { font-size: 15px; line-height: 1.6; }
+  .modality p { font-size: 15px; line-height: 1.6; margin-bottom: 12px; }
+  .modality-learn {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--peach-gold);
+  }
+  .modality-link:hover .modality-learn {
+    color: var(--text-dark);
+  }
   @media (max-width: 768px) {
     .hero { padding: 70px 0 60px; }
     .modalities-grid { grid-template-columns: 1fr; }

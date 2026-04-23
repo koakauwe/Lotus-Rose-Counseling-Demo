@@ -486,6 +486,28 @@ section {
   border-radius: 50px;
   font-size: 14px;
   font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Linked specialty chips — clickable, hoverable */
+.specialties-list li.specialty-link-wrap {
+  padding: 0;
+  background: transparent;
+}
+.specialties-list .specialty-link {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 50px;
+  background: var(--panel-bg);
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.specialties-list .specialty-link:hover {
+  background: var(--peach-gold);
+  color: var(--white);
+  transform: translateY(-1px);
 }
 
 
