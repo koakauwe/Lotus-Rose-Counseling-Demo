@@ -1248,12 +1248,51 @@ section {
   .statement-section p { font-size: 26px; }
 }
 
+/* As Featured On — media credit strip */
+.featured-on {
+  text-align: center;
+  padding: 48px 40px 24px;
+  background: var(--warm-cream);
+}
+
+.featured-on-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-medium);
+  margin-bottom: 12px;
+}
+
+.featured-on-name {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.featured-on-network {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-medium);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .featured-on { padding: 32px 24px 16px; }
+  .featured-on-name { font-size: 22px; }
+}
+
 /* Stat callout strip */
 .stat-strip {
   display: flex;
   justify-content: center;
   gap: 64px;
-  padding: 48px 40px;
+  padding: 24px 40px 48px;
   background: var(--warm-cream);
 }
 
