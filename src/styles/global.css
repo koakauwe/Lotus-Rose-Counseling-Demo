@@ -707,14 +707,14 @@ section {
 }
 
 /* Specific floral backgrounds */
-.floral-hero { background-image: url('/florals/hero-peonies.jpg'); }
-.floral-joy { background-image: url('/florals/floral-joy.jpg'); }
-.floral-megan { background-image: url('/florals/floral-megan.jpg'); }
-.floral-pam { background-image: url('/florals/floral-pam.jpg'); }
-.floral-brynnlee { background-image: url('/florals/floral-brynnlee.jpg'); }
-.floral-insurance { background-image: url('/florals/floral-insurance.jpg'); }
-.floral-contact { background-image: url('/florals/floral-contact.jpg'); }
-.floral-subtle { background-image: url('/florals/floral-subtle.jpg'); }
+.floral-hero { background-image: url('/florals/hero-peonies.webp'); }
+.floral-joy { background-image: url('/florals/floral-joy.webp'); }
+.floral-megan { background-image: url('/florals/floral-megan.webp'); }
+.floral-pam { background-image: url('/florals/floral-pam.webp'); }
+.floral-brynnlee { background-image: url('/florals/floral-brynnlee.webp'); }
+.floral-insurance { background-image: url('/florals/floral-insurance.webp'); }
+.floral-contact { background-image: url('/florals/floral-contact.webp'); }
+.floral-subtle { background-image: url('/florals/floral-subtle.webp'); }
 
 /* Split sections with floral backgrounds */
 .split-section.floral-section .split-content {
