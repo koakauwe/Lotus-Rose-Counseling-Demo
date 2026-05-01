@@ -108,13 +108,12 @@ const currentYear = new Date().getFullYear();
   }
   .footer-col a {
     color: var(--text-dark);
-    opacity: 0.8;
     transition: all 0.2s;
   }
   .footer-col a:hover {
     color: var(--text-dark);
-    opacity: 1;
     padding-left: 4px;
+    text-decoration: underline;
   }
 
   .contact-list li {
@@ -154,10 +153,10 @@ const currentYear = new Date().getFullYear();
     padding-top: 24px;
     text-align: center;
   }
-  .footer-bottom p { color: var(--text-medium); font-size: 13px; margin-bottom: 8px; }
-  .footer-bottom a { color: var(--text-dark); opacity: 0.6; }
-  .footer-bottom a:hover { opacity: 1; }
-  .dot { margin: 0 8px; opacity: 0.3; }
+  .footer-bottom p { color: var(--text-dark); font-size: 13px; margin-bottom: 8px; }
+  .footer-bottom a { color: var(--text-dark); font-weight: 600; }
+  .footer-bottom a:hover { text-decoration: underline; }
+  .dot { margin: 0 8px; color: var(--text-dark); }
   .copyright { margin-bottom: 0; }
 
   @media (max-width: 1100px) {
