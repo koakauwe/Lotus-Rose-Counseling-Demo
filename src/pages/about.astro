@@ -32,18 +32,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="lotus-rose-gallery">
-        <figure>
-          <img src="/photos/about-3.webp" alt="Lotus Rose as a young woman with her husband" width="800" height="1067" loading="lazy" />
-          <figcaption>Lotus Rose as a young woman with her husband.</figcaption>
-        </figure>
-        <figure>
-          <img src="/photos/about-2.webp" alt="Lotus Rose with her husband later in life" width="800" height="900" loading="lazy" />
-          <figcaption>Together later in life.</figcaption>
-        </figure>
-        <figure>
-          <img src="/photos/about-1.webp" alt="Lotus Rose smiling in her later years" width="800" height="900" loading="lazy" />
-          <figcaption>The smile she carried through every season.</figcaption>
-        </figure>
+        <img src="/photos/about-3.webp" alt="Lotus Rose as a young woman with her husband" width="800" height="1067" loading="lazy" />
+        <img src="/photos/about-2.webp" alt="Lotus Rose with her husband later in life" width="800" height="900" loading="lazy" />
+        <img src="/photos/about-1.webp" alt="Lotus Rose smiling in her later years" width="800" height="900" loading="lazy" />
       </div>
 
     </div>
@@ -165,24 +156,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     max-width: 1100px;
     margin: 48px auto 0;
   }
-  .lotus-rose-gallery figure {
-    margin: 0;
-    text-align: center;
-  }
   .lotus-rose-gallery img {
     width: 100%;
     height: 360px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: var(--shadow-soft);
-    margin-bottom: 12px;
-  }
-  .lotus-rose-gallery figcaption {
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-size: 15px;
-    color: var(--text-medium);
-    line-height: 1.5;
   }
 
   @media (max-width: 768px) {
