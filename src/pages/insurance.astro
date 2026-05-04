@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const faqSchema = [
   {
-    question: "Does Lotus Rose Counseling accept insurance?",
-    answer: "Yes, Lotus Rose Counseling accepts most major insurance plans. Contact us to verify your specific plan and benefits before your first session."
+    question: "What insurances does Lotus Rose Counseling accept?",
+    answer: "We accept Select Health, United Health, PEHP, DMBA, EMI, and BCBS (Blue Cross Blue Shield). Contact us to verify your specific plan and benefits before your first session."
   },
   {
     question: "How much does therapy cost without insurance?",
@@ -19,7 +19,7 @@ const faqSchema = [
 
 <BaseLayout
   title="Insurance & Pricing | Lotus Rose Counseling in Orem, UT"
-  description="Insurance information and therapy pricing at Lotus Rose Counseling in Orem, Utah. We accept most major insurance plans. Free 15-minute consultation available."
+  description="Lotus Rose Counseling in Orem accepts Select Health, United Health, PEHP, DMBA, EMI, and BCBS. Self-pay options also available. Free 15-minute consultation."
   faqSchema={faqSchema}
 >
 
@@ -38,13 +38,17 @@ const faqSchema = [
     <div class="container">
       <div class="text-container">
         <div class="highlight-box">
-          <h3>Insurance Accepted</h3>
-          <p>We accept most major insurance plans. To verify your specific coverage:</p>
-          <ul>
-            <li>Call us at <a href="tel:+18016424244">(801) 642-4244</a></li>
-            <li>Fill out our <a href="/contact/">contact form</a> and select "Insurance coverage question"</li>
-            <li>Have your insurance card ready — we'll verify your benefits for you</li>
+          <h3>Insurances We Accept</h3>
+          <p>Lotus Rose Counseling is in-network with the following insurance plans:</p>
+          <ul class="insurance-list">
+            <li><strong>Select Health</strong></li>
+            <li><strong>United Health</strong></li>
+            <li><strong>PEHP</strong> (Public Employees Health Program)</li>
+            <li><strong>DMBA</strong> (Deseret Mutual Benefit Administrators)</li>
+            <li><strong>EMI</strong> (Educators Mutual Insurance)</li>
+            <li><strong>BCBS</strong> (Blue Cross Blue Shield)</li>
           </ul>
+          <p>To verify your specific plan and benefits, call us at <a href="tel:+18016424244">(801) 642-4244</a> or fill out our <a href="/contact/">contact form</a> and select "Insurance coverage question." Have your insurance card ready and we'll help verify your benefits.</p>
         </div>
 
         <h2>What to Know Before Your First Session</h2>
@@ -111,7 +115,31 @@ const faqSchema = [
 
 <style>
   .insurance-top { padding: 80px 0 20px; }
+  .insurance-list {
+    columns: 2;
+    column-gap: 32px;
+    padding-left: 0;
+    list-style: none;
+    margin: 16px 0 24px;
+  }
+  .insurance-list li {
+    padding: 8px 0 8px 24px;
+    position: relative;
+    break-inside: avoid;
+    color: var(--text-medium);
+  }
+  .insurance-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--peach-gold);
+    font-weight: 700;
+  }
+  .insurance-list li strong {
+    color: var(--text-dark);
+  }
   @media (max-width: 768px) {
     .insurance-top { padding: 60px 0 10px; }
+    .insurance-list { columns: 1; }
   }
 </style>

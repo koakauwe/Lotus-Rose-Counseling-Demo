@@ -17,7 +17,20 @@ A production website for Lotus Rose Counseling — a women-focused mental health
 - **Phone:** (801) 642-4244
 - **Email:** Joy: joy.bouchard@lotusrosecounseling.com | Office: officemanager@lotusrosecounseling.com
 - **Website:** lotusrosecounseling.com (DNS on Cloudflare via koakauwe@gmail.com account)
-- **Payment:** Insurance accepted + self-pay options. **Specific insurances/prices intentionally vague** on website (Joy's current preference)
+- **Insurances accepted (in-network):** Select Health, United Health, PEHP, DMBA, EMI, BCBS (Blue Cross Blue Shield). Self-pay also available. Specific session prices still kept off the public site (call to verify).
+- **Featured on:** The Secret Lives of Mormon Wives (Hulu, 2024) — Joy was the therapist on the show; sessions filmed in the Orem office. Practice-level credit on homepage trust strip; Joy-specific credit on her bio page only.
+
+## Origin of the Name "Lotus Rose"
+
+The practice is named after Joy's grandmother, Lotus Rose. Key facts:
+
+- She was a young mother who cared for her family alone while her husband was away at war
+- She lost her husband much younger than expected and continued raising her family on her own
+- Despite the adversity, she remained strong, compassionate, and kept a great sense of humor
+- The name honors quiet feminine resilience: enduring, adapting, and continuing to care for others through your own hardship
+- The lotus represents growth through muddy ground; the rose represents love and vulnerability with thorns for strength and boundaries
+
+This story lives on the About page (`/about/`) with three photos of Lotus Rose and a video. Don't paraphrase or rewrite the story without checking — Joy's own words are the canonical version.
 
 ---
 
@@ -234,8 +247,9 @@ src/
 
 ## Pending / Open Items
 
-- [ ] **Joy needs to send:** Specific insurances accepted + self-pay rates (currently kept vague)
-- [ ] **Joy needs to send:** Grandma's name and how she connects to "Lotus Rose" naming
+- [x] ~~**Joy needs to send:** Specific insurances accepted~~ ✅ Listed on Insurance page (Select Health, United, PEHP, DMBA, EMI, BCBS)
+- [ ] **Joy still needs to send:** Self-pay session rates (still kept off site for now)
+- [x] ~~**Joy needs to send:** Grandma's name and how she connects to "Lotus Rose" naming~~ ✅ Added to About page
 - [ ] **Joy needs to send:** GA4 Measurement ID (starts with `G-`)
 - [ ] **Joy needs to send:** New office photos when team gets new headshots
 - [ ] **Future:** Geo pages for Provo, Lehi, American Fork, Pleasant Grove, Lindon
