@@ -44,8 +44,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Joy's Story (split layout) -->
-  <div class="split-section">
+  <!-- Joy's Story (split layout — portrait variant with framed photo) -->
+  <div class="split-section split-section--portrait">
     <div class="split-content">
       <p class="section-label">The Founder</p>
       <h2>Joy Bouchard, LCSW</h2>
@@ -142,6 +142,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: 56px;
     padding-top: 48px;
     border-top: 1px solid rgba(61, 51, 48, 0.1);
+  }
+
+  /* Portrait variant — gives Joy's photo a contained, framed look
+     instead of stretching edge to edge */
+  .split-section--portrait {
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    background: var(--warm-cream);
+  }
+  .split-section--portrait .split-image {
+    padding: 60px 60px 60px 0;
+  }
+  .split-section--portrait .split-image img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+    margin-left: auto;
+  }
+
+  @media (max-width: 900px) {
+    .split-section--portrait {
+      grid-template-columns: 1fr;
+    }
+    .split-section--portrait .split-image {
+      padding: 0 28px 40px;
+      height: auto;
+    }
+    .split-section--portrait .split-image img {
+      max-width: 320px;
+      margin: 0 auto;
+    }
   }
 
   @media (max-width: 768px) {
