@@ -248,7 +248,7 @@ src/
 ## Pending / Open Items
 
 - [x] ~~**Joy needs to send:** Specific insurances accepted~~ ✅ Listed on Insurance page (Select Health, United, PEHP, DMBA, EMI, BCBS)
-- [ ] **Joy still needs to send:** Self-pay session rates (still kept off site for now)
+- [x] ~~**Joy still needs to send:** Self-pay session rates~~ ✅ Listed on Insurance page (Intake $180, Ongoing $125-$150)
 - [x] ~~**Joy needs to send:** Grandma's name and how she connects to "Lotus Rose" naming~~ ✅ Added to About page
 - [ ] **Joy needs to send:** GA4 Measurement ID (starts with `G-`)
 - [ ] **Joy needs to send:** New office photos when team gets new headshots

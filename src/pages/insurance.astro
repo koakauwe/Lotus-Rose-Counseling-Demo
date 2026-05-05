@@ -8,7 +8,7 @@ const faqSchema = [
   },
   {
     question: "How much does therapy cost without insurance?",
-    answer: "Session rates vary by therapist and service. Contact us for current self-pay rates. We want therapy to be accessible, so we're happy to discuss options during your free consultation."
+    answer: "Self-pay rates are $180 for the initial intake (first session) and $125 to $150 for ongoing sessions, depending on the therapist's license level. We want therapy to be accessible, so we're happy to talk through options during your free 15-minute consultation."
   },
   {
     question: "Do you offer a free consultation?",
@@ -67,8 +67,23 @@ const faqSchema = [
         </ul>
         <p>We can help you navigate these questions — just ask during your consultation or contact us beforehand.</p>
 
-        <h3>Self-Pay Options</h3>
-        <p>If you don't have insurance or prefer to pay out of pocket, self-pay rates are available. Contact us for current pricing. Some advantages of self-pay:</p>
+        <h3>Self-Pay Pricing</h3>
+        <p>If you don't have insurance, prefer to pay out of pocket, or your plan isn't one we accept, self-pay is available. Our rates reflect the level of training and licensure of each therapist.</p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <p class="pricing-label">Initial Intake</p>
+            <p class="pricing-amount">$180</p>
+            <p class="pricing-note">First session, includes assessment and treatment planning</p>
+          </div>
+          <div class="pricing-card">
+            <p class="pricing-label">Ongoing Sessions</p>
+            <p class="pricing-amount">$125&ndash;$150</p>
+            <p class="pricing-note">Per session, depending on therapist license level</p>
+          </div>
+        </div>
+
+        <p>A few advantages of paying out of pocket:</p>
         <ul style="padding-left: 24px; margin-bottom: 24px;">
           <li style="margin-bottom: 8px;">No diagnosis required on your permanent medical record</li>
           <li style="margin-bottom: 8px;">No session limits imposed by insurance</li>
@@ -138,8 +153,47 @@ const faqSchema = [
   .insurance-list li strong {
     color: var(--text-dark);
   }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 24px 0 32px;
+  }
+  .pricing-card {
+    background: var(--warm-cream);
+    border-left: 3px solid var(--peach-gold);
+    border-radius: 0 12px 12px 0;
+    padding: 24px 28px;
+    text-align: left;
+  }
+  .pricing-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--peach-gold);
+    margin: 0 0 6px;
+  }
+  .pricing-amount {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 8px;
+    line-height: 1;
+  }
+  .pricing-note {
+    font-size: 14px;
+    color: var(--text-medium);
+    margin: 0;
+    line-height: 1.5;
+  }
+
   @media (max-width: 768px) {
     .insurance-top { padding: 60px 0 10px; }
     .insurance-list { columns: 1; }
+    .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
+    .pricing-amount { font-size: 32px; }
   }
 </style>
