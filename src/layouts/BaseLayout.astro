@@ -156,6 +156,47 @@ const faqJsonLd = faqSchema && faqSchema.length > 0 ? {
       setTimeout(loadGA, 2000);
     }
   </script>
+
+  <!-- Conversion event tracking — delegated click listener for phone, email, and CTA clicks -->
+  <script is:inline>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (!link || typeof gtag !== 'function') return;
+
+      var href = link.getAttribute('href') || '';
+      var pageLocation = window.location.pathname;
+
+      // Phone number click (tel: links)
+      if (href.indexOf('tel:') === 0) {
+        gtag('event', 'phone_click', {
+          phone_number: href.replace('tel:', ''),
+          page_location: pageLocation,
+          link_text: (link.textContent || '').trim().substring(0, 80)
+        });
+        return;
+      }
+
+      // Email click (mailto: links)
+      if (href.indexOf('mailto:') === 0) {
+        gtag('event', 'email_click', {
+          email_address: href.replace('mailto:', ''),
+          page_location: pageLocation,
+          link_text: (link.textContent || '').trim().substring(0, 80)
+        });
+        return;
+      }
+
+      // CTA: any link to /contact/ counts as "book consultation" intent
+      // Skip if we're already on the contact page
+      if ((href === '/contact/' || href === '/contact' || href.indexOf('lotusrosecounseling.com/contact/') !== -1)
+          && pageLocation !== '/contact/') {
+        gtag('event', 'book_consultation_click', {
+          page_location: pageLocation,
+          link_text: (link.textContent || '').trim().substring(0, 80)
+        });
+      }
+    });
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to main content</a>

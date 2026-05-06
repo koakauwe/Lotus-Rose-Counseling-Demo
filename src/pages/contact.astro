@@ -133,6 +133,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 form.style.display = 'none';
                 successDiv.style.display = 'block';
                 successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Fire conversion event to GA4
+                if (typeof gtag === 'function') {
+                  var fd = new FormData(form);
+                  gtag('event', 'contact_form_submission', {
+                    intent: fd.get('intent') || 'unspecified',
+                    service: fd.get('service') || 'unspecified',
+                    contact_preference: fd.get('contact_preference') || 'unspecified'
+                  });
+                }
               } else if (response.status === 429) {
                 errorDiv.querySelector('p').textContent = 'Too many submissions. Please wait a bit and try again, or call (801) 642-4244.';
                 errorDiv.style.display = 'block';
