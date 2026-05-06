@@ -1,0 +1,10 @@
+# Cloudflare Pages redirects
+# Format: <source> <destination> <status>
+# 301 = permanent redirect (SEO best practice for moved pages)
+
+# Old Zyro URL — /grief no longer exists, points to grief-counseling page
+/grief                  /grief-counseling/  301
+
+# Internal short URL → canonical
+/insurance              /insurance-and-pricing/  301
+/insurance/             /insurance-and-pricing/  301
