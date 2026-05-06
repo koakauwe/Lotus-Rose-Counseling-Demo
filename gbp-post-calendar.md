@@ -32,8 +32,25 @@ For each post:
 4. Paste the post copy from below
 5. Add the photo from `/photos/` or `/florals/` (filename listed)
 6. Click **Add a button** → choose **Learn more**
-7. Paste the CTA URL listed
+7. Paste the CTA URL listed (UTM tags included — copy the full URL exactly)
 8. Publish
+
+---
+
+## UTM Tracking Convention
+
+Every CTA URL below has UTM parameters appended so we can see in GA4 exactly which GBP posts produce traffic and conversions. The convention is:
+
+- `utm_source=gbp` — identifies Google Business Profile as the traffic source
+- `utm_medium=organic` — non-paid channel
+- `utm_campaign=<topic-slug>` — the specific post topic, so we can compare topics
+
+**Where to see the data:**
+- GA4 → Reports → Acquisition → Traffic acquisition → filter by `Session source = gbp`
+- GA4 → Reports → Acquisition → Sessions by campaign — shows which post topics drove sessions
+- GA4 → Engagement → Events → `contact_form_submission` — break down by source/campaign to see which topics produced leads
+
+**Important:** Always copy the full URL with the `?utm_…` query string. A post without UTM tags will still work, but the traffic will show up as generic "google / organic" and we'll lose the attribution.
 
 ---
 
@@ -42,7 +59,7 @@ For each post:
 - **Service:** Postpartum Therapy
 - **City:** Orem
 - **Photo:** office-1.webp or floral-joy.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/postpartum-depression/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/postpartum-depression/?utm_source=gbp&utm_medium=organic&utm_campaign=postpartum-orem`
 
 **Postpartum Therapy in Orem, Utah**
 
@@ -63,7 +80,7 @@ A complimentary 15-minute conversation is a low-pressure place to start.
 - **Service:** EMDR Therapy
 - **City:** Provo
 - **Photo:** floral-megan.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/emdr-therapy/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/emdr-therapy/?utm_source=gbp&utm_medium=organic&utm_campaign=emdr-provo`
 
 **EMDR Therapy in Provo and Utah County**
 
@@ -86,7 +103,7 @@ A complimentary 15-minute conversation is a place to begin.
 - **Service:** Grief & Infant Loss
 - **City:** Lehi
 - **Photo:** floral-contact.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/grief-counseling/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/grief-counseling/?utm_source=gbp&utm_medium=organic&utm_campaign=grief-lehi`
 
 **Grief Counseling in Lehi, Utah**
 
@@ -107,7 +124,7 @@ Spring doesn't replace winter. It just arrives, eventually, in its own time.
 - **Service:** Anxiety & Depression
 - **City:** American Fork
 - **Photo:** office-3.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/anxiety-depression/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/anxiety-depression/?utm_source=gbp&utm_medium=organic&utm_campaign=anxiety-american-fork`
 
 **Therapy for Anxiety and Low Mood in American Fork**
 
@@ -128,7 +145,7 @@ A storm doesn't pass because you forced it. It passes because the conditions cha
 - **Service:** Tired Mom's Club Group
 - **City:** Orem (online)
 - **Photo:** floral-support-group.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/support-groups/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/support-groups/?utm_source=gbp&utm_medium=organic&utm_campaign=tired-moms-group`
 
 **An Online Group for Burned-Out Moms**
 
@@ -149,7 +166,7 @@ We can't give you a nap. But we can help you feel human again.
 - **Service:** Trauma Therapy
 - **City:** Pleasant Grove
 - **Photo:** floral-insurance.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/trauma-therapy/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/trauma-therapy/?utm_source=gbp&utm_medium=organic&utm_campaign=trauma-pleasant-grove`
 
 **Trauma Therapy in Pleasant Grove, Utah**
 
@@ -170,7 +187,7 @@ A frozen river doesn't melt all at once. It thaws slowly, in its own time, when 
 - **Service:** Infertility & IVF Support
 - **City:** Lindon
 - **Photo:** floral-contact.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/infertility/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/infertility/?utm_source=gbp&utm_medium=organic&utm_campaign=infertility-lindon`
 
 **Therapy for the Infertility Journey in Lindon, Utah**
 
@@ -191,7 +208,7 @@ Therapy during this season isn't about fixing anything. It's about giving you a 
 - **Service:** Body Image Therapy
 - **City:** Vineyard
 - **Photo:** floral-subtle.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/services/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/services/?utm_source=gbp&utm_medium=organic&utm_campaign=body-image-vineyard`
 
 **Therapy for Body Image Concerns in Vineyard**
 
@@ -212,7 +229,7 @@ A garden doesn't bloom by being criticized. It blooms by being tended.
 - **Service:** Faith Transitions
 - **City:** Springville
 - **Photo:** office-5.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/our-therapists/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/our-therapists/?utm_source=gbp&utm_medium=organic&utm_campaign=faith-transitions-springville`
 
 **Therapy for Faith Transitions in Springville, Utah**
 
@@ -233,7 +250,7 @@ A tree doesn't lose its life when it loses its leaves. It's gathering what it ne
 - **Service:** Childhood Experiences in Motherhood
 - **City:** Orem
 - **Photo:** floral-joy.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/trauma-therapy/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/trauma-therapy/?utm_source=gbp&utm_medium=organic&utm_campaign=childhood-patterns-orem`
 
 **When Old Patterns Resurface in Motherhood: Therapy in Orem**
 
@@ -252,7 +269,7 @@ You don't have to choose between caring for your kids and caring for the part of
 - **Service:** Telehealth Therapy
 - **City:** Utah & Idaho (broad)
 - **Photo:** floral-brynnlee.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/our-therapists/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/our-therapists/?utm_source=gbp&utm_medium=organic&utm_campaign=telehealth-utah-idaho`
 
 **Telehealth Therapy for Women in Utah and Idaho**
 
@@ -273,7 +290,7 @@ The right care meets you where you are. Sometimes that's an office. Sometimes th
 - **Service:** Internal Family Systems (IFS)
 - **City:** Provo
 - **Photo:** floral-subtle.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/modalities/internal-family-systems/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/modalities/internal-family-systems/?utm_source=gbp&utm_medium=organic&utm_campaign=ifs-provo`
 
 **Internal Family Systems Therapy in Provo, Utah**
 
@@ -294,7 +311,7 @@ Most approaches try to silence the parts of you that hurt. IFS asks why they're 
 - **Service:** Birth Story Support
 - **City:** Orem
 - **Photo:** floral-joy.webp
-- **CTA button:** Learn more → `https://lotusrosecounseling.com/postpartum-depression/`
+- **CTA button:** Learn more → `https://lotusrosecounseling.com/postpartum-depression/?utm_source=gbp&utm_medium=organic&utm_campaign=birth-story-orem`
 
 **Therapy for Hard Birth Experiences in Orem, Utah**
 
