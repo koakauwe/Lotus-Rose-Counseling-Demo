@@ -23,6 +23,7 @@ export async function onRequestPost(context) {
     const intent = (formData.get('intent') || '').trim();
     const service = (formData.get('service') || '').trim();
     const contactPref = (formData.get('contact_preference') || '').trim();
+    const referralSource = (formData.get('referral_source') || '').trim();
     const honeypot = (formData.get('website') || '').trim();
 
     // Honeypot — bots fill hidden fields
@@ -90,9 +91,21 @@ export async function onRequestPost(context) {
       'email': 'Email',
     };
 
+    const referralLabels = {
+      'google-search': 'Google search',
+      'google-maps': 'Google Maps',
+      'psychology-today': 'Psychology Today',
+      'mormon-wives': 'The Secret Lives of Mormon Wives',
+      'therapist-referral': 'Referral from another therapist',
+      'friend-family': 'Friend or family',
+      'instagram': 'Instagram',
+      'other': 'Other',
+    };
+
     const intentLabel = intentLabels[intent] || intent || 'Not specified';
     const serviceLabel = serviceLabels[service] || service || 'Not sure yet';
     const contactPrefLabel = contactPrefLabels[contactPref] || contactPref || 'No preference';
+    const referralLabel = referralLabels[referralSource] || referralSource || 'Not provided';
     const firstName = name.split(' ')[0];
 
     // ── 1. Notification email to Joy ──
@@ -131,8 +144,12 @@ export async function onRequestPost(context) {
             <td style="padding: 14px 20px; color: #3D3330; border-bottom: 1px solid #f0ebe4;">${esc(serviceLabel)}</td>
           </tr>
           <tr>
-            <td style="padding: 14px 20px; font-weight: 700; color: #3D3330;">Contact Via</td>
-            <td style="padding: 14px 20px; color: #3D3330;">${esc(contactPrefLabel)}</td>
+            <td style="padding: 14px 20px; font-weight: 700; color: #3D3330; border-bottom: 1px solid #f0ebe4;">Contact Via</td>
+            <td style="padding: 14px 20px; color: #3D3330; border-bottom: 1px solid #f0ebe4;">${esc(contactPrefLabel)}</td>
+          </tr>
+          <tr style="background: #FFF8F3;">
+            <td style="padding: 14px 20px; font-weight: 700; color: #3D3330;">Heard About Us</td>
+            <td style="padding: 14px 20px; color: #3D3330;"><strong style="color: #D4A574;">${esc(referralLabel)}</strong></td>
           </tr>
         </table>
       </div>

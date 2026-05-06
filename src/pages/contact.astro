@@ -96,6 +96,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </select>
             </div>
 
+            <!-- How did you hear about us — attribution for trial-period reporting -->
+            <div class="form-group">
+              <label for="referral-source">How did you hear about us?</label>
+              <select id="referral-source" name="referral_source">
+                <option value="" selected>Select one (optional)</option>
+                <option value="google-search">Google search</option>
+                <option value="google-maps">Google Maps</option>
+                <option value="psychology-today">Psychology Today</option>
+                <option value="mormon-wives">The Secret Lives of Mormon Wives</option>
+                <option value="therapist-referral">Referral from another therapist</option>
+                <option value="friend-family">Friend or family</option>
+                <option value="instagram">Instagram</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
             <!-- Hidden attribution field -->
             <input type="hidden" name="source" value="website-contact-form" />
 
@@ -140,7 +156,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   gtag('event', 'contact_form_submission', {
                     intent: fd.get('intent') || 'unspecified',
                     service: fd.get('service') || 'unspecified',
-                    contact_preference: fd.get('contact_preference') || 'unspecified'
+                    contact_preference: fd.get('contact_preference') || 'unspecified',
+                    referral_source: fd.get('referral_source') || 'unspecified'
                   });
                 }
               } else if (response.status === 429) {
