@@ -44,6 +44,16 @@ unless she asks. The numbers in the prose are doing the work.
 >
 > Here's the recap for **[Month]**.
 >
+> *(Month 1 only — include this paragraph and then delete it from the
+> month 2 and 3 emails.)*
+>
+> *This is the first month with real measurement in place. The numbers
+> below are an honest first picture, not a comparison to anything —
+> we didn't have analytics or form tracking running before this. The
+> point of month 1 is to establish what "normal" looks like with these
+> pieces working. Month 2 is when we'll have something to compare
+> against.*
+>
 > **The headline:**
 > The website produced **[X] consultation requests** this month. You said
 > **[Y] became consultation calls** and **[Z] of those became new clients**.
@@ -99,21 +109,32 @@ about what to do next month.
 
 ---
 
-## Trial-Period Baseline (Filled in at Trial Start)
+## What We Knew Going In
 
-Capture these on day one so the monthly numbers have something to compare to.
-Update this section once and leave it alone.
+We didn't have website analytics before May 1, 2026, so most "baseline"
+numbers don't exist. The trial isn't a comparison-to-baseline exercise —
+it's an absolute measurement: *did marketing produce more new clients than
+it cost?* That math works without historical data.
 
-| Baseline as of [DATE TRIAL STARTED] | Value |
-|---|---|
-| Form submissions / month (last 30 days before trial) | _____ |
-| Joy's new clients / month (her recent average) | _____ |
-| GBP profile views / month | _____ |
-| GBP calls / month | _____ |
-| GSC impressions (last 28 days) | _____ |
-| GSC clicks (last 28 days) | _____ |
-| Number of indexed pages | _____ |
-| Top 5 organic queries | _____ |
+The only things worth recording up front are the few real signals that
+existed before we turned tracking on. Fill these in once and leave them.
+
+| Going-in signal | Value | Source |
+|---|---|---|
+| Joy's normal intake rate | _____ new clients/month | Ask Joy: "what's a typical month look like for you?" |
+| GBP profile views — April 2026 | _____ | GBP dashboard → Performance → 30 days ending April 30 |
+| GBP calls — April 2026 | _____ | GBP dashboard → Calls |
+| GBP direction requests — April 2026 | _____ | GBP dashboard → Directions |
+| GSC impressions — last 28 days before May 1 | _____ | Search Console → Performance |
+| GSC clicks — last 28 days before May 1 | _____ | Search Console → Performance |
+
+**Notes for month 1:**
+- GA4 has no pre-trial data, so the report leads with absolute numbers
+  (e.g., "12 form submissions this month"), not deltas.
+- Form submissions weren't tracked before May 6, 2026, so any
+  "submissions per month" trend starts in June.
+- GSC and GBP do have historical data, so April → May → June comparisons
+  on those platforms are real and worth surfacing.
 
 ---
 
@@ -139,6 +160,19 @@ is enough to spot trends without re-opening old emails.
 - Top channel: ____
 - One thing that worked: ____
 - One thing that didn't: ____
+
+---
+
+## How the Three Months Are Different
+
+Each month plays a different role. Don't write the same kind of report
+three times.
+
+| Month | What we're doing | What the report contains |
+|---|---|---|
+| 1 (May) | Establishing the measurement floor | Absolute numbers, no comparisons. "This is what we now know." |
+| 2 (June) | First real comparison | Month-over-month deltas finally mean something. Channel mix becomes signal. |
+| 3 (July) | Decision month | Two months of trends + revenue attribution. "Here's what it produced. Worth keeping?" |
 
 ---
 
