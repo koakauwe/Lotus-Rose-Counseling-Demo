@@ -111,17 +111,43 @@ about what to do next month.
 
 ## What We Knew Going In
 
-We didn't have website analytics before May 1, 2026, so most "baseline"
-numbers don't exist. The trial isn't a comparison-to-baseline exercise —
-it's an absolute measurement: *did marketing produce more new clients than
-it cost?* That math works without historical data.
+We didn't have website analytics before May 1, 2026, so most website-side
+"baseline" numbers don't exist. The trial isn't a pure comparison-to-baseline
+exercise — it's an absolute measurement: *did marketing produce more new
+clients than it cost?* That math works without historical data.
 
-The only things worth recording up front are the few real signals that
-existed before we turned tracking on. Fill these in once and leave them.
+That said, **Joy does have real intake numbers from her practice records,
+and those are the most important baseline of all.** They tell us where
+"recovered" looks like and where "great" looks like.
 
-| Going-in signal | Value | Source |
+### Joy's intake history (provided May 6, 2026)
+
+| Period | Inbound leads | New clients | Lead → client rate |
+|---|---|---|---|
+| **Historical average** (pre-slowdown) | ~30/month | 12–15/month | ~40–50% |
+| **March 2026** | 16 | 7 | 44% |
+| **April 2026** | 15 | 6 | 40% |
+
+**Industry context:** Joy reports the slowdown isn't unique to Lotus Rose —
+it's an industry-wide pattern. Other therapy practices are seeing the same
+softness. This matters for trial framing: we're working against a headwind,
+not a calm sea.
+
+**What this means for the trial:**
+- "Back to historical average" = ~30 leads/month → 12–15 new clients/month.
+  That's roughly **double current performance.** A real, meaningful goal.
+- The lead → client rate (40–44%) is already *good* and tracks with industry
+  norms. This isn't a "Joy needs to convert better" problem. It's a *volume*
+  problem. Marketing's job is to feed her more leads, not improve her
+  closing rate.
+- If the trial moves leads from 15/month → 22/month with the same conversion
+  rate, that's roughly +3 new clients/month. At Joy's average lifetime value,
+  that's the ROI math.
+
+### Other going-in signals (fill these in once and leave them)
+
+| Signal | Value | Source |
 |---|---|---|
-| Joy's normal intake rate | _____ new clients/month | Ask Joy: "what's a typical month look like for you?" |
 | GBP profile views — April 2026 | _____ | GBP dashboard → Performance → 30 days ending April 30 |
 | GBP calls — April 2026 | _____ | GBP dashboard → Calls |
 | GBP direction requests — April 2026 | _____ | GBP dashboard → Directions |

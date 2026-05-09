@@ -14,6 +14,32 @@ it isn't worth logging.
 
 ### Week of May 4
 
+**Tuesday, May 6 — Joy's intake history captured for trial baseline**
+
+Joy shared real intake numbers from her practice records — these are now
+the anchor for every monthly report:
+
+- **March 2026:** 16 inbound leads → 7 new clients (44% conversion)
+- **April 2026:** 15 inbound leads → 6 new clients (40% conversion)
+- **Historical average (pre-slowdown):** ~30 leads/month → 12–15 new clients/month
+
+Joy's framing: the slowdown is industry-wide, not specific to Lotus Rose.
+Other therapy practices are seeing the same softness. This is critical
+context for the trial — we're working against a headwind.
+
+**What this changes about the trial:**
+- The 40–44% lead → client conversion rate is already healthy. Joy doesn't
+  have a closing problem. She has a *volume* problem.
+- Marketing's job during the trial is to feed her more leads, not optimize
+  her sales process.
+- "Back to historical average" = ~30 leads/month, roughly double current
+  volume. That's the real success metric.
+- Even modest progress matters: 15 → 22 leads/month at the same conversion
+  rate produces +3 new clients/month, which is the ROI line.
+
+Logged into `trial-monthly-report.md` "What We Knew Going In" section so
+every monthly report from now on anchors against these numbers.
+
 **Tuesday, May 6 — Trial-period tracking infrastructure built**
 
 Wired up the measurement system that makes the 3-month trial reportable:
