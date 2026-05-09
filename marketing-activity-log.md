@@ -14,6 +14,17 @@ it isn't worth logging.
 
 ### Week of May 4
 
+**Tuesday, May 6 — Week 2 GBP post published early ("EMDR Therapy in Provo")**
+
+Posted Week 2 of the calendar 5 days ahead of the planned May 11 slot.
+Linked to `/emdr-therapy/?utm_source=gbp&utm_medium=organic&utm_campaign=emdr-provo`.
+Posted as-is from the calendar — no policy-flag rewrites needed.
+
+Going forward Joy gets two GBP posts in close succession (May 4
+postpartum + May 6 EMDR), which is fine for visibility. The next
+post (Week 3, grief/Lehi) is still slated for Monday May 18 to
+re-establish weekly cadence.
+
 **Tuesday, May 6 — Joy's intake history captured for trial baseline**
 
 Joy shared real intake numbers from her practice records — these are now
