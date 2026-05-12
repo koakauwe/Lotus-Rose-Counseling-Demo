@@ -12,6 +12,48 @@ it isn't worth logging.
 
 ## May 2026
 
+### Week of May 11
+
+**Monday, May 11 — GA4 traffic data needs scrubbing for May report**
+
+Reviewed the GA4 Marketing Performance dashboard. Of 132 active users
+in the trial-to-date window, **~59 are from Singapore** — almost
+certainly bot/datacenter traffic, not real visitors. Singapore is a
+major cloud hub (AWS, GCP, Cloudflare APAC), and a women's therapy
+practice in Orem has no plausible Singapore audience. Real human
+traffic is closer to ~70 users, not 132. Also spotted `lcgrm.com`
+referral traffic, which is a known referrer-spam domain.
+
+**Action for end-of-month report:** when pulling May numbers,
+exclude Singapore + obvious referrer-spam domains so the visitor
+count we cite to Joy is the real human number. Citing the raw 132
+would overstate traffic by ~50% and erode credibility the moment
+anyone looked closely.
+
+Did NOT enable a permanent country-exclusion filter in GA4 — kept
+raw data intact in case it's useful for analysis later. Filtering
+happens at report-pull time, not in the data layer.
+
+**Monday, May 11 — Joy's feedback: Megan Judd modality correction**
+
+Joy flagged that Megan's profile listed "Experiential Therapy" as
+one of her main modalities, but Megan does not use it. Replaced
+with "Feminist Theory" across all 5 surfaces it appears: her
+individual profile, the therapist hub card, the homepage preview,
+and both schema files. Plain text, not a link, since there's no
+/modalities/feminist-theory/ page on the site.
+
+**Sunday, May 10 — Mother's Day GBP post**
+
+Drafted a Mother's Day post ("To Every Woman Carrying Mother's Day")
+on May 6 ahead of the holiday. Hero peonies image (`hero-peonies-v2.png`)
+pulled from the site for use as the post photo.
+
+Whether the post actually went live on May 10 isn't recorded here —
+ask Koa to confirm. If yes, the UTM campaign tag was
+`mothers-day-2026` and the CTA pointed to the homepage. If no, the
+copy is in the chat record and saved for the 2027 calendar.
+
 ### Week of May 4
 
 **Tuesday, May 6 — Week 2 GBP post published early ("EMDR Therapy in Provo")**
@@ -115,6 +157,10 @@ These are the things in motion that should produce signal by end of May:
   will include channel breakdown.
 - **First conversion event totals in GA4** — phone clicks, email clicks,
   form submissions, contact-CTA clicks all start counting from today.
+- **End-of-month data scrub** — when pulling May numbers, exclude
+  Singapore + known referrer-spam (`lcgrm.com`) from the visitor
+  count. Raw GA4 number is inflated ~50% by bot/datacenter traffic.
+  Only cite the cleaned number in Joy's report.
 
 ---
 
