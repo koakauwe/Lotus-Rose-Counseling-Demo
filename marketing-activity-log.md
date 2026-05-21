@@ -43,16 +43,20 @@ individual profile, the therapist hub card, the homepage preview,
 and both schema files. Plain text, not a link, since there's no
 /modalities/feminist-theory/ page on the site.
 
-**Sunday, May 10 — Mother's Day GBP post**
+**Sunday, May 10 — Mother's Day GBP post published**
 
-Drafted a Mother's Day post ("To Every Woman Carrying Mother's Day")
-on May 6 ahead of the holiday. Hero peonies image (`hero-peonies-v2.png`)
-pulled from the site for use as the post photo.
+Drafted on May 6, published on May 10 for the holiday.
+Title: "To Every Woman Carrying Mother's Day." Hero peonies image
+(`hero-peonies-v2.png`) used as the post photo. CTA linked to the
+homepage with `utm_source=gbp&utm_medium=organic&utm_campaign=mothers-day-2026`.
 
-Whether the post actually went live on May 10 isn't recorded here —
-ask Koa to confirm. If yes, the UTM campaign tag was
-`mothers-day-2026` and the CTA pointed to the homepage. If no, the
-copy is in the chat record and saved for the 2027 calendar.
+This was an off-calendar post — not part of the May–July 13-post
+calendar. Worth flagging in the May report as a moment-driven post,
+distinct from the scheduled service posts. Mother's Day is a heavy
+day for the audience this practice serves (postpartum, grief,
+infertility, complicated family stories) and the post leaned into
+that complexity rather than treating the holiday as a generic
+"happy moms day" greeting.
 
 ### Week of May 4
 
