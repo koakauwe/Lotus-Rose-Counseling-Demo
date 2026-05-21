@@ -20,7 +20,7 @@ const faqSchema = [
 
 <BaseLayout
   title="Our Therapists in Orem, UT | Lotus Rose Counseling"
-  description="Meet the therapists at Lotus Rose Counseling in Orem, Utah. Joy Bouchard (LCSW), Megan Judd, Pam Basinger, and Brynnlee Brunt specialize in EMDR, trauma, and postpartum therapy."
+  description="Meet the team at Lotus Rose Counseling in Orem, Utah. Our therapists specialize in EMDR, trauma, postpartum depression, grief, and women's mental health throughout Utah County."
   faqSchema={faqSchema}
 >
 
@@ -31,9 +31,9 @@ const faqSchema = [
     </div>
     <div class="hero-fullbleed-overlay"></div>
     <div class="hero-fullbleed-content">
-      <p class="section-label">Your Therapists</p>
+      <p class="section-label">Your Team</p>
       <h1>Meet the Team at Lotus Rose Counseling</h1>
-      <p class="hero-subtitle">Four therapists, each bringing different training and lived experience — all dedicated to creating a space where healing happens.</p>
+      <p class="hero-subtitle">Therapists, an intern, and an office manager — each bringing different training and lived experience, all dedicated to creating a space where healing happens.</p>
     </div>
   </section>
 
@@ -91,6 +91,45 @@ const faqSchema = [
         bio="As a mother of two, Jaclyn brings both clinical expertise and lived experience in perinatal mood disorders. Through her own journey with infertility and perinatal and postpartum anxiety, she found therapy to be deeply healing. After undergoing IVF to grow her family, she developed a deep passion for supporting individuals at every stage of that journey. Jaclyn also has experience in child welfare, domestic violence, and working with families and individuals experiencing trauma."
         bookingText="Book an Appointment"
       />
+
+      <!-- Therapist Intern — not yet booking -->
+      <div class="therapist-card intern-card">
+        <div class="therapist-card-photo">
+          <img src="/photos/monique-pratt.jpg" alt="Monique Pratt, MSWI — therapist intern at Lotus Rose Counseling" class="therapist-photo-img" width="200" height="200" loading="lazy" />
+        </div>
+        <div class="therapist-card-info">
+          <span class="intern-badge">Therapist Intern · Not Currently Booking</span>
+          <h3 class="therapist-name">Monique Pratt</h3>
+          <p class="therapist-title">Therapist Intern · MSWI</p>
+          <p class="therapist-bio">Taking clients this fall.</p>
+          <div class="therapist-actions">
+            <span class="intern-status">Available Fall 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Team -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="text-container text-center">
+        <p class="section-label">Support Team</p>
+        <h2>Behind the Scenes</h2>
+        <p>The team members who keep everything running and make sure every client feels supported from their very first call.</p>
+      </div>
+      <div class="support-team">
+        <div class="therapist-card support-card">
+          <div class="therapist-card-photo">
+            <img src="/photos/adri-lamb.jpg" alt="Adri Lamb — office manager at Lotus Rose Counseling" class="therapist-photo-img" width="200" height="200" loading="lazy" />
+          </div>
+          <div class="therapist-card-info">
+            <h3 class="therapist-name">Adri Lamb</h3>
+            <p class="therapist-title">Office Manager</p>
+            <p class="therapist-bio">Adri is the friendly and organized heart behind the scenes at Lotus Rose Counseling. As the Office Manager, she oversees scheduling, inbound leads, and client communication, helping ensure every client feels supported from their very first contact with the practice. Through her own life experiences, Adri brings a compassionate, non-judgmental approach to every interaction and is passionate about helping women find the support and care they need. She is dedicated to creating a welcoming, safe environment where clients feel seen, valued, and comfortable taking the first step toward healing.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -209,12 +248,56 @@ const faqSchema = [
       "jobTitle": "Clinical Social Worker",
       "worksFor": { "@id": "https://lotusrosecounseling.com/#business" },
       "knowsAbout": ["Perinatal Mood Disorders", "Postpartum Depression", "Postpartum Anxiety", "Infertility", "Life Transitions", "CBT", "DBT", "ACT"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://lotusrosecounseling.com/#monique-pratt",
+      "name": "Monique Pratt",
+      "jobTitle": "Therapist Intern",
+      "worksFor": { "@id": "https://lotusrosecounseling.com/#business" }
     }
   ])} />
 
 </BaseLayout>
 
 <style>
+  /* Therapist Intern Card */
+  .intern-card {
+    border: 2px dashed var(--soft-rose);
+    background: rgba(255, 248, 243, 0.6);
+  }
+  .intern-badge {
+    display: inline-block;
+    background: var(--warm-cream);
+    color: var(--peach-gold);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+  }
+  .intern-status {
+    background: var(--blush-pink);
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: inline-block;
+  }
+
+  /* Support Team Card */
+  .support-team {
+    max-width: 900px;
+    margin: 40px auto 0;
+  }
+  .support-card .therapist-bio {
+    margin-bottom: 0;
+  }
+
   .reference-section-accordion {
     max-width: 900px;
     margin: 0 auto;
