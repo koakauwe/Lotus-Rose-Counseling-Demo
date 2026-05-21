@@ -90,7 +90,9 @@ function getModalityUrl(specialty: string): string | null {
     )}
   </div>
   <div class="therapist-card-info">
-    <h3 class="therapist-name">{name}</h3>
+    <h3 class="therapist-name">
+      {profileUrl ? <a href={profileUrl} class="therapist-name-link">{name}</a> : name}
+    </h3>
     <p class="therapist-title">
       {title}
       {languages && <span> · {languages}</span>}
@@ -154,6 +156,14 @@ function getModalityUrl(specialty: string): string | null {
     box-shadow: var(--shadow-soft);
   }
   .therapist-card-info { flex: 1; }
+  .therapist-name-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .therapist-name-link:hover {
+    color: var(--peach-gold);
+  }
   .therapist-bio {
     font-size: 16px;
     line-height: 1.8;
