@@ -173,6 +173,23 @@ const faqSchema = [
           <p>Perinatal Mood Disorders, Infertility, Life Transitions</p>
         </a>
       </div>
+
+      <!-- Support Team — intern + office manager -->
+      <div class="support-preview-row">
+        <a href="/our-therapists/#monique-pratt" class="therapist-preview therapist-link">
+          <img src="/photos/monique-pratt.jpg" alt="Monique Pratt, MSWI — therapist intern at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" loading="lazy" />
+          <h3 class="therapist-name">Monique Pratt</h3>
+          <p class="therapist-title">Therapist Intern · MSWI</p>
+          <p>Taking clients this fall</p>
+        </a>
+        <a href="/our-therapists/#adri-lamb" class="therapist-preview therapist-link">
+          <img src="/photos/adri-lamb.jpg" alt="Adri Lamb — office manager at Lotus Rose Counseling" class="therapist-photo" width="160" height="160" loading="lazy" />
+          <h3 class="therapist-name">Adri Lamb</h3>
+          <p class="therapist-title">Office Manager</p>
+          <p>Scheduling, intake, and client communication</p>
+        </a>
+      </div>
+
       <div class="text-center" style="margin-top: 36px;">
         <a href="/our-therapists/" class="btn-secondary">Meet Our Full Team →</a>
       </div>
@@ -259,6 +276,14 @@ const faqSchema = [
     margin-top: 48px;
     text-align: center;
   }
+  .support-preview-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 220px));
+    gap: 28px;
+    margin-top: 48px;
+    justify-content: center;
+    text-align: center;
+  }
   .therapist-preview p {
     font-size: 14px;
     line-height: 1.6;
@@ -296,5 +321,6 @@ const faqSchema = [
   }
   @media (max-width: 768px) {
     .therapist-preview-grid { grid-template-columns: 1fr; }
+    .support-preview-row { grid-template-columns: 1fr; max-width: 280px; margin-left: auto; margin-right: auto; }
   }
 </style>
