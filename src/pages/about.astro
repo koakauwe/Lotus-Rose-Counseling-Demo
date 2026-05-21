@@ -46,14 +46,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Joy's Story (split layout — portrait variant with framed photo) -->
   <div class="split-section split-section--portrait">
-    <div class="split-content">
-      <p class="section-label">The Founder</p>
-      <h2>Joy Bouchard, LCSW</h2>
-      <p>Joy founded Lotus Rose because she's lived the struggle. As a mother of three, she has her own journey with birth trauma, postpartum depression, and postpartum anxiety, with each child bringing a different experience.</p>
-      <p>She knows what it's like to be searching for someone you can talk to, someone who can give guidance through the hardest chapters of motherhood. That's the practice she set out to build.</p>
-    </div>
-    <div class="split-image">
-      <img src="/photos/joy-bouchard.jpg" alt="Joy Bouchard, LCSW — founder of Lotus Rose Counseling" width="800" height="800" loading="lazy" />
+    <div class="split-inner">
+      <div class="split-content">
+        <p class="section-label">The Founder</p>
+        <h2>Joy Bouchard, LCSW</h2>
+        <p>Joy founded Lotus Rose because she's lived the struggle. As a mother of three, she has her own journey with birth trauma, postpartum depression, and postpartum anxiety, with each child bringing a different experience.</p>
+        <p>She knows what it's like to be searching for someone you can talk to, someone who can give guidance through the hardest chapters of motherhood. That's the practice she set out to build.</p>
+      </div>
+      <div class="split-image">
+        <img src="/photos/joy-bouchard.jpg" alt="Joy Bouchard, LCSW — founder of Lotus Rose Counseling" width="800" height="800" loading="lazy" />
+      </div>
     </div>
   </div>
 
@@ -145,14 +147,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   /* Portrait variant — gives Joy's photo a contained, framed look
-     instead of stretching edge to edge */
+     instead of stretching edge to edge. Constrained to a centered
+     max-width so text and image stay near each other on wide screens. */
   .split-section--portrait {
-    grid-template-columns: 1.3fr 1fr;
-    align-items: center;
     background: var(--warm-cream);
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 80px 0;
+  }
+  .split-section--portrait .split-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .split-section--portrait .split-content {
+    padding: 0;
   }
   .split-section--portrait .split-image {
-    padding: 60px 60px 60px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
   }
   .split-section--portrait .split-image img {
     width: 100%;
@@ -162,20 +180,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     object-fit: cover;
     border-radius: 12px;
     box-shadow: var(--shadow-medium);
-    margin-left: auto;
   }
 
   @media (max-width: 900px) {
-    .split-section--portrait {
+    .split-section--portrait { padding: 56px 0; }
+    .split-section--portrait .split-inner {
       grid-template-columns: 1fr;
-    }
-    .split-section--portrait .split-image {
-      padding: 0 28px 40px;
-      height: auto;
+      gap: 32px;
+      padding: 0 28px;
     }
     .split-section--portrait .split-image img {
       max-width: 320px;
-      margin: 0 auto;
     }
   }
 
