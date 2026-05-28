@@ -5,6 +5,15 @@ export default defineConfig({
   output: 'static',
   site: 'https://lotusrosecounseling.com',
   trailingSlash: 'always',
+  redirects: {
+    '/therapists': '/our-therapists/',
+    '/therapists/': '/our-therapists/',
+    '/contact-us': '/contact/',
+    '/contact-us/': '/contact/',
+    '/modalities': '/services/',
+    '/modalities/': '/services/',
+    '/insurance-and-pricing': '/insurance-and-pricing/',
+  },
   integrations: [
     sitemap({
       filter: (page) =>
