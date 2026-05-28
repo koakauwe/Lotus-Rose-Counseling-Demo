@@ -13,6 +13,8 @@ export default defineConfig({
     '/modalities': '/services/',
     '/modalities/': '/services/',
     '/insurance-and-pricing': '/insurance-and-pricing/',
+    '/joys-therapy-background': '/therapists/joy-bouchard/',
+    '/joys-therapy-background/': '/therapists/joy-bouchard/',
   },
   integrations: [
     sitemap({
