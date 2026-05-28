@@ -12,6 +12,48 @@ it isn't worth logging.
 
 ## May 2026
 
+### Week of May 25
+
+**Wednesday, May 28 — Search Console audit + redirect cleanup**
+
+Reviewed all Search Console coverage reports and resolved every actionable
+item:
+
+- **4 hard 404s fixed** via 301 redirects in `astro.config.mjs`:
+  `/therapists/` → `/our-therapists/`, `/contact-us` → `/contact/`,
+  `/modalities/` → `/services/`, `/insurance-and-pricing` → `/insurance-and-pricing/`.
+  These were old URLs Google had indexed from an earlier version of the site.
+
+- **1 pre-rebuild URL redirected:** `/joys-therapy-background` (last crawled
+  Nov 2025) → `/therapists/joy-bouchard/`. Ensures any residual crawl equity
+  from the old URL transfers to Joy's current profile page.
+
+- **2 "Discovered - not indexed" pages:** Requested indexing via URL
+  Inspection for `/blog/postpartum-depression-vs-baby-blues/` and
+  `/modalities/acceptance-commitment-therapy/`. Both are good content pages
+  that should be indexed — they just hadn't been crawled yet.
+
+- **Confirmed non-issues:** www canonical alternates (working correctly),
+  trailing-slash redirect entries (expected behavior), and the
+  `/blog/coming-soon/` robots.txt block (intentional).
+
+- **"Validate Fix" submitted** in Search Console for the 404 report after
+  redirects were deployed.
+
+**Wednesday, May 28 — Homepage quote updated**
+
+Replaced Joy's postpartum quote in the homepage statement section with
+Christine Northrup's quote: *"Every woman who heals herself, helps heal all
+women who came before her, and all those who come after her."* Joy's request.
+
+**Wednesday, May 28 — GBP posts Week 5 + 6 scheduled**
+
+Week 5 (Tired Mom's Club / online) scheduled for June 1.
+Week 6 (Trauma Therapy / Pleasant Grove) scheduled for June 2.
+Week 7 (Infertility / Lindon) drafted and ready to schedule for ~June 9.
+
+---
+
 ### Week of May 11
 
 **Monday, May 11 — GA4 traffic data needs scrubbing for May report**
