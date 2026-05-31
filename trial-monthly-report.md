@@ -169,11 +169,13 @@ not a calm sea.
 Keep a running list of each month's report below. Even one sentence per month
 is enough to spot trends without re-opening old emails.
 
-### Month 1 — [Month Year]
-- Form submissions: __ | New clients: __
-- Top channel: ____
-- One thing that worked: ____
-- One thing that didn't: ____
+### Month 1 — May 2026
+- Form submissions: 12 | New clients: __(ask Joy)__
+- Top channel: Organic Search (103 users, 17.5% key event rate)
+- GBP: 363 profile views, 49 website clicks, 5 calls, 8 UTM sessions at 25% conversion rate
+- Search Console: 111 clicks, 5,400 impressions, avg position 26.8, 28 pages indexed
+- One thing that worked: Organic search converting at 17.5% — people are finding and trusting the site
+- One thing that didn't: GBP posts drove 26 Organic Social sessions with 0 conversions (awareness channel, not direct-response — expected for Month 1)
 
 ### Month 2 — [Month Year]
 - Form submissions: __ | New clients: __
